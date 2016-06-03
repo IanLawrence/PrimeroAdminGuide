@@ -3,9 +3,9 @@
 
 *  [*How it Works: The Building Blocks*](1.1/PrimeroAdministrationandConfigurationGuide.md#how-it-works-the-building-blocks)
 
-	*  [*Components*](1.1/PrimeroAdministrationandConfigurationGuide.md.md#components)
+	*  [*Components*](1.1/PrimeroAdministrationandConfigurationGuide.md#components)
 
-	*  [*Modules*](1.1/PrimeroAdministrationandConfigurationGuide.md.md#modules)
+	*  [*Modules*](1.1/PrimeroAdministrationandConfigurationGuide.md#modules)
 
 	*  [*Programs*](1.1/PrimeroAdministrationandConfigurationGuide.md#programs)
 
