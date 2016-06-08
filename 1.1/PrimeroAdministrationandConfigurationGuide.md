@@ -1,37 +1,3 @@
-![](img/image62.png)
-========================================================================
-
-**Primero Administration and Configuration Guide**
-
-**Release 1.1.0 **
-
-November 2015
-
-
-***Prepared for:***
-
-![](img/image01.png){#section-2}
-======================================================================================
-
-3 United Nations Plaza
-
-New York, NY 10017
-
-
-> ***Prepared by:***
-
-![](img/image34.png){#section-2}
-======================================================================================
-
-> <span style="font-variant:small-caps;">Quoin</span>, Inc.
-
-186 South Street, Suite 600
-
-Boston, MA 02111
-
-
-
-
 How it Works: The Building Blocks
 =====================================
 
