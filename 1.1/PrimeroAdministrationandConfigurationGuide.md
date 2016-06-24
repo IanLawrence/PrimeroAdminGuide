@@ -324,8 +324,7 @@ below:
 
 To create a new Agency, use the following process:
 
-1.  Navigate to the Users page using the **SETTINGS** link in the
-    > navigation bar.
+1.  Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
 2.  Select the ***Agency*** link in the left panel navigation.
 
@@ -337,8 +336,7 @@ To create a new Agency, use the following process:
 
 A name for the agency is required; no other information is necessary.
 
-1.  To add a logo for the Agency, use the BROWSE button to navigate
-    > through the files available and select the appropriate image.
+1.  To add a logo for the Agency, use the BROWSE button to navigate through the files available and select the appropriate image.
 
 ![](img/image105.png)
 
@@ -394,7 +392,7 @@ To create a new User, follow these steps:
 
     c.  User Groups - sets the hierarchy and shared information access for a user. This helps set the manager versus team member role and vice versa.
 
-> Click on the SAVE button once all the desired information is entered.
+Click on the SAVE button once all the desired information is entered.
 
 To edit an existing user, either find the name and click *Edit* in the
 options in the right column from the list view or from the *Show* page,
