@@ -1,5 +1,5 @@
 {
-    "title" : "Administration Guide",
+    "title" : "Primero Administration Guide",
     "github" : false,
     "plugins" : [ "-mathjax", "-mixpanel", "fancybox"],
     "links" : {
