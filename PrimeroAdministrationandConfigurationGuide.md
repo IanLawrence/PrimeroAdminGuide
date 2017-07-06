@@ -22,7 +22,7 @@ Many aspects of Primero are configurable. This configuration is performed throug
 * **Gender Based Violence \(GBV\)**: This module includes case management and incident tracking for gender-based violence service providers.
 
 
-In Sierra Leone, Primero has been equipped with the CP module, while the GBV module has been turned off. Each module comes with module-specific components and a default set of forms and other configurations. While there appears to be some overlap between the modules - both CP and GBV have cases - each module has a unique set of forms. In some cases, fields, like name and date of birth, may be shared among the forms across modules.
+Each module comes with module-specific components and a default set of forms and other configurations. While there appears to be some overlap between the modules - both CP and GBV have cases - each module has a unique set of forms. In some cases, fields, like name and date of birth, may be shared among the forms across modules.
 
 ## Programs
 
@@ -46,7 +46,7 @@ The general term for these limits to what the user can do and what a user can se
 
 ## Records
 
-A **record** tracks to the components that are implemented in Primero. The three permitted record types are cases, incidents, and tracing requests. In Sierra Leone, the only record type being used will be cases.
+A **record** tracks to the components that are implemented in Primero. The three permitted record types are cases, incidents, and tracing requests.
 
 ## Fields
 
