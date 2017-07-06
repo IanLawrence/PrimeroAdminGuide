@@ -102,7 +102,7 @@ Since Users are built using Roles and User Groups, it is important to create the
 
 _**_IMPORTANT:_**_
 
-**_Every user must have access to the corresponding Record Owner form on the module you wish for them to access._**_ To accomplish this, you can select no forms at all, which will defer to pre-defined forms access. Most likely you will be selecting individual forms for each module the user’s role can access as they will not need to see all default forms. _**_Once you select a single form for a role to access, you must select all forms you wish the role to access._**
+**_Every user must have access to the corresponding Record Owner form on the module you wish for them to access._** To accomplish this, you can select no forms at all, which will defer to pre-defined forms access. Most likely you will be selecting individual forms for each module the user’s role can access as they will not need to see all default forms. **_Once you select a single form for a role to access, you must select all forms you wish the role to access._**
 
 ## Creating and Editing User Roles
 
