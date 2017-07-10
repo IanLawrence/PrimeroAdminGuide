@@ -58,8 +58,6 @@ A **field** \(data field\) is information within a record. Fields are attributes
 
 * Date
 
-* Check Boxes
-
 * Tick Box
 
 * Select Drop Down \(single-select or multi-select\)
@@ -81,11 +79,11 @@ A **form** contains a set of fields for a record. By configuring the Primero app
 
 ## Form Groups
 
-A **Form Group** is visible in the form navigation panel on the left side of the screen and can contain a single form or be expanded to show multiple forms. When multiple forms are added to a group, it becomes expandable\/ collapsible; if the group contains one form, there is no expand or collapse functionality. This allows for the form navigation panel to be organized in concise, navigable, groupings to keep the panel shorter and easier to use. For example, the Identity\/Registration form group includes all forms specific to the identity \(Basic Identity, Preliminary Protection Concerns\) and registration \(Interview Details\) of a case. The form group to which each form belongs is configured on creation or edit.
+A **Form Group** is visible in the form navigation panel on the left side of the screen and can contain a single form or be expanded to show multiple forms. When multiple forms are added to a group, it becomes expandable\/ collapsible; if the group contains one form, there is no expand or collapse functionality. This allows for the form navigation panel to be organized in concise, navigable groupings to keep the panel shorter and easier to use. For example, the Identity\/Registration form group includes all forms specific to the identity \(Basic Identity, Preliminary Protection Concerns\) and registration \(Interview Details\) of a case. The form group to which each form belongs is configured on creation or edit.
 
 # User and Role Management
 
-As described above, each Primero user has a combination of at least one role and one user group that allows them to access the functions and records required to support their business role within the service-providing organizations and agencies that use the Primero. User management consists of the following three elements:
+As described above, each Primero user has a combination of at least one role and one user group that allows them to access the functions and records required to support their business role within the service-providing organizations and agencies that use the Primero implementation. User management consists of the following three elements:
 
 * **Users** are the individuals using Primero who each have a unique username and password. Each user is given access to one or more modules in Primero \(e.g., CP for case management\).
 
@@ -162,8 +160,10 @@ A few hints for setting roles:
 
 * Access all records
 
+* No access - Admin functionality only
 
-The actions the user can perform once they have access to a record are driven by the privileges set with their role. These permissions given to a user apply to all records they have access to. If a user has write access to their own records, and also happens to have access to the records of anyone in their user group, then their write access will also apply to their user group access, meaning they can make changes to any files owned by members of the user group.
+
+The actions the user can perform once they have access to a record are driven by the privileges set with their role. These permissions given to a user apply to all records they have access to. If a user has write access to their own records, and also happens to have access to the records of anyone in their user group, then their write access will also apply to their user group access, meaning they can make changes to any files owned by members of the user group. A user whose role has access to all records, and has write access for cases, would obviously be able to make changes to any case. Some users, however, may have a role with no record access. These roles are meant for users who act solely as system administrators--managing users, forms, agencies, etc.--without being able to access cases, incidents, and tracing requests.
 
 The following diagram helps explain the relationship between Users, Roles, and User Groups through a hypothetical Role\/User Group setup, where the different roles are given specific permissions regarding their ability to see records within different User Groups:
 
@@ -300,7 +300,7 @@ Configuring Programs and Modules should not be done without the guidance of the 
 
 ## Configuring Programs
 
-Programs represent a mandate for the application as provided by the steering committee for using Primero. As such, Site Administrators should never configure or edit Programs and Modules without approval and assistance. An example of a program is child protection work within certain zones of a particular refugee camp. In Release 1.0 of Primero, the program configuration only provides descriptive information about the application’s mission. While the Program does not currently impact application behavior or configuration, it could in future releases. In the default configuration of Primero, there is one program, Primero, it should not be edited or deleted.
+Programs represent a mandate for the application as provided by the steering committee for using Primero. As such, Site Administrators should never configure or edit Programs and Modules without approval and assistance. An example of a program is child protection work within certain zones of a particular refugee camp. In the current release, the program configuration only provides descriptive information about the application’s mission. While the Program does not currently impact application behavior or configuration, it could in future releases. In the default configuration of Primero, there is one program, Primero, it should not be edited or deleted.
 
 To add Programs, with the understanding that this will have no impact and should be done with caution and guidance, follow these steps:
 
@@ -345,7 +345,7 @@ To add more Modules, with the understanding that this should be done with cautio
 
 ![](img/image40.png)
 
-1. There are Name and Program are mandatory fields. At least one Associated Record Type must be selected. Once the Associated Record Type\(s\) is selected, the forms only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
+1. Name and Program are mandatory fields. At least one Associated Record Type must be selected. Once the Associated Record Type\(s\) is selected, the forms only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
 
 ![](img/image33.png)
 
@@ -363,8 +363,6 @@ A **field** \(data field\) is information within a record. Fields are attributes
 
 * Date
 
-* Check Boxes
-
 * Tick Box
 
 * Select Drop Down \(single-select and multi-select\)
@@ -375,7 +373,7 @@ A **field** \(data field\) is information within a record. Fields are attributes
 
 * Tally Field
 
-* Date Field \/ Date Range
+* Date Field / Date Range
 
 
 Forms are created first and then the fields on those forms are added once the form is created. Forms can only be created or modified by a user with the appropriate permissions. The following sections describe how to configure the forms and fields within Primero.
@@ -456,17 +454,11 @@ A brief description of each field type and any additional information to build t
 
 ![](img/image109.png)
 
-* **Check Boxes** - A check box may be appropriate when there are two or three options for a field, and the user needs to be able to select more than one, as shown below:
-
-![](img/image72.png)
-
-The check boxes will display in Edit mode. In “View” mode, only the text of the option selected, such as ‘Dairy’ or ‘Shellfish’ will appear.
-
 * **Tick Box -** A tick box is a checkbox with one selection as shown below:
 
 ![](img/image11.png)
 
-Like a check box, the tick box will display in Edit mode. In “View” mode, only the text of the option will appear. In some cases, even when the tick box is not selected, the opposite value will show in “View” mode. For example, if the value of the tick box is ‘Yes’ and it is unchecked, the field may contain ‘No’ in “View” mode.
+Tick box inputs will display in Edit mode. In “View” mode, only the text of the option will appear. In some cases, even when the tick box is not selected, the opposite value will show in “View” mode. For example, if the value of the tick box is ‘Yes’ and it is unchecked, the field may contain ‘No’ in “View” mode.
 
 * **Select Drop Down** - A select drop down field allows the user to pick a value or values from a defined list of options as shown below:
 
