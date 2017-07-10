@@ -1,26 +1,35 @@
-![](img/image62.png)
-========================================================================
+# Primero Administration and Configuration Guide [Draft]
 
-**Primero Administration and Configuration Guide**
+July 10, 2017
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ***Prepared for:***
 
-![](img/image01.png)
-======================================================================================
+> UNICEF
+>
+> 3 United Nations Plaza
+>
+> New York, NY 10017
 
-3 United Nations Plaza
+ 
 
-New York, NY 10017
-
-
-> ***Prepared by:***
-
-![](img/image34.png)
-======================================================================================
+***Prepared by:***
 
 > <span style="font-variant:small-caps;">Quoin</span>, Inc.
+>
+> 186 South Street, Suite 600
+>
+> Boston, MA 02111
 
-186 South Street, Suite 600
-
-Boston, MA 02111
