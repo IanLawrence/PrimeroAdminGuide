@@ -1,16 +1,10 @@
 # How it Works: The Building Blocks
 
-Primero is an information management system that allows for data entry
-and reporting for child protection. The system helps intake relevant
-information via multiple sources, consolidates the information into
-relevant record types \(Cases \/ Incidents \/ Tracing Requests\) and allows
-service providers to report and make educated decisions to assist in
-these locations.
+Primero is an information management system that allows for data entry and reporting for child protection. The system helps intake relevant information via multiple sources, consolidates the information into relevant record types \(Cases \/ Incidents \/ Tracing Requests\) and allows service providers to report and make educated decisions to assist in these locations.
 
 ## Components
 
-Primero is made up of multiple **components**. The current implemented
-Primero components are:
+Primero is made up of multiple **components**. The current implemented Primero components are:
 
 * **Cases**, which track an individual beneficiary\/survivor. Different information is captured for CP and GBV cases.
 
@@ -21,79 +15,42 @@ Primero components are:
 
 ## Modules
 
-Many aspects of Primero are configurable. This configuration is
-performed through **modules**. Modules represent how the system will be
-used and contain a default set of forms. Primero typically includes the
-following modules by default::
+Many aspects of Primero are configurable. This configuration is performed through **modules**. Modules represent how the system will be used and contain a default set of forms. Primero typically includes the following modules by default::
 
 * **Child Protection \(CP\)**: This module includes child protection case management and tracing request capability to aid in family tracing and reunification.
 
 * **Gender Based Violence \(GBV\)**: This module includes case management and incident tracking for gender-based violence service providers.
 
 
-In Sierra Leone, Primero has been equipped with the CP module, while the
-GBV module has been turned off. Each module comes with module-specific
-components and a default set of forms and other configurations. While
-there appears to be some overlap between the modules - both CP and GBV
-have cases - each module has a unique set of forms. In some cases,
-fields, like name and date of birth, may be shared among the forms
-across modules.
+In Sierra Leone, Primero has been equipped with the CP module, while the GBV module has been turned off. Each module comes with module-specific components and a default set of forms and other configurations. While there appears to be some overlap between the modules - both CP and GBV have cases - each module has a unique set of forms. In some cases, fields, like name and date of birth, may be shared among the forms across modules.
 
 ## Programs
 
-Modules belong to **Programs** which represent a mandate for the
-application as provided by the steering committee for certain programs
-using Primero. An example of a program is child protection work within
-certain zones of a particular refugee camp. Application functionality
-cannot be configured within a program. The program configuration only
-provides descriptive information about the application’s mission. This
-should not be edited.
+Modules belong to **Programs** which represent a mandate for the application as provided by the steering committee for certain programs using Primero. An example of a program is child protection work within certain zones of a particular refugee camp. Application functionality cannot be configured within a program. The program configuration only provides descriptive information about the application’s mission. This should not be edited.
 
 ## Users
 
-Primero **Users** are the individuals working for service-providing
-organizations and agencies who use the system.
+Primero **Users** are the individuals working for service-providing organizations and agencies who use the system.
 
 ## User Groups
 
-**User Groups** represent teams of users working together. For example,
-there may be a team of social workers in a particular refugee camp
-providing services to children. There may be another team responsible
-for the child’s best interest determination. A **manager** of a user
-group will have some level of access to all of the data managed by that
-group, but not to the data managed by a different group.
+**User Groups** represent teams of users working together. For example, there may be a team of social workers in a particular refugee camp providing services to children. There may be another team responsible for the child’s best interest determination. A **manager** of a user group will have some level of access to all of the data managed by that group, but not to the data managed by a different group.
 
 ## Roles
 
-Users will have **Roles**, which define what particular users are
-allowed to do: read records, modify records, run reports, configure the
-system. Examples of roles are Social Worker, \CP Manager, and CP
-Administrator.
+Users will have **Roles**, which define what particular users are allowed to do: read records, modify records, run reports, configure the system. Examples of roles are Social Worker, \CP Manager, and CP Administrator.
 
-Along with defining what actions the user is allowed to perform, roles
-also limit what kind of information is visible about individual records
-for a specific user. For example, a CP Social Worker may be allowed to
-view and edit personally identifiable information \(such as name, age,
-and sex\) about a particular client, while a CP Manager may only see a
-reduced set of information about that same person \(age and sex, but not
-the name\), and may not be allowed to edit any of it.
+Along with defining what actions the user is allowed to perform, roles also limit what kind of information is visible about individual records for a specific user. For example, a CP Social Worker may be allowed to view and edit personally identifiable information \(such as name, age, and sex\) about a particular client, while a CP Manager may only see a reduced set of information about that same person \(age and sex, but not the name\), and may not be allowed to edit any of it.
 
-The general term for these limits to what the user can do and what a
-user can see is **authorization**.
+The general term for these limits to what the user can do and what a user can see is **authorization**.
 
 ## Records
 
-A **record** tracks to the components that are implemented in Primero.
-The three permitted record types are cases, incidents, and tracing
-requests. In Sierra Leone, the only record type being used will be
-cases.
+A **record** tracks to the components that are implemented in Primero. The three permitted record types are cases, incidents, and tracing requests. In Sierra Leone, the only record type being used will be cases.
 
 ## Fields
 
-A **field** \(data field\) is information within a record. Fields are
-attributes like name, age, date of birth. Sometimes one field can be
-used to store several values like a list of protection concerns or all
-the languages spoken. Fields types include:
+A **field** \(data field\) is information within a record. Fields are attributes like name, age, date of birth. Sometimes one field can be used to store several values like a list of protection concerns or all the languages spoken. Fields types include:
 
 * Text
 
@@ -116,45 +73,19 @@ the languages spoken. Fields types include:
 * Date Field \/ Date Range
 
 
-Each of these field types is defined with an example in section 4.2
-below.
+Each of these field types is defined with an example in section 4.2 below.
 
 ## Forms
 
-A **form** contains a set of fields for a record. By configuring the
-Primero application, you can specify new fields on a form, reorder the
-fields, or allow different forms to share the same field. For example,
-the standard form and field set for a child protection case has a form
-called “Preliminary Protection Concerns” which has a field listing the
-protection concerns related to the individual beneficiary\/survivor where
-multiple values can be selected. Further down, there is a different form
-called “Protection Concerns” which contains the same list \(for
-reference\) and an ability to elaborate on each protection concern with
-an additional set of fields. This narrows the information in each form
-and allows the form to be targeted to a particular purpose or a step in
-the case management workflow.
+A **form** contains a set of fields for a record. By configuring the Primero application, you can specify new fields on a form, reorder the fields, or allow different forms to share the same field. For example, the standard form and field set for a child protection case has a form called “Preliminary Protection Concerns” which has a field listing the protection concerns related to the individual beneficiary\/survivor where multiple values can be selected. Further down, there is a different form called “Protection Concerns” which contains the same list \(for reference\) and an ability to elaborate on each protection concern with an additional set of fields. This narrows the information in each form and allows the form to be targeted to a particular purpose or a step in the case management workflow.
 
 ## Form Groups
 
-A **Form Group** is visible in the form navigation panel on the left
-side of the screen and can contain a single form or be expanded to show
-multiple forms. When multiple forms are added to a group, it becomes
-expandable\/ collapsible; if the group contains one form, there is no
-expand or collapse functionality. This allows for the form navigation
-panel to be organized in concise, navigable, groupings to keep the panel
-shorter and easier to use. For example, the Identity\/Registration form
-group includes all forms specific to the identity \(Basic Identity,
-Preliminary Protection Concerns\) and registration \(Interview Details\) of
-a case. The form group to which each form belongs is configured on
-creation or edit.
+A **Form Group** is visible in the form navigation panel on the left side of the screen and can contain a single form or be expanded to show multiple forms. When multiple forms are added to a group, it becomes expandable\/ collapsible; if the group contains one form, there is no expand or collapse functionality. This allows for the form navigation panel to be organized in concise, navigable, groupings to keep the panel shorter and easier to use. For example, the Identity\/Registration form group includes all forms specific to the identity \(Basic Identity, Preliminary Protection Concerns\) and registration \(Interview Details\) of a case. The form group to which each form belongs is configured on creation or edit.
 
 # User and Role Management
 
-As described above, each Primero user has a combination of at least one
-role and one user group that allows them to access the functions and
-records required to support their business role within the
-service-providing organizations and agencies that use the Primero. User
-management consists of the following three elements:
+As described above, each Primero user has a combination of at least one role and one user group that allows them to access the functions and records required to support their business role within the service-providing organizations and agencies that use the Primero. User management consists of the following three elements:
 
 * **Users** are the individuals using Primero who each have a unique username and password. Each user is given access to one or more modules in Primero \(e.g., CP for case management\).
 
@@ -163,24 +94,15 @@ management consists of the following three elements:
 * Their **User Group** creates teams of users who can share information. However, what the users in this group can see is governed by the breadth of data set in the role.
 
 
-Each of these elements is created and edited from Manage Users
-functionality in the Settings option in the Main Navigation Menu across
-the top of the screen:
+Each of these elements is created and edited from Manage Users functionality in the Settings option in the Main Navigation Menu across the top of the screen:
 
 ![](img/image114.png)
 
-Since Users are built using Roles and User Groups, it is important to
-create these first before creating individual Users.
+Since Users are built using Roles and User Groups, it is important to create these first before creating individual Users.
 
 _**_IMPORTANT:_**_
 
-**_Every user must have access to the corresponding Record Owner form on
-the module you wish for them to access._**_ To accomplish this, you can
-select no forms at all, which will defer to pre-defined forms access.
-Most likely you will be selecting individual forms for each module the
-user’s role can access as they will not need to see all default forms.
-_**_Once you select a single form for a role to access, you must select
-all forms you wish the role to access._**
+**_Every user must have access to the corresponding Record Owner form on the module you wish for them to access._** To accomplish this, you can select no forms at all, which will defer to pre-defined forms access. Most likely you will be selecting individual forms for each module the user’s role can access as they will not need to see all default forms. **_Once you select a single form for a role to access, you must select all forms you wish the role to access._**
 
 ## Creating and Editing User Roles
 
@@ -190,24 +112,14 @@ A User Role sets the following:
 
 * Management - The breadth of data this role can see. The options are: “Access only my records,” “Access all records owned by users in my group,” and “Access all records.”
 
-* Role Management - Which roles the role is able to manage. This setting is found as a permisssion under the “Role” resource.
+* Role Management - Which roles the role is able to manage. This setting is found as a permission under the “Role” resource.
 
 * Forms - The specific forms a user with this role sees. All fields on the form will be visible if the user can see the form.
 
+* Dashboards- The information the user will see on the dashboard when first logging in. The options are “View Approvals,” “View Assessment,” and “Manage.” If either of the first two are selected, the user will see these items on the dashboard. If “Manage” is selected, it overrides the other permissions checked and gives access to all options in the section.
 
-It is important to reiterate that, when you are modifying a role’s
-permissions, you must modify them for each type of record you want the
-role to be able to handle. So, for instance, if you wanted a role to be
-able to write to, read from, and export cases, you would need to
-specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the
-‘case’ section of the role form. If you wanted your role to only be able
-to read from tracing requests, you would only check the ‘read’ box in
-the ‘tracing request’ section. If you wanted to make sure the role had
-no access whatsoever to the user record, then you would check nothing in
-the ‘user’ section. On the other hand, if you want to grant all
-available permissions on a particular type of resource, you can always
-just check the ‘manage’ box, which will signal that the role has all
-permissions for that resource and save you a bit of time in the process.
+
+It is important to note that once a role has been created, it cannot be deleted. The role can only be disabled. It is important to reiterate that, when you are modifying a role’s permissions, you must modify them for each type of record you want the role to be able to handle. So, for instance, if you wanted a role to be able to write to, read from, and export cases, you would need to specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the ‘case’ section of the role form. If you wanted your role to only be able to read from tracing requests, you would only check the ‘read’ box in the ‘tracing request’ section. If you wanted to make sure the role had no access whatsoever to the user record, then you would check nothing in the ‘user’ section. On the other hand, if you want to grant all available permissions on a particular type of resource, you can always just check the ‘manage’ box, which will signal that the role has all permissions for that resource and save you a bit of time in the process.
 
 ![](img/image96.png)
 
@@ -229,13 +141,7 @@ To create a new role, use the following process:
 2. It is required that a user have access to **“Record Owner”** form. A user cannot edit this form, but access will be needed for the system to allow the user to access the record type.
 
 
-To edit the properties of an existing role, find the name and click
-_Edit_ in the options in the right column. From the _Show_ page, click
-the EDIT button at the top of the screen. We highly recommend that a
-role never be deleted unless it was created in error as this may have a
-negative impact on any users who have been assigned the role. Click on
-the SAVE button once all the desired information has been changed or
-entered.
+To edit the properties of an existing role, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen. We highly recommend that a role never be deleted unless it was created in error as this may have a negative impact on any users who have been assigned the role. Click on the SAVE button once all the desired information has been changed or entered.
 
 A few hints for setting roles:
 
@@ -248,10 +154,7 @@ A few hints for setting roles:
 
 ## Creating and Editing User Groups
 
-**User Groups** are used to create teams of users and allow different
-levels of access to records within the group. As with Roles, this should
-be set up before creating individual users. Access to the records within
-a User Group is determined within the role as follows:
+**User Groups** are used to create teams of users and allow different levels of access to records within the group. As with Roles, this should be set up before creating individual users. Access to the records within a User Group is determined within the role as follows:
 
 * Access only my records
 
@@ -260,18 +163,9 @@ a User Group is determined within the role as follows:
 * Access all records
 
 
-The actions the user can perform once they have access to a record are
-driven by the privileges set with their role. These permissions given to
-a user apply to all records they have access to. If a user has write
-access to their own records, and also happens to have access to the
-records of anyone in their user group, then their write access will also
-apply to their user group access, meaning they can make changes to any
-files owned by members of the user group.
+The actions the user can perform once they have access to a record are driven by the privileges set with their role. These permissions given to a user apply to all records they have access to. If a user has write access to their own records, and also happens to have access to the records of anyone in their user group, then their write access will also apply to their user group access, meaning they can make changes to any files owned by members of the user group.
 
-The following diagram helps explain the relationship between Users,
-Roles, and User Groups through a hypothetical Role\/User Group setup,
-where the different roles are given specific permissions regarding their
-ability to see records within different User Groups:
+The following diagram helps explain the relationship between Users, Roles, and User Groups through a hypothetical Role\/User Group setup, where the different roles are given specific permissions regarding their ability to see records within different User Groups:
 
 ![](img/image102.png)
 
@@ -290,24 +184,13 @@ To create a new user group, use the following process:
 
 A name for the group is required; no other information is necessary. Click on the SAVE button once all the desired information is entered.
 
-Membership to the User Group is given when the specific user is created.
-Access to the records of the group is determined by the role that user
-has.
+Membership to the User Group is given when the specific user is created. Access to the records of the group is determined by the role that user has.
 
-To edit the name or description of an existing user group, find the name
-and click _Edit_ in the options in the right column. From the _Show_
-page, click the EDIT button at the top of the screen. We highly
-recommend that a user group never be deleted unless it was created in
-error as this may have a negative impact on any users who have been
-assigned the group. Click on the SAVE button once all the desired
-information has been changed or entered.
+To edit the name or description of an existing user group, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen. We highly recommend that a user group never be deleted unless it was created in error as this may have a negative impact on any users who have been assigned the group. Click on the SAVE button once all the desired information has been changed or entered.
 
 ## Creating and Editing Agencies
 
-**Agency** is a required field for setting up users so these should be
-configured before creating users. This also configures the logo\(s\) that
-appear in the top right corner of the Primero application as shown
-below:
+**Agency** is a required field for setting up users so these should be configured before creating users. This also configures the logo\(s\) that appear in the top right corner of the Primero application as shown below:
 
 ![](img/image99.png)
 
@@ -330,23 +213,17 @@ A name for the agency is required; no other information is necessary.
 
 ![](img/image105.png)
 
-For the logo to appear at the top right of the screen in the Primero
-application, check the box at the bottom of the form as shown below and
-click on the SAVE button once all the desired information is entered.
+For the logo to appear at the top right of the screen in the Primero application, check the box at the bottom of the form as shown below and click on the SAVE button once all the desired information is entered.
 
 ## ![](img/image103.png) {#section-6}
 
-To edit an existing agency, find the name in the list of agencies and
-click _Edit_ in the options in the right column. From the _Show_ page,
-click the EDIT button at the top of the screen. Click on the SAVE button
-once all the desired information has been changed or entered.
+To edit an existing agency, find the name in the list of agencies and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
+
+It is important to note that once an agency has been created, it cannot be deleted. The agency can only be disabled.
 
 ## Creating and Editing Users
 
-**Users** are the individuals using Primero who each have a unique
-username and password. Before setting up users, the roles, user group
-and agency for that user must be set up. For each individual user, the
-following information is specified:
+**Users** are the individuals using Primero who each have a unique username and password. Before setting up users, the roles, user group and agency for that user must be set up. For each individual user, the following information is specified:
 
 * Username - This should be unique across all the instances in the deployment.
 
@@ -385,18 +262,11 @@ To create a new User, follow these steps:
 
 Click on the SAVE button once all the desired information is entered.
 
-To edit an existing user, either find the name and click _Edit_ in the
-options in the right column from the list view or from the _Show_ page,
-click the EDIT button at the top of the screen. Click on the SAVE button
-once all the desired information has been changed or entered.
+To edit an existing user, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
 ## Disabling and Deleting Users
 
-We highly recommend that a user never be deleted unless it was created
-in error to avoid issues with record ownership or other negative
-impacts. Instead, it is recommended that a user access be disabled.
-Disabling a username will prohibit that username from being used to log
-in to Primero.
+We highly recommend that a user never be deleted unless it was created in error to avoid issues with record ownership or other negative impacts. Instead, it is recommended that a user access be disabled. Disabling a username will prohibit that username from being used to log in to Primero.
 
 To disable a User, follow these steps:
 
@@ -411,8 +281,7 @@ To disable a User, follow these steps:
 
 ![](img/image97.png)
 
-Although not recommended, if for some reason a user needs to be deleted,
-follow these steps:
+Although not recommended, if for some reason a user needs to be deleted, follow these steps:
 
 1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
@@ -427,30 +296,13 @@ To delete the username, click on the OK button. To cancel and keep the username,
 
 # Configuring Programs and Modules
 
-Configuring Programs and Modules should not be done without the guidance
-of the appropriate Steering Committee. Site administrators should never
-configure or edit Programs and Modules without approval and assistance.
-Modules are higher level components in which country, regional, and
-international decisions need to be made for its purpose and use cases.
-While creating or editing Modules and Programs will not be a
-frequently-used feature, should it become necessary, the instructions
-are provided below.
+Configuring Programs and Modules should not be done without the guidance of the appropriate Steering Committee. Site administrators should never configure or edit Programs and Modules without approval and assistance. Modules are higher level components in which country, regional, and international decisions need to be made for its purpose and use cases. While creating or editing Modules and Programs will not be a frequently-used feature, should it become necessary, the instructions are provided below.
 
 ## Configuring Programs
 
-Programs represent a mandate for the application as provided by the
-steering committee for using Primero. As such, Site Administrators
-should never configure or edit Programs and Modules without approval and
-assistance. An example of a program is child protection work within
-certain zones of a particular refugee camp. In Release 1.0 of Primero,
-the program configuration only provides descriptive information about
-the application’s mission. While the Program does not currently impact
-application behavior or configuration, it could in future releases. In
-the default configuration of Primero, there is one program, Primero, it
-should not be edited or deleted.
+Programs represent a mandate for the application as provided by the steering committee for using Primero. As such, Site Administrators should never configure or edit Programs and Modules without approval and assistance. An example of a program is child protection work within certain zones of a particular refugee camp. In Release 1.0 of Primero, the program configuration only provides descriptive information about the application’s mission. While the Program does not currently impact application behavior or configuration, it could in future releases. In the default configuration of Primero, there is one program, Primero, it should not be edited or deleted.
 
-To add Programs, with the understanding that this will have no impact
-and should be done with caution and guidance, follow these steps:
+To add Programs, with the understanding that this will have no impact and should be done with caution and guidance, follow these steps:
 
 1. Navigate to the **SETTINGS** option in the main navigation bar.
 
@@ -467,34 +319,20 @@ and should be done with caution and guidance, follow these steps:
 
 ![](img/image49.png)
 
-To edit an existing Program, either find the name and click _Edit_ in
-the options in the right column from the list view or from the _Show_
-page, click the EDIT button at the top of the screen. Click on the SAVE
-button once all the desired information has been changed or entered.
+To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
 ## Configuring Modules
 
-Modules represent how the system will be used and contain the default
-set of forms. Site administrators should never configure or edit Modules
-without approval and assistance. Primero will include the following
-default modules that should not be deleted:
+Modules represent how the system will be used and contain the default set of forms. Site administrators should never configure or edit Modules without approval and assistance. Primero will include the following default modules that should not be deleted:
 
-* Child Protection \(CP\): This module includes child protection case
-  management and tracing request capability to aid in family tracing
-  and reunification.
+* Child Protection \(CP\): This module includes child protection case management and tracing request capability to aid in family tracing and reunification.
 
-* Gender Based Violence \(GBV\): This module includes case management
-  and incident tracking for gender-based violence service providers.
+* Gender Based Violence \(GBV\): This module includes case management and incident tracking for gender-based violence service providers.
 
 
-Each module comes with module-specific components and a default set of
-forms and other configurations. While there appears to be some overlap
-between the modules - both CP and GBV have cases - each module has a
-unique set of forms. In some cases, fields, like name and date of birth,
-may be shared among the forms across modules.
+Each module comes with module-specific components and a default set of forms and other configurations. While there appears to be some overlap between the modules - both CP and GBV have cases - each module has a unique set of forms. In some cases, fields, like name and date of birth, may be shared among the forms across modules.
 
-To add more Modules, with the understanding that this should be done
-with caution and guidance, follow these steps:
+To add more Modules, with the understanding that this should be done with caution and guidance, follow these steps:
 
 1. Navigate to the **SETTINGS** option in the main navigation bar.
 
@@ -511,29 +349,13 @@ with caution and guidance, follow these steps:
 
 ![](img/image33.png)
 
-To edit an existing Program, either find the name and click _Edit_ in
-the options in the right column from the list view or from the _Show_
-page, click the EDIT button at the top of the screen. Click on the SAVE
-button once all the desired information has been changed or entered.
+To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
 # Form and Field Configuration
 
-A **form** contains a set of fields for a record. By configuring the
-Primero application, you can create a new form, modify the existing
-forms, specify new fields on a form, reorder the fields, or allow
-different forms to share the same field. Forms are organized by
-components - Cases, Tracing Requests, and Incidents - and Modules - CP
-and GBV.
+A **form** contains a set of fields for a record. By configuring the Primero application, you can create a new form, modify the existing forms, specify new fields on a form, reorder the fields, or allow different forms to share the same field. Forms are organized by components - Cases, Tracing Requests, and Incidents - and Modules - CP and GBV.
 
-A **field** \(data field\) is information within a record. Fields are
-attributes like name, age, date of birth. Sometimes one field can be
-used to store several values like a list of protection concerns or all
-the languages spoken. The same field can be ‘shared’ on different forms
-so that you can enter a date of birth on one form and see it on multiple
-forms. Fields can only be shared within a component, such as Case. A
-field cannot be shared across components, such as Cases and Tracing
-Requests. There are a variety of Field types that are available
-including:
+A **field** \(data field\) is information within a record. Fields are attributes like name, age, date of birth. Sometimes one field can be used to store several values like a list of protection concerns or all the languages spoken. The same field can be ‘shared’ on different forms so that you can enter a date of birth on one form and see it on multiple forms. Fields can only be shared within a component, such as Case. A field cannot be shared across components, such as Cases and Tracing Requests. There are a variety of Field types that are available including:
 
 * Text
 
@@ -556,16 +378,11 @@ including:
 * Date Field \/ Date Range
 
 
-Forms are created first and then the fields on those forms are added
-once the form is created. Forms can only be created or modified by a
-user with the appropriate permissions. The following sections describe
-how to configure the forms and fields within Primero.
+Forms are created first and then the fields on those forms are added once the form is created. Forms can only be created or modified by a user with the appropriate permissions. The following sections describe how to configure the forms and fields within Primero.
 
 ## Creating and Editing a New Form
 
-It may be necessary to create a new form when the core set of forms does
-not satisfy the needs of documenting something within a case, incident
-or tracing request.
+It may be necessary to create a new form when the core set of forms does not satisfy the needs of documenting something within a case, incident or tracing request.
 
 To create a new form, follow these steps:
 
@@ -599,38 +416,25 @@ If you want the form to appear by itself and not as part of a group at the top l
 
 1. Press SAVE when all the desired information is entered.
 
-Once you have saved the form, you can add fields to the form using the
-instructions below.
+Once you have saved the form, you can add fields to the form using the instructions below.
 
-To edit an existing Form, either find the name in the list of forms and
-click _Edit_ in the options in the right column from the list view, or
-from the _Show_ page, click the EDIT button at the top of the screen.
-Click on the SAVE button once all the desired information has been
-changed or entered.
+To edit an existing Form, either find the name in the list of forms and click _Edit_ in the options in the right column from the list view, or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
 ## Creating and Editing Fields on a Form
 
-You must create and save the Form before you are able to enter the
-fields to be displayed on the form. Once you have saved the Form, you
-will see the following at the bottom of the form creation page:
+You must create and save the Form before you are able to enter the fields to be displayed on the form. Once you have saved the Form, you will see the following at the bottom of the form creation page:
 
 ![](img/image10.png)
 
-To add a field to the form, select the ADD button, the following will
-appear:
+To add a field to the form, select the ADD button, the following will appear:
 
 ![](img/image113.png)
 
-There is a SAVE button to save the changes to the field but you must
-also save the form after fields have been added. The left navigation
-panel in this window, lists the types of fields that can be added to a
-form \(below\).
+There is a SAVE button to save the changes to the field but you must also save the form after fields have been added. The left navigation panel in this window, lists the types of fields that can be added to a form \(below\).
 
 ![](img/image55.png) ![](img/image56.png)
 
-Once a type of field is selected, the fields required to create that
-type of field will appear. All field types will ask for at least the
-following:
+Once a type of field is selected, the fields required to create that type of field will appear. All field types will ask for at least the following:
 
 * Display Name - This is the name that will display on the form
 
@@ -641,12 +445,9 @@ following:
 * Visible - Use this indicator to have the field show on the form \(check the checkbox to do this\) or hidden on the form. It is highly recommended that you hide unwanted fields rather than delete them. The exception is in the case of a field created in error or duplicated. Once a field has been in use, it is preferable to hide it rather than delete it.
 
 
-When you have entered all the information for the field, press the SAVE
-button at the bottom of the field modal to save the field. You must also
-save the form using the SAVE button at the top of the page.
+When you have entered all the information for the field, press the SAVE button at the bottom of the field modal to save the field. You must also save the form using the SAVE button at the top of the page.
 
-A brief description of each field type and any additional information to
-build the field is detailed below:
+A brief description of each field type and any additional information to build the field is detailed below:
 
 * **Text Field -** A Text Field is used for brief pieces of text.Unlike a Text Area, it will not expand to fit the text entered. Text will not be truncated but it is not easy to view.
 
@@ -692,8 +493,7 @@ The application will automatically add the three values and display a total.
 
 ![](img/image45.png)
 
-Within a form there are two additional field types that are unique from
-other field types and they are used for different purposes:
+Within a form there are two additional field types that are unique from other field types and they are used for different purposes:
 
 * The **Subform**, also referred to as a Nested form, is a section of a form where a user can collect the same set of data for multiple occurrences within the same case, incident or tracing request. This is used throughout Primero to collect information where a case may have multiple follow up visits, protection concerns etc..
   For example, when recording a child’s living situation in the “Care Arrangements” form, a worker may fill out the same “Care Arrangement” subform each time the child’s current arrangement changes.
@@ -701,19 +501,11 @@ other field types and they are used for different purposes:
 * A **Separator** identifies a new section within the form. For example, on the ‘Closure’ form, a separator marks the address portion of the form to set it apart from the rest of the fields on the page. This is not a sub-form because you only need to enter information into it once.
 
 
-A Subform is created in two steps, first you need to add the Subform
-field type to the Form where the Subform should appear. Second, click
-_Edit Subform_ from the list of fields to add the fields for the
-subform.
+A Subform is created in two steps, first you need to add the Subform field type to the Form where the Subform should appear. Second, click _Edit Subform_ from the list of fields to add the fields for the subform.
 
 ## Editing an Existing Form
 
-Similarly to creating a new form, you can edit an existing form to show,
-hide, or change existing fields. You should only change fields which are
-outside the **core data set.** This means the fields that are inherent
-to the Primero deployment when you first receive it should not be
-edited, but can be selected to be invisible in the form and field level
-forms.
+Similarly to creating a new form, you can edit an existing form to show, hide, or change existing fields. You should only change fields which are outside the **core data set.** This means the fields that are inherent to the Primero deployment when you first receive it should not be edited, but can be selected to be invisible in the form and field level forms.
 
 1. Navigate to the Form Builder using the **FORMS** link in the navigation bar
 
@@ -726,39 +518,23 @@ forms.
 
 ### Change an Existing Field
 
-The functionality to change a field from one type to another is
-currently not supported. It is necessary to create a new field with the
-desired type and then hide the field you are replacing. If you want the
-data in the existing field to appear in the new field, make note of the
-database name of the existing field. Create a new field with the proper
-type and use the existing database name. You will need to create a
-unique field label - the text that appears on the page. Once this is
-done hide the field you are replacing.
+The functionality to change a field from one type to another is currently not supported. It is necessary to create a new field with the desired type and then hide the field you are replacing. If you want the data in the existing field to appear in the new field, make note of the database name of the existing field. Create a new field with the proper type and use the existing database name. You will need to create a unique field label - the text that appears on the page. Once this is done hide the field you are replacing.
 
 ### Change the Field Order within a Form
 
-You may click and drag a single field to anywhere in the form to change
-the order in which they appear on the form. You must do this one field
-at a time.
+You may click and drag a single field to anywhere in the form to change the order in which they appear on the form. You must do this one field at a time.
 
 ### Change the Form Group
 
-While creating or editing a form, to add a new form group, type the name
-of the new form group in the field. The following will appear:
+While creating or editing a form, to add a new form group, type the name of the new form group in the field. The following will appear:
 
 ![](img/image44.png)
 
-Use the mouse to click “Click to add” and it will create a new form
-group name.
+Use the mouse to click “Click to add” and it will create a new form group name.
 
 ## Lookup Values Management
 
-“Lookup” is the term used for a set of values that might be used in the
-dropdown selection for multiple fields. For example, it may be more
-efficient to define the values for fields such as “Language,”
-“Ethnicity,” and “Nationality” once and then reference them for several
-fields throughout Primero. This will ensure certain data points are
-consistent and improve data entry speed and accuracy.
+“Lookup” is the term used for a set of values that might be used in the dropdown selection for multiple fields. For example, it may be more efficient to define the values for fields such as “Language,” “Ethnicity,” and “Nationality” once and then reference them for several fields throughout Primero. This will ensure certain data points are consistent and improve data entry speed and accuracy.
 
 To create a new Lookup:
 
@@ -774,18 +550,13 @@ To create a new Lookup:
 2. Add a single option in each “Option” field adding new fields or removing as needed.
 
 
-Once a Lookup is created, you can add to a field type and select whether
-you can pick one or more of the values.
+Once a Lookup is created, you can add to a field type and select whether you can pick one or more of the values.
 
-To edit the properties of an existing Lookup, find the name and click
-_Edit_ in the options in the right column. From the _Show_ page, click
-the EDIT button at the top of the screen.
+To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
 # Rules for Importing Data into Primero
 
-Importing information into Primero is a strict process. This helps make
-sure that data is not incorrectly input into the system. There are some
-rules as to how and what you can import:
+Importing information into Primero is a strict process. This helps make sure that data is not incorrectly input into the system. There are some rules as to how and what you can import:
 
 * Imports from a Primero instance to a Primero instance must be “Primero file format” \(or JSON\)
 
@@ -805,38 +576,17 @@ rules as to how and what you can import:
 * If you are performing an initial migration of data, then be sure that you have decided on and loaded your configuration before making changes to your migration file and importing it. Failing to do so can cause you to lose data in fields whose database names have changed in the configuration.
 
 
-For additional questions or concerns, you may discuss with your site
-administrator or the proper authority.
+For additional questions or concerns, you may discuss with your site administrator or the proper authority.
 
 # Exporting and Importing the Configuration Bundle
 
-Configuration Bundles allow you to export and import the configuration
-for a Primero instance. This allows you to duplicate the configuration
-of one instance and can greatly simplify the setup of a new instance by
-exporting the desired configuration from an existing instance and
-importing it into the new instance. The Configuration Bundle includes
-all other data in the system except for the record data itself.
-Everything under the **FORMS** option from the main navigation bar and
-everything except _**Users**_ under the **SETTINGS** option is included
-in the Configuration Bundle. There is a separate export and import
-process for Users which is described in the next section.
+Configuration Bundles allow you to export and import the configuration for a Primero instance. This allows you to duplicate the configuration of one instance and can greatly simplify the setup of a new instance by exporting the desired configuration from an existing instance and importing it into the new instance. The Configuration Bundle includes all other data in the system except for the record data itself. Everything under the **FORMS** option from the main navigation bar and everything except _**Users**_ under the **SETTINGS** option is included in the Configuration Bundle. There is a separate export and import process for Users which is described in the next section.
 
-A bundle import will preserve any existing data that isn’t part of the
-import, but will overwrite data that is part of the import. For example,
-if you had an agency _IRC_ in an instance and then imported a
-Configuration Bundle with the agency _Save the Children_, you would have
-an instance with both of those agencies. If you had an existing agency
-_Save the Children_ with a telephone of _+1-555-555-5555_ and the same
-agency in the bundle had a telephone of _+1-444-444-4444_, the latter
-phone number would exist in the system after a bundle import.
+A bundle import will preserve any existing data that isn’t part of the import, but will overwrite data that is part of the import. For example, if you had an agency _IRC_ in an instance and then imported a Configuration Bundle with the agency _Save the Children_, you would have an instance with both of those agencies. If you had an existing agency _Save the Children_ with a telephone of _+1-555-555-5555_ and the same agency in the bundle had a telephone of _+1-444-444-4444_, the latter phone number would exist in the system after a bundle import.
 
 ## Exporting the Configuration Bundle
 
-To export the Configuration Bundle, login in as a user on this instance
-with permissions to access the **SETTINGS** option in the main
-navigation bar. Select the **SETTINGS** option from the main navigation
-bar. While on the _**Users**_ form in the left navigation list, you
-should see the Action button with the options to Export as shown below:
+To export the Configuration Bundle, login in as a user on this instance with permissions to access the **SETTINGS** option in the main navigation bar. Select the **SETTINGS** option from the main navigation bar. While on the _**Users**_ form in the left navigation list, you should see the Action button with the options to Export as shown below:
 
 ![](img/image108.png)
 
@@ -851,26 +601,13 @@ To export a Configuration Bundle from an existing instance:
 
 A password is required and it is highly recommended that you choose a strong password that you can remember. A filename is optional. After completing the password field, click on _OK_ and you should receive a zip file containing the Configuration Bundle. If you do not enter a filename, the filename will start with ‘configuration\_bundle’ and end with ‘json.zip.’
 
-It is highly recommended that if the Configuration Bundle is to be
-distributed, the zip file that is encrypted and password protected be
-distributed and the password sent separately rather than distributing
-the extracted, unencrypted file.
+It is highly recommended that if the Configuration Bundle is to be distributed, the zip file that is encrypted and password protected be distributed and the password sent separately rather than distributing the extracted, unencrypted file.
 
 ## Importing the Configuration Bundle
 
-To import a bundle from another instance, you will need the zip file
-created in the export step and the password for that file. However,
-before doing the import, you will need to extract the _.json_ file from
-inside the zip file that you received when you exported the
-Configuration Bundle in the previous step. Once the file is extracted,
-use the steps below to import the configuration into the desired
-instance.
+To import a bundle from another instance, you will need the zip file created in the export step and the password for that file. However, before doing the import, you will need to extract the _.json_ file from inside the zip file that you received when you exported the Configuration Bundle in the previous step. Once the file is extracted, use the steps below to import the configuration into the desired instance.
 
-To import the Configuration Bundle, login in as a user with permissions
-to access the **SETTINGS** option in the main navigation bar. Select the
-**SETTINGS** option from the main navigation bar. While on the
-_**Users**_ form in the left navigation list, you should see the Action
-button with the options to Import as shown below:
+To import the Configuration Bundle, login in as a user with permissions to access the **SETTINGS** option in the main navigation bar. Select the **SETTINGS** option from the main navigation bar. While on the _**Users**_ form in the left navigation list, you should see the Action button with the options to Import as shown below:
 
 ![](img/image51.png)
 
@@ -889,29 +626,11 @@ This is the _.json_ file that was contained inside the zip file that you receive
 
 ###  {#section-11}
 
-Sometimes a bundle import will succeed and the ‘File was imported
-successfully’ message will appear, but the process does not apply the
-full set of bundle changes. For example, some Forms or Lookups may go
-missing. If that is the case, the bundle will need to be reapplied again
-using the Import process until the full set of configuration changes are
-observed. It helps to keep a list of expected Forms, Lookups, and Roles
-and then double check that this list appears in the configured Primero
-instance. It is important to note that existing core case and incident
-data will not be erased if the bundle is partially applied.
+Sometimes a bundle import will succeed and the ‘File was imported successfully’ message will appear, but the process does not apply the full set of bundle changes. For example, some Forms or Lookups may go missing. If that is the case, the bundle will need to be reapplied again using the Import process until the full set of configuration changes are observed. It helps to keep a list of expected Forms, Lookups, and Roles and then double check that this list appears in the configured Primero instance. It is important to note that existing core case and incident data will not be erased if the bundle is partially applied.
 
 ## Testing the Configuration Bundle
 
-Once a configuration bundle imports successfully or any changes have
-been applied, it must be tested to make sure the new fields and formats
-are correctly configured. The best way to verify your changes is to
-simply save a record. Either open a new record, or edit an existing one.
-From here, try to make changes to all different field types: Add an item
-to a multi-select, check a tick box, add a value for a date of birth. Be
-sure, as well, to add entries to nested forms on form sections such as
-Family Details. As you are going through the various form sections, also
-take a minute to make sure that the fields look the way you imagine they
-should look. When you click on a drop down, do the options you specified
-for that drop down appear?
+Once a configuration bundle imports successfully or any changes have been applied, it must be tested to make sure the new fields and formats are correctly configured. The best way to verify your changes is to simply save a record. Either open a new record, or edit an existing one. From here, try to make changes to all different field types: Add an item to a multi-select, check a tick box, add a value for a date of birth. Be sure, as well, to add entries to nested forms on form sections such as Family Details. As you are going through the various form sections, also take a minute to make sure that the fields look the way you imagine they should look. When you click on a drop down, do the options you specified for that drop down appear?
 
 Below is an example of simple steps that can help in this verification:
 
@@ -938,29 +657,18 @@ Below is an example of simple steps that can help in this verification:
   * Did they show up in your export correctly?
 
 
-When you are finally done adding information to your record, save it,
-and see if your information saved correctly. If they did, and you have
-encountered no errors, try creating and then exporting a report as well.
-If all of this proceeds without error, it is time to export a
-configuration bundle so you can save the changes you have made so far.
+When you are finally done adding information to your record, save it, and see if your information saved correctly. If they did, and you have encountered no errors, try creating and then exporting a report as well. If all of this proceeds without error, it is time to export a configuration bundle so you can save the changes you have made so far.
 
 # Exporting and Importing a Group of Users
 
-User import and export is a similar process to the Configuration Bundle.
-This functionality only applies to Users. This function exports and
-imports all users in the instance; you cannot pick users to export or
-import. Also, it does not export the underlying building blocks of Users
+User import and export is a similar process to the Configuration Bundle. This functionality only applies to Users. This function exports and imports all users in the instance; you cannot pick users to export or import. Also, it does not export the underlying building blocks of Users
 
 * Agencies, Roles and User Groups. These can be exported and imported
   using the Configuration Bundle functionality described above.
 
 ## Exporting a Group of Users
 
-To create the User Export, login in as a user with permissions to access
-the **SETTINGS** option in the main navigation bar. Select the
-**SETTINGS** option from the main navigation bar. While on the
-_**Users**_ form in the left navigation list, you should see the Action
-button with the options to Export as shown below:
+To create the User Export, login in as a user with permissions to access the **SETTINGS** option in the main navigation bar. Select the **SETTINGS** option from the main navigation bar. While on the _**Users**_ form in the left navigation list, you should see the Action button with the options to Export as shown below:
 
 ![](img/image63.png)
 
@@ -975,24 +683,13 @@ To create a User Export from an existing instance:
 
 A password is required and it is highly recommended that you choose a strong password that you can remember. A filename is optional. After completing the password field, click on _OK_ and you should receive a zip file containing the user export. If you do not enter a filename, the filename will default to ‘primero\_user.json.zip.’
 
-It is highly recommended that if the User Export is to be distributed,
-the zip file that is encrypted and password protected be distributed and
-the password sent separately rather than distributing the extracted,
-unencrypted file.
+It is highly recommended that if the User Export is to be distributed, the zip file that is encrypted and password protected be distributed and the password sent separately rather than distributing the extracted, unencrypted file.
 
 ## Importing a Group of Users
 
-To import a User Export from another instance, you will need the zip
-file created in the export step and the password for that file. Unlike
-the import for the Configuration Bundle, the user import accepts the zip
-file without the need to extract the .json file; however, you must
-provide the password for the file in the import prompt.
+To import a User Export from another instance, you will need the zip file created in the export step and the password for that file. Unlike the import for the Configuration Bundle, the user import accepts the zip file without the need to extract the .json file; however, you must provide the password for the file in the import prompt.
 
-To import the User Export, login in as a user with permissions to access
-the **SETTINGS** option in the main navigation bar. Select the
-**SETTINGS** option from the main navigation bar. While on the
-_**Users**_ form in the left navigation list, you should see the Action
-button with the options to Import as shown below:
+To import the User Export, login in as a user with permissions to access the **SETTINGS** option in the main navigation bar. Select the **SETTINGS** option from the main navigation bar. While on the _**Users**_ form in the left navigation list, you should see the Actionbutton with the options to Import as shown below:
 
 ![](img/image41.png)
 
@@ -1011,33 +708,20 @@ Enter in the password for the exported file and do not change the format type. A
 
 # Exporting a Blank Nested Form for an Existing Case
 
-Exporting a blank Nested Form in PDF format allows you to print out
-additional paper Forms to take into the field to record additional
-occurrences of the Form contents, such as an additional family member on
-the Family Details nested form within a CP Case.
+Exporting a blank Nested Form in PDF format allows you to print out additional paper Forms to take into the field to record additional occurrences of the Form contents, such as an additional family member on the Family Details nested form within a CP Case.
 
 ![](img/image98.png)
 ![](img/image93.png)
 
-From within the Case use the Export option under the Action button,
-select Custom Export and then you must select the corresponding “Nested
-Form Name.” An easy way to do this is to type “nested” in the Select
-Forms to Export field. This will filter the form list and show those
-that starts with “Nested” as shown below:
+From within the Case use the Export option under the Action button, select Custom Export and then you must select the corresponding “Nested Form Name.” An easy way to do this is to type “nested” in the Select Forms to Export field. This will filter the form list and show those that starts with “Nested” as shown below:
 
 ![](img/image39.png)
 
-Select the desired nested form and complete the export to PDF format.
-The PDF will contain all the forms for that case record as well as the
-blank nested form. Do not select any of the non-nested forms. If you
-select a non-nested form, you will get all the information for the case
-without any blank forms.
+Select the desired nested form and complete the export to PDF format. The PDF will contain all the forms for that case record as well as the blank nested form. Do not select any of the non-nested forms. If you select a non-nested form, you will get all the information for the case without any blank forms.
 
 # Testing Administrative Changes and Data Loads
 
-It is recommended to test out on a local instance any large bulk change
-to the system before applying it to the global production instance. Such
-risky bulk changes may include:
+It is recommended to test out on a local instance any large bulk change to the system before applying it to the global production instance. Such risky bulk changes may include:
 
 * Applying a customization bundle
 
@@ -1046,15 +730,11 @@ risky bulk changes may include:
 * Running migrations
 
 
-Additionally, experiments with forms, Lookup values, and Report creation
-can be safely performed on a test instance to minimize any potential
-disruptions to all Primero users from misconfigured Forms or Reports
-with poor performance.
+Additionally, experiments with forms, Lookup values, and Report creation can be safely performed on a test instance to minimize any potential disruptions to all Primero users from misconfigured Forms or Reports with poor performance.
 
 ## Test instance
 
-A test instance can be set up and configured for the express purpose of
-validating potentially disruptive updates to Primero as follows:
+A test instance can be set up and configured for the express purpose of validating potentially disruptive updates to Primero as follows:
 
 * The instance can be a local laptop or desktop installation of Primero. Local instances are quick to set up and isolated from production. To do this, use the Installation instructions listed in a separate document.
 
@@ -1070,14 +750,11 @@ validating potentially disruptive updates to Primero as follows:
 
 
 
-It is recommended that any deployment have at least one test instance
-for the administrator to validate system-wide changes.
+It is recommended that any deployment have at least one test instance for the administrator to validate system-wide changes.
 
 ## Testing
 
-Once a test instance exists, the administrator can apply the changes and
-manually validate the expected results. The following are good areas to
-spot check:
+Once a test instance exists, the administrator can apply the changes and manually validate the expected results. The following are good areas to spot check:
 
 * Are all the records loaded? If the import file contains 3000 new records, do we have 3000 new records?
 
@@ -1099,24 +776,15 @@ spot check:
 
 ## Designing Forms and Lookups
 
-It is recommended that configuration design take place on a separate
-test instance. This will buffer live end users from experiencing
-potential errors from misconfigured forms and roles. Once the
-configuration has been successfully modified, it can then be applied to
-production as an import of the Configuration Bundle.
+It is recommended that configuration design take place on a separate test instance. This will buffer live end users from experiencing potential errors from misconfigured forms and roles. Once the configuration has been successfully modified, it can then be applied to production as an import of the Configuration Bundle.
 
 # Security Certificate Issues
 
-Although we expect Primero instances to have SSL certificates associated
-with each deployment, that may not always be true. If so, there are some
-additional steps required to gain access to Primero. Depending on the
-browser, you will have to add Primero to your exceptions, “accept
-risks”, or “proceed.”
+Although we expect Primero instances to have SSL certificates associated with each deployment, that may not always be true. If so, there are some additional steps required to gain access to Primero. Depending on the browser, you will have to add Primero to your exceptions, “accept risks”, or “proceed.”
 
 ## Security Certificate Issues on the Chrome Browser
 
-When you access Primero using the Chrome browser, you may receive the
-following message:
+When you access Primero using the Chrome browser, you may receive the following message:
 
 ![](img/image104.png)
 
@@ -1128,8 +796,7 @@ following message:
 
 ## Security Certificate Issues on the Firefox Browser
 
-When you access Primero using the Chrome browser, you may receive the
-following message:
+When you access Primero using the Chrome browser, you may receive the following message:
 
 ![](img/image95.png)
 
@@ -1145,8 +812,7 @@ following message:
 
 ## Security Certificate Issues on the Internet Explorer \(IE\) Browser
 
-When you access Primero using an Internet Explorer browser, you may
-receive the following message:
+When you access Primero using an Internet Explorer browser, you may receive the following message:
 
 ![](img/image111.png)
 
