@@ -353,7 +353,7 @@ To edit an existing Program, either find the name and click _Edit_ in the option
 
 ## Name Field Auto-Population
 
-A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list```  in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
+A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list```  in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default (this is for developers working on a configuration bundle).
 
 * ```field_key``` sets the field to be populated.
 
@@ -370,7 +370,9 @@ System settings (```SystemSettings```) is part of the configuration bundle and i
 ## Age Range
 
 Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property
+
 * There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
+
 * The default age ranges are ```["0..4", "5..11", "12..17", "18..59", "60..#{AgeRange::MAX}"]```
 
 # Form and Field Configuration
@@ -568,7 +570,8 @@ Once a Lookup is created, you can add to a field type and select whether you can
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
 ## Jordan Case Identity
-* The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```
+
+* The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings``` (this is for developers working on a configuration bundle)
 
 # Rules for Importing Data into Primero
 
@@ -595,8 +598,8 @@ Importing information into Primero is a strict process. This helps make sure tha
 For additional questions or concerns, you may discuss with your site administrator or the proper authority.
 
 ## Protection Concerns
-  * Protection Concerns codes are defined in **Lookup** as ```lookup-protection-concerns``` in the configuration bundle
 
+* If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns``` in the configuration bundle (this is for developers).
 
 # Exporting and Importing the Configuration Bundle
 
