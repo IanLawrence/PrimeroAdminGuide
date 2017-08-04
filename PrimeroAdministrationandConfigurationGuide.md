@@ -351,6 +351,28 @@ To add more Modules, with the understanding that this should be done with cautio
 
 To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
+## Name Field Auto-Population
+
+A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list```  in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
+
+* ```field_key``` sets the field to be populated.
+
+* ```format``` sets the fields the values are pulled from.
+
+* ```separator``` sets what goes between the pulled values.
+
+* ```auto_populated``` sets if the field_key field is auto-populated.
+
+# System Settings Configuration
+
+System settings (```SystemSettings```) is part of the configuration bundle and is a collection of settings that affect the whole build.
+
+## Age Range
+
+Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property
+* There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
+* The default age ranges are ```["0..4", "5..11", "12..17", "18..59", "60..#{AgeRange::MAX}"]```
+
 # Form and Field Configuration
 
 A **form** contains a set of fields for a record. By configuring the Primero application, you can create a new form, modify the existing forms, specify new fields on a form, reorder the fields, or allow different forms to share the same field. Forms are organized by components - Cases, Tracing Requests, and Incidents - and Modules - CP and GBV.
@@ -374,7 +396,6 @@ A **field** \(data field\) is information within a record. Fields are attributes
 * Tally Field
 
 * Date Field / Date Range
-
 
 Forms are created first and then the fields on those forms are added once the form is created. Forms can only be created or modified by a user with the appropriate permissions. The following sections describe how to configure the forms and fields within Primero.
 
@@ -546,6 +567,9 @@ Once a Lookup is created, you can add to a field type and select whether you can
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
+## Jordan Case Identity
+* The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```
+
 # Rules for Importing Data into Primero
 
 Importing information into Primero is a strict process. This helps make sure that data is not incorrectly input into the system. There are some rules as to how and what you can import:
@@ -569,6 +593,10 @@ Importing information into Primero is a strict process. This helps make sure tha
 
 
 For additional questions or concerns, you may discuss with your site administrator or the proper authority.
+
+## Protection Concerns
+  * Protection Concerns codes are defined in **Lookup** as ```lookup-protection-concerns``` in the configuration bundle
+
 
 # Exporting and Importing the Configuration Bundle
 
