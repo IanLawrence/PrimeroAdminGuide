@@ -1,0 +1,65 @@
+# **Configuration Documentation**
+
+## v1.3 configuration
+* **Jordan Case Identity**
+  * The ID in the cases list rows is either ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set
+* **Auto generate Full Name**
+  * In the ```system_settings.rb``` seed file under ```auto_populate_list``` the auto genereated name for the ```name``` field is configured like this:
+  ```{
+      :field_key => "name",
+      :format => [
+        "name_first",
+        "name_middle",
+        "name_last"
+      ],
+      :separator => " ",
+      :auto_populated => true
+    }```
+  * ```field_key``` sets the field to be populated
+  * ```format``` sets the fields the values are pulled from
+  * ```separator``` sets what goes between the pulled values
+  * ```auto_populated``` sets if the field_key field is autopopulated
+* **Protection Concerns**
+  *Protection Concerns codes are defined in ```Lookup``` as ```lookup-protection-concerns``` in the configuration bundle
+* **Age Range**
+  * Age range is set in the ```system_settings.rb``` seed file by the ```primary_age_range``` property
+  * There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
+  * The default age ranges are ```["0..4", "5..11", "12..17", "18..59", "60..#{AgeRange::MAX}"]```
+
+## v1.4 configuration
+* **Alerts/Notifications:**
+  * In ```seed_files/system_settings/system_settings.rb```:
+    * toggle show_alerts to hide or show all the notifications.
+      * This includes the case sidebar form indicators and the messages in the form view for new subforms (incidents and service provision), approvals (BIA, case plan, case closure), and changed forms (currently only for service detail forms)
+    * ```approval_forms_to_alert```:
+      * This is a map that is used to associate form ids with approval alert types
+    * ```changes_field_to_form```:
+      * This is a map of field names to forms (either one field to one form or one field to an array of many forms is accepted structure)
+* **Create a CP Incident from a CP Case**
+  * New permission to allow creating an incident details from a case you don't own
+  * ```Permission::INCIDENT_DETAILS_FROM_CASE```
+* **Create services details from a case**
+  * New permission to allow adding a service provision form to a case you don't own
+  * ```Permission::SERVICES_SECTION_FROM_CASE```
+* **Reporting Location**
+  * In ```system_settings.rb``` in the seed files under ```reporting_location_config```:
+  * ```hierarchy_filter``` replaces ```reg_ex_filter``` to filter locations. This should match the hierarchy array in ```locations.rb```
+* **Manager Dashboard**
+  * Dashboards are handled by role permissions
+  * ```Permission.new(
+    :resource => Permission::DASHBOARD,
+    :actions => [
+      Permission::VIEW_APPROVALS,
+      Permission::VIEW_ASSESSMENT,
+      Permission::DASH_CASES_TO_ASSIGN,
+      Permission::DASH_SHOW_NONE_VALUES
+    ]
+  )```
+* **Referral Button**
+  * New permission to show referral button from service form
+  * ```Permission::REFERRAL_FROM_SERVICE,```
+*  **Agency Code displayed at top left of case record**
+  * This is controlled by the ```Agency_code``` on the Agency module (disabled by defalt)
+* **Search for an existing ID before creating a Case record**
+  * in ```default_modules.rb``` the property ```allow_searchable_ids```
+  * default is true
