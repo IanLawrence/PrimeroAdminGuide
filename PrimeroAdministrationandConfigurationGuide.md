@@ -353,7 +353,7 @@ To edit an existing Program, either find the name and click _Edit_ in the option
 
 ## Name Field Auto-Population
 
-A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list```  in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default (this is for developers working on a configuration bundle).
+A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list```  in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
 
 * ```field_key``` sets the field to be populated.
 
@@ -374,6 +374,10 @@ Age range is set in the ```SystemSettings``` part of the configuration bundle by
 * There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
 
 * The default age ranges are ```["0..4", "5..11", "12..17", "18..59", "60..#{AgeRange::MAX}"]```
+
+## Reporting Location
+
+In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_filter``` replaces ```reg_ex_filter``` to filter locations. This should match the hierarchy array in ```Locations```
 
 # Form and Field Configuration
 
@@ -572,6 +576,28 @@ To edit the properties of an existing Lookup, find the name and click _Edit_ in 
 ## Jordan Case Identity
 
 * The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings``` (this is for developers working on a configuration bundle)
+
+# Alerts sand Notifications
+
+Alerts are a way of letting the case owner know when someone else has changed something in a case such as updating a field in a form, adding an incident, adding service provision, or requesting approval for a form. Alerts appear in the form of a message at the top of the associated form with a red "!" next to the form name in the form selection side bar.
+
+* In ```SystemSettings```
+
+  * toggle show_alerts to hide or show all the notifications. This includes the case sidebar form indicators and the messages in the form view for new subforms (incidents and service provision), approvals (BIA, case plan, case closure), and changed forms (currently only for service detail forms)
+
+  * ```approval_forms_to_alert``` is a map that is used to associate form ids with approval alert types
+
+  * ```changes_field_to_form``` is a map of field names to forms (either one field to one form or one field to an array of many forms is accepted structure). This is used to decide which fields will trigger an alert for a form when changed by someone who isn't the case owner.
+
+# Permissions
+
+## Create a CP Incident from a CP Case
+
+This is a new permission to allow creating an incident details from a case you don't own. Add ```Permission::INCIDENT_DETAILS_FROM_CASE``` to the role you want to give this permission to.
+
+## Create services details from a case
+
+This is a new ppermission to allow adding a service provision form to a case you don't own. Add ```Permission::SERVICES_SECTION_FROM_CASE``` to the role you want to give this permission to.
 
 # Rules for Importing Data into Primero
 

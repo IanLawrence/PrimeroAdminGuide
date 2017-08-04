@@ -41,11 +41,22 @@
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
 
+<<<<<<< HEAD
 	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
 
 *  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
 	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
 
+||||||| parent of e92ba93... JOR-897 configuration documentation update for 1.4
+=======
+	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
+
+*  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
+	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
+
+	*  [*Reporting Location*](PrimeroAdministrationandConfigurationGuide.md#reporting-location)
+
+>>>>>>> e92ba93... JOR-897 configuration documentation update for 1.4
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)
@@ -62,10 +73,26 @@
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
 
+<<<<<<< HEAD
 		*  [*Protection Concerns*](PrimeroAdministrationandConfigurationGuide.md#protection-concerns)
 
 	*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
 
+||||||| parent of e92ba93... JOR-897 configuration documentation update for 1.4
+=======
+		*  [*Protection Concerns*](PrimeroAdministrationandConfigurationGuide.md#protection-concerns)
+
+	*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
+
+* [*Alerts sand Notifications*](PrimeroAdministrationandConfigurationGuide.md#alerts_sand_notifications)
+
+* [*Permissions*](PrimeroAdministrationandConfigurationGuide.md#permissions)
+
+	* [*Create a CP Incident from a CP Case*](PrimeroAdministrationandConfigurationGuide.md#create-a-cp-incident-from-a-cp-case)
+
+	* [*Create services details from a case*](PrimeroAdministrationandConfigurationGuide.md#create-services-details-from-a-case)
+
+>>>>>>> e92ba93... JOR-897 configuration documentation update for 1.4
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
 
 *  [*Exporting and Importing the Configuration Bundle*](PrimeroAdministrationandConfigurationGuide.md#exporting-and-importing-the-configuration-bundle)
