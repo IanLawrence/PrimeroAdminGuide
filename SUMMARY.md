@@ -41,6 +41,11 @@
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
 
+	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
+
+*  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
+	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
+
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)
@@ -56,6 +61,10 @@
 		*  [*Change the Form Group*](PrimeroAdministrationandConfigurationGuide.md#change-the-form-group)
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
+
+		*  [*Protection Concerns*](PrimeroAdministrationandConfigurationGuide.md#protection-concerns)
+
+	*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
 
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
 
