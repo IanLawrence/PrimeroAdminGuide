@@ -35,28 +35,28 @@
 
 	*  [*Disabling and Deleting Users*](PrimeroAdministrationandConfigurationGuide.md#disabling-and-deleting-users)
 
+	*  [*Configuring Manager Dashboard*](PrimeroAdministrationandConfigurationGuide.md#configuring-manager-dashboard)
+
+	*  [*Referral Button*](PrimeroAdministrationandConfigurationGuide.md#referral-button)
+
 *  [*Configuring Programs and Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-programs-and-modules)
 
 	*  [*Configuring Programs*](PrimeroAdministrationandConfigurationGuide.md#configuring-programs)
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
 
-<<<<<<< HEAD
 	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
 
 *  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
-	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
 
-||||||| parent of e92ba93... JOR-897 configuration documentation update for 1.4
-=======
-	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
-
-*  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
 	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
 
 	*  [*Reporting Location*](PrimeroAdministrationandConfigurationGuide.md#reporting-location)
 
->>>>>>> e92ba93... JOR-897 configuration documentation update for 1.4
+	*  [*Agency Code*](PrimeroAdministrationandConfigurationGuide.md#agency-code)
+
+	* [*Search for an existing ID before creating a Case record*](PrimeroAdministrationandConfigurationGuide.md#search-for-an-existing-id-before-creating-a-case-record)
+
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)
@@ -65,24 +65,15 @@
 
 	*  [*Editing an Existing Form*](PrimeroAdministrationandConfigurationGuide.md#editing-an-existing-form)
 
-		*  [*Change an Existing Field*](PrimeroAdministrationandConfigurationGuide.md#change-an-existing-field)
+			*  [*Change an Existing Field*](PrimeroAdministrationandConfigurationGuide.md#change-an-existing-field)
 
-		*  [*Change the Field Order within a Form*](PrimeroAdministrationandConfigurationGuide.md#change-the-field-order-within-a-form)
+			*  [*Change the Field Order within a Form*](PrimeroAdministrationandConfigurationGuide.md#change-the-field-order-within-a-form)
 
-		*  [*Change the Form Group*](PrimeroAdministrationandConfigurationGuide.md#change-the-form-group)
+			*  [*Change the Form Group*](PrimeroAdministrationandConfigurationGuide.md#change-the-form-group)
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
 
-<<<<<<< HEAD
-		*  [*Protection Concerns*](PrimeroAdministrationandConfigurationGuide.md#protection-concerns)
-
-	*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
-
-||||||| parent of e92ba93... JOR-897 configuration documentation update for 1.4
-=======
-		*  [*Protection Concerns*](PrimeroAdministrationandConfigurationGuide.md#protection-concerns)
-
-	*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
+		*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
 
 * [*Alerts sand Notifications*](PrimeroAdministrationandConfigurationGuide.md#alerts_sand_notifications)
 
@@ -92,8 +83,9 @@
 
 	* [*Create services details from a case*](PrimeroAdministrationandConfigurationGuide.md#create-services-details-from-a-case)
 
->>>>>>> e92ba93... JOR-897 configuration documentation update for 1.4
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
+
+	*  [*Protection Concerns*](PrimeroAdministrationandConfigurationGuide.md#protection-concerns)
 
 *  [*Exporting and Importing the Configuration Bundle*](PrimeroAdministrationandConfigurationGuide.md#exporting-and-importing-the-configuration-bundle)
 
