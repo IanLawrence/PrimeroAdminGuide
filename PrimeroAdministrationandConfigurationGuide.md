@@ -296,7 +296,7 @@ To delete the username, click on the OK button. To cancel and keep the username,
 
 ## Configuring Manager Dashboard
 
-The statistics that show up on the manager are configurable from the roles settings. To change the dashboard for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove modules.
+The statistics that show up on the manager are configurable from the roles settings. To change the dashboard for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove the statistics.
 
 The added statistics are as follows:
 
@@ -386,8 +386,9 @@ In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_f
 
 This is for developers working on configuration files. The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt).
 
-## This is for developers working on configuration files. Search for an existing ID before creating a Case record
-A new feature allows for searching for an existing case by ID before creating a new one.
+## Search for an existing ID before creating a Case record
+
+This is for developers working on configuration files. A new feature allows for searching for an existing case by ID before creating a new one.
 This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings.
 
 ## Name Field Auto-Population
@@ -616,7 +617,7 @@ This is for developers working on configuration files. The ID in the cases list 
 
 # Alerts sand Notifications
 
-Alerts are a way of letting the case owner know when someone else has changed something in a case such as updating a field in a form, adding an incident, adding service provision, or requesting approval for a form. Alerts appear in the form of a message at the top of the associated form with a red "!" next to the form name in the form selection side bar.
+This is for developers working on configuration files. Alerts are a way of letting the case owner know when someone else has changed something in a case such as updating a field in a form, adding an incident, adding service provision, or requesting approval for a form. Alerts appear in the form of a message at the top of the associated form with a red "!" next to the form name in the form selection side bar.
 
 * In ```SystemSettings```
 
