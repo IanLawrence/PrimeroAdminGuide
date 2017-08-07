@@ -630,11 +630,11 @@ Alerts are a way of letting the case owner know when someone else has changed so
 
 ## Create a CP Incident from a CP Case
 
-This is a new permission to allow creating an incident details from a case you don't own. Add ```Permission::INCIDENT_DETAILS_FROM_CASE``` to the role you want to give this permission to.
+This permission allows creating an incident details from a case you don't own. To add or remove this ability for a user, go the **Settings** tab and click on **Roles**. Edit the corresponding role for that user by toggling the checkbox for **Add Incident Details to another user's case** in the **Permissions** section.
 
 ## Create services details from a case
 
-This is a new ppermission to allow adding a service provision form to a case you don't own. Add ```Permission::SERVICES_SECTION_FROM_CASE``` to the role you want to give this permission to.
+This permission allows adding a service provision form to a case you don't own. To add or remove this ability for a user, go the **Settings** tab and click on **Roles**. Edit the corresponding role for that user by toggling the checkbox for **Add Service provision to another user's case** in the **Permissions** section.
 
 # Rules for Importing Data into Primero
 
