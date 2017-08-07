@@ -294,6 +294,21 @@ Although not recommended, if for some reason a user needs to be deleted, follow 
 
 To delete the username, click on the OK button. To cancel and keep the username, click on the CANCEL button. This action cannot be undone so proceed with caution.
 
+## Configuring Manager Dashboard
+
+The modules that show up on the manager are cofigurable from the roles settings. To change the dashboard for a for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove modules.
+
+The new modules for version 1.4 are as follows:
+
+* View Approvals
+* View Assessment
+* View Cases To Assign
+* View None Values
+
+## Referral Button
+
+Version 1.4 adds a new referral button to a Response Overview. To have the button appear, the user has to have the permission **Refer Case from Service form** added to their role (this is disabled by default)
+
 # Configuring Programs and Modules
 
 Configuring Programs and Modules should not be done without the guidance of the appropriate Steering Committee. Site administrators should never configure or edit Programs and Modules without approval and assistance. Modules are higher level components in which country, regional, and international decisions need to be made for its purpose and use cases. While creating or editing Modules and Programs will not be a frequently-used feature, should it become necessary, the instructions are provided below.
@@ -378,6 +393,14 @@ Age range is set in the ```SystemSettings``` part of the configuration bundle by
 ## Reporting Location
 
 In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_filter``` replaces ```reg_ex_filter``` to filter locations. This should match the hierarchy array in ```Locations```
+
+## Agency Code
+
+The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt). This is for developers modifying the configuration files.
+
+## Search for an existing ID before creating a Case record
+A new feature allows for searching for an existing case by ID before creating a new one.
+This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings. This is for developers modifying the configuration files.
 
 # Form and Field Configuration
 
