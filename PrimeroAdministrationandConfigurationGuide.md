@@ -353,7 +353,7 @@ To edit an existing Program, either find the name and click _Edit_ in the option
 
 ## Name Field Auto-Population
 
-A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list```  in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default (this is for developers working on a configuration bundle).
+This is for developers working on a configuration files. A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list``` attribute in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
 
 * ```field_key``` sets the field to be populated.
 
@@ -363,13 +363,27 @@ A field can be set to auto-populate based on one or more other fields using the 
 
 * ```auto_populated``` sets if the field_key field is auto-populated.
 
+* For example for populating the name field with ```name_first```, ```name_middle```, and ```name_last``` it would look like this:
+```
+{
+  "field_key": "name",
+  "format": [
+    "name_first",
+    "name_middle",
+    "name_last"
+  ],
+  "separator": " ",
+  "auto_populated": true
+},
+```
+
 # System Settings Configuration
 
 System settings (```SystemSettings```) is part of the configuration bundle and is a collection of settings that affect the whole build.
 
 ## Age Range
 
-Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property
+This is for developers working on a configuration files. Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property.
 
 * There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
 
@@ -571,7 +585,7 @@ To edit the properties of an existing Lookup, find the name and click _Edit_ in 
 
 ## Jordan Case Identity
 
-* The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings``` (this is for developers working on a configuration bundle)
+* This is for developers working on a configuration files. The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```.
 
 # Rules for Importing Data into Primero
 
@@ -599,7 +613,7 @@ For additional questions or concerns, you may discuss with your site administrat
 
 ## Protection Concerns
 
-* If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns``` in the configuration bundle (this is for developers).
+* This is for developers working on a configuration files. If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns``` in the configuration bundle.
 
 # Exporting and Importing the Configuration Bundle
 
