@@ -372,7 +372,7 @@ System settings (```SystemSettings```) is part of the configuration bundle and i
 
 ## Age Range
 
-This is for developers working on a configuration files. Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property.
+This is for developers working on configuration files. Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property.
 
 * There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
 
@@ -384,15 +384,15 @@ In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_f
 
 ## Agency Code
 
-This is for developers working on a configuration files. The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt).
+This is for developers working on configuration files. The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt).
 
-## This is for developers working on a configuration files. Search for an existing ID before creating a Case record
+## This is for developers working on configuration files. Search for an existing ID before creating a Case record
 A new feature allows for searching for an existing case by ID before creating a new one.
 This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings.
 
 ## Name Field Auto-Population
 
-This is for developers working on a configuration files. A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list``` attribute in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
+This is for developers working on configuration files. A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list``` attribute in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
 
 * ```field_key``` sets the field to be populated.
 
@@ -612,7 +612,7 @@ To edit the properties of an existing Lookup, find the name and click _Edit_ in 
 
 ## Jordan Case Identity
 
-This is for developers working on a configuration files. The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```.
+This is for developers working on configuration files. The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```.
 
 # Alerts sand Notifications
 
@@ -662,7 +662,7 @@ For additional questions or concerns, you may discuss with your site administrat
 
 ## Protection Concerns
 
-* This is for developers working on a configuration files. If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns```.
+* This is for developers working on configuration files. If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns```.
 
 # Exporting and Importing the Configuration Bundle
 
