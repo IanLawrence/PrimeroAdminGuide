@@ -296,9 +296,9 @@ To delete the username, click on the OK button. To cancel and keep the username,
 
 ## Configuring Manager Dashboard
 
-The modules that show up on the manager are cofigurable from the roles settings. To change the dashboard for a for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove modules.
+The statistics that show up on the manager are configurable from the roles settings. To change the dashboard for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove modules.
 
-The new modules for version 1.4 are as follows:
+The added statistics are as follows:
 
 * View Approvals
 * View Assessment
@@ -307,7 +307,7 @@ The new modules for version 1.4 are as follows:
 
 ## Referral Button
 
-Version 1.4 adds a new referral button to a Response Overview. To have the button appear, the user has to have the permission **Refer Case from Service form** added to their role (this is disabled by default)
+A button that opens the referral form for a Response Overview located on the Response Overview form header. To have the button appear, the user has to have the permission **Refer Case from Service form** added to their role (this is disabled by default)
 
 # Configuring Programs and Modules
 
@@ -366,25 +366,13 @@ To add more Modules, with the understanding that this should be done with cautio
 
 To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
-## Name Field Auto-Population
-
-A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list```  in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
-
-* ```field_key``` sets the field to be populated.
-
-* ```format``` sets the fields the values are pulled from.
-
-* ```separator``` sets what goes between the pulled values.
-
-* ```auto_populated``` sets if the field_key field is auto-populated.
-
 # System Settings Configuration
 
 System settings (```SystemSettings```) is part of the configuration bundle and is a collection of settings that affect the whole build.
 
 ## Age Range
 
-Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property
+This is for developers working on a configuration files. Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property.
 
 * There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
 
@@ -396,11 +384,37 @@ In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_f
 
 ## Agency Code
 
-The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt). This is for developers modifying the configuration files.
+This is for developers working on a configuration files. The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt).
 
-## Search for an existing ID before creating a Case record
+## This is for developers working on a configuration files. Search for an existing ID before creating a Case record
 A new feature allows for searching for an existing case by ID before creating a new one.
-This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings. This is for developers modifying the configuration files.
+This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings.
+
+## Name Field Auto-Population
+
+This is for developers working on a configuration files. A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list``` attribute in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
+
+* ```field_key``` sets the field to be populated.
+
+* ```format``` sets the fields the values are pulled from.
+
+* ```separator``` sets what goes between the pulled values.
+
+* ```auto_populated``` sets if the field_key field is auto-populated.
+
+* For example for populating the name field with ```name_first```, ```name_middle```, and ```name_last``` it would look like this:
+```
+{
+  "field_key": "name",
+  "format": [
+    "name_first",
+    "name_middle",
+    "name_last"
+  ],
+  "separator": " ",
+  "auto_populated": true
+},
+```
 
 # Form and Field Configuration
 
@@ -598,7 +612,7 @@ To edit the properties of an existing Lookup, find the name and click _Edit_ in 
 
 ## Jordan Case Identity
 
-* The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings``` (this is for developers working on a configuration bundle)
+This is for developers working on a configuration files. The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```.
 
 # Alerts sand Notifications
 
@@ -648,7 +662,7 @@ For additional questions or concerns, you may discuss with your site administrat
 
 ## Protection Concerns
 
-* If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns``` in the configuration bundle (this is for developers).
+* This is for developers working on a configuration files. If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns```.
 
 # Exporting and Importing the Configuration Bundle
 
@@ -889,4 +903,3 @@ When you access Primero using an Internet Explorer browser, you may receive the 
 ![](img/image111.png)
 
 * Click “Continue to this website \(not recommended\).” You will be redirected to Primero log in page.
-

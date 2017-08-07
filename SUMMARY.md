@@ -45,8 +45,6 @@
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
 
-	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
-
 *  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
 
 	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
@@ -56,6 +54,8 @@
 	*  [*Agency Code*](PrimeroAdministrationandConfigurationGuide.md#agency-code)
 
 	* [*Search for an existing ID before creating a Case record*](PrimeroAdministrationandConfigurationGuide.md#search-for-an-existing-id-before-creating-a-case-record)
+
+	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
 
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
