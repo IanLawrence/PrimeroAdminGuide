@@ -53,7 +53,7 @@
 
 	*  [*Agency Code*](PrimeroAdministrationandConfigurationGuide.md#agency-code)
 
-	* [*Search for an existing ID before creating a Case record*](PrimeroAdministrationandConfigurationGuide.md#search-for-an-existing-id-before-creating-a-case-record)
+	*  [*Search for an existing ID before creating a Case record*](PrimeroAdministrationandConfigurationGuide.md#search-for-an-existing-id-before-creating-a-case-record)
 
 	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
 
@@ -75,13 +75,13 @@
 
 		*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
 
-* [*Alerts sand Notifications*](PrimeroAdministrationandConfigurationGuide.md#alerts_sand_notifications)
+*  [*Alerts sand Notifications*](PrimeroAdministrationandConfigurationGuide.md#alerts_sand_notifications)
 
-* [*Permissions*](PrimeroAdministrationandConfigurationGuide.md#permissions)
+*  [*Permissions*](PrimeroAdministrationandConfigurationGuide.md#permissions)
 
-	* [*Create a CP Incident from a CP Case*](PrimeroAdministrationandConfigurationGuide.md#create-a-cp-incident-from-a-cp-case)
+	*  [*Create a CP Incident from a CP Case*](PrimeroAdministrationandConfigurationGuide.md#create-a-cp-incident-from-a-cp-case)
 
-	* [*Create services details from a case*](PrimeroAdministrationandConfigurationGuide.md#create-services-details-from-a-case)
+	*  [*Create services details from a case*](PrimeroAdministrationandConfigurationGuide.md#create-services-details-from-a-case)
 
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
 

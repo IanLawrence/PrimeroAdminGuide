@@ -300,10 +300,73 @@ The statistics that show up on the manager are configurable from the roles setti
 
 The added statistics are as follows:
 
-* View Approvals
-* View Assessment
-* View Cases To Assign
-* View None Values
+* **View Approvals**
+
+  This adds the **Approvals** section to the dashboard. For each approval type it shows how many cases are awaiting approval and how many have already been either accepted or rejected.
+
+  ![](img/image116.png)
+
+* **View Assessment**
+
+  This adds the **Cases by Assessment Level** section to the dashboard where you can see a breakdown of the number of cases per assessment level along with how many are new or recently updated.
+
+  ![](img/image115.png)
+
+* **View Reporting Locations**
+
+  This adds the cases by location section that shows the number of cases per location and how many are open, closed, or new for that location.
+
+  ![](img/image118.png)
+
+* **View Protection Concerns**
+
+  This adds the **Proteciton Concerns** section to the dashboard which shows the breakdown of cases by type of proteciton concern along with which cases are new, open, or closed.
+
+  ![](img/image119.png)
+
+* **Manage**
+
+  This adds both the **Proteciton Concerns** and the cases by location sections to the dashboard.
+
+* **View Cases To Assign**
+
+  This adds the **Cases To Assign** section of the dashboard which shows the cases that are assigned to you that should be reassigned based on your role. The cases are separated by cases that are due to be assigned in the future and cases that are overdue to be assigned with further separation based on priority.
+
+  ![](img/image117.png)
+
+* **View Cases By Workflow**
+
+  This adds the **CASES BY WORKFLOW** table that shows cases by social worker broken up by response type and if the services have been implemented.
+
+  ![](img/image122.png)
+
+* **View Cases By Social Worker**
+
+  This adds the **CASES BY SOCIAL WORKER** table that shows the number of cases assigned to each social worker.
+
+  ![](img/image120.png)
+
+* **View Referrals By Social Worker**
+
+  This adds the **REFERRALS BY SOCIAL WORKER** table that shows the cases referred to each social worker.
+
+  ![](img/image121.png)
+
+* **View Transfers By Social Worker**
+
+  This adds the **TRANSFERS BY SOCIAL WORKER** table that shows cases by social worker that are in the process of being transferred.
+
+  ![](img/image123.png)
+
+* **View Protection Concerns filter**
+
+  This adds the ability to filter cases by Protection Conserns to the filters section.
+
+  ![](img/image124.png)
+
+* **View None Values**
+
+  This adds the cases with "no proirity" level to the **Cases by Assessment Level** and **Cases To Assign** sections of the dashboard.
 
 ## Referral Button
 
@@ -615,7 +678,7 @@ To edit the properties of an existing Lookup, find the name and click _Edit_ in 
 
 This is for developers working on configuration files. The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```.
 
-# Alerts sand Notifications
+# Alerts and Notifications
 
 This is for developers working on configuration files. Alerts are a way of letting the case owner know when someone else has changed something in a case such as updating a field in a form, adding an incident, adding service provision, or requesting approval for a form. Alerts appear in the form of a message at the top of the associated form with a red "!" next to the form name in the form selection side bar.
 
