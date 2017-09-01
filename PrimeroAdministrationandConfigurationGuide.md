@@ -583,9 +583,24 @@ Once a Lookup is created, you can add to a field type and select whether you can
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
-## Jordan Case Identity
+## Customize List View Fields
 
-* This is for developers working on configuration files. The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```.
+To auto-populate fields in the case list, you can use the 'auto_populate_list' attribute in the SystemSettings portion of the configuration bundle. This attribute takes the form of an array of objects, with each object representing a different attribute in the list. In the example below, the attribute with a 'field_key' of 'name' will be populated with the attributes 'name_first,' 'name_middle,' and 'name_last' separated by a single space. So, for instance, a user with the first name 'John,' the middle name 'Wiley,' and the last name 'Hopkins' would have 'John Wiley Hopkins' shown in the 'name' column in the case list. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+```
+:auto_populate_list => [
+  {
+    :field_key => "name",
+    :format => [
+      "name_first",
+      "name_middle",
+      "name_last"
+    ],
+    :separator => " ",
+    :auto_populated => true
+  }
+],
+```
 
 # Rules for Importing Data into Primero
 
