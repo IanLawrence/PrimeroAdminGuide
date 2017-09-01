@@ -296,7 +296,7 @@ To delete the username, click on the OK button. To cancel and keep the username,
 
 ## Configuring Manager Dashboard
 
-The statistics that show up on the manager are configurable from the roles settings. To change the dashboard for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove the statistics.
+The statistics that show up on the manager dashboard are configurable from the roles settings. To change the dashboard for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove the statistics.
 
 The added statistics are as follows:
 
@@ -320,13 +320,13 @@ The added statistics are as follows:
 
 * **View Protection Concerns**
 
-  This adds the **Proteciton Concerns** section to the dashboard which shows the breakdown of cases by type of proteciton concern along with which cases are new, open, or closed.
+  This adds the **Protection Concerns** section to the dashboard which shows the breakdown of cases by type of protection concern along with which cases are new, open, or closed.
 
   ![](img/image119.png)
 
 * **Manage**
 
-  This adds both the **Proteciton Concerns** and the cases by location sections to the dashboard.
+  This adds both the **Protection Concerns** and the cases by location sections to the dashboard.
 
 * **View Cases To Assign**
 
@@ -370,7 +370,7 @@ The added statistics are as follows:
 
 ## Referral Button
 
-A button that opens the referral form for a Response Overview located on the Response Overview form header. To have the button appear, the user has to have the permission **Refer Case from Service form** added to their role (this is disabled by default)
+A button that opens the referral form for a Response Overview located on the Response Overview form header. To have the button appear, the user has to have the permission **Refer Case from Service form** added to their role (this is disabled by default).
 
 # Configuring Programs and Modules
 
@@ -431,11 +431,11 @@ To edit an existing Program, either find the name and click _Edit_ in the option
 
 # System Settings Configuration
 
-System settings (```SystemSettings```) is part of the configuration bundle and is a collection of settings that affect the whole build.
+System settings is a part of the settings which affect the whole build. This group of settings can be edited directly in the configuration bundle using the (SystemSettings) object, or directly through the web application.
 
 ## Age Range
 
-This is for developers working on configuration files. Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property.
+Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 * There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
 
@@ -443,20 +443,20 @@ This is for developers working on configuration files. Age range is set in the `
 
 ## Reporting Location
 
-In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_filter``` replaces ```reg_ex_filter``` to filter locations. This should match the hierarchy array in ```Locations```
+In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_filter``` replaces ```reg_ex_filter``` to filter locations. This should match the hierarchy array in ```Locations```. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 ## Agency Code
 
-This is for developers working on configuration files. The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt).
+The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt). [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 ## Search for an existing ID before creating a Case record
 
-This is for developers working on configuration files. A new feature allows for searching for an existing case by ID before creating a new one.
-This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings.
+A new feature allows for searching for an existing case by ID before creating a new one.
+This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 ## Name Field Auto-Population
 
-This is for developers working on configuration files. A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list``` attribute in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default.
+A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list``` attribute in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 * ```field_key``` sets the field to be populated.
 
@@ -674,21 +674,50 @@ Once a Lookup is created, you can add to a field type and select whether you can
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
-## Jordan Case Identity
+## Customize List View Fields
 
-This is for developers working on configuration files. The ID in the cases list rows is either in the format ```case_ID_code/short_ID``` or just ```short_ID``` if the case_ID_code isn't set. This is set as an auto-populated field in the ```SystemSettings```.
+To auto-populate fields in the case list, you can use the 'auto_populate_list' attribute in the SystemSettings portion of the configuration bundle. This attribute takes the form of an array of objects, with each object representing a different attribute in the list. In the example below, the attribute with a 'field_key' of 'name' will be populated with the attributes 'name_first,' 'name_middle,' and 'name_last' separated by a single space. So, for instance, a user with the first name 'John,' the middle name 'Wiley,' and the last name 'Hopkins' would have 'John Wiley Hopkins' shown in the 'name' column in the case list. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+```
+:auto_populate_list => [
+  {
+    :field_key => "name",
+    :format => [
+      "name_first",
+      "name_middle",
+      "name_last"
+    ],
+    :separator => " ",
+    :auto_populated => true
+  }
+],
+```
 
 # Alerts and Notifications
 
-This is for developers working on configuration files. Alerts are a way of letting the case owner know when someone else has changed something in a case such as updating a field in a form, adding an incident, adding service provision, or requesting approval for a form. Alerts appear in the form of a message at the top of the associated form with a red "!" next to the form name in the form selection side bar.
+Alerts are a way of letting the case owner know when someone else has changed something in a case such as updating a field in a form, adding an incident, adding service provision, or requesting approval for a form. Alerts appear in the form of a message at the top of the associated form with a red "!" next to the form name in the form selection side bar. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 * In ```SystemSettings```
 
   * toggle show_alerts to hide or show all the notifications. This includes the case sidebar form indicators and the messages in the form view for new subforms (incidents and service provision), approvals (BIA, case plan, case closure), and changed forms (currently only for service detail forms)
 
-  * ```approval_forms_to_alert``` is a map that is used to associate form ids with approval alert types
+  * ```approval_forms_to_alert``` is a map that is used to associate form ids with approval alert types. For example, the code below shows the bia, case_plan and closure forms being mapped to those approval alert types.
 
-  * ```changes_field_to_form``` is a map of field names to forms (either one field to one form or one field to an array of many forms is accepted structure). This is used to decide which fields will trigger an alert for a form when changed by someone who isn't the case owner.
+  ```
+  :approval_forms_to_alert => {
+    "cp_bia_form" => "bia",
+    "services" => "case_plan",
+    "closure_form" => "closure"
+  }
+  ```
+
+  * ```changes_field_to_form``` is a map of field names to forms (either one field to one form or one field to an array of many forms is accepted structure). This is used to decide which fields will trigger an alert for a form when changed by someone who isn't the case owner. In the example below, the service provider medical details subform field is mapped to the service provider medical details (view only) form in order to add an alert to the subform's parent from when a change is made to the subform.
+
+  ```
+  :changes_field_to_form => {
+    "service_provider_details_medical_subform_section" => "service_provider_details_medical_view_only"
+  }
+  ```
 
 # Permissions
 
@@ -726,7 +755,7 @@ For additional questions or concerns, you may discuss with your site administrat
 
 ## Protection Concerns
 
-* This is for developers working on configuration files. If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns```.
+* If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns```. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 # Exporting and Importing the Configuration Bundle
 
