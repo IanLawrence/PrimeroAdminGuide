@@ -407,7 +407,6 @@ Modules represent how the system will be used and contain the default set of for
 
 * Gender Based Violence \(GBV\): This module includes case management and incident tracking for gender-based violence service providers.
 
-
 Each module comes with module-specific components and a default set of forms and other configurations. While there appears to be some overlap between the modules - both CP and GBV have cases - each module has a unique set of forms. In some cases, fields, like name and date of birth, may be shared among the forms across modules.
 
 To add more Modules, with the understanding that this should be done with caution and guidance, follow these steps:
@@ -427,7 +426,16 @@ To add more Modules, with the understanding that this should be done with cautio
 
 ![](img/image33.png)
 
-To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
+### Edits to the Configuration Bundle
+
+#### Agency Code
+
+The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt). [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+#### Search for an existing ID before creating a Case record
+
+A new feature allows for searching for an existing case by ID before creating a new one.
+This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 # System Settings Configuration
 
@@ -444,15 +452,6 @@ Age range is set in the ```SystemSettings``` part of the configuration bundle by
 ## Reporting Location
 
 In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_filter``` replaces ```reg_ex_filter``` to filter locations. This should match the hierarchy array in ```Locations```. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
-
-## Agency Code
-
-The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt). [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
-
-## Search for an existing ID before creating a Case record
-
-A new feature allows for searching for an existing case by ID before creating a new one.
-This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 ## Name Field Auto-Population
 

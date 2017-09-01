@@ -45,15 +45,17 @@
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
 
+		*  [*Edits to the Configuration Bundle*](PrimeroAdministrationandConfigurationGuide.md#edits-to-the-configuration-bundle)
+
+			*  [*Agency Code*](PrimeroAdministrationandConfigurationGuide.md#agency-code)
+
+			*  [*Search for an existing ID before creating a Case record*](PrimeroAdministrationandConfigurationGuide.md#search-for-an-existing-id-before-creating-a-case-record)
+
 *  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
 
 	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
 
 	*  [*Reporting Location*](PrimeroAdministrationandConfigurationGuide.md#reporting-location)
-
-	*  [*Agency Code*](PrimeroAdministrationandConfigurationGuide.md#agency-code)
-
-	*  [*Search for an existing ID before creating a Case record*](PrimeroAdministrationandConfigurationGuide.md#search-for-an-existing-id-before-creating-a-case-record)
 
 	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
 
