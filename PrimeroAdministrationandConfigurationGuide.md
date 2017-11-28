@@ -495,7 +495,11 @@ Within a form there are two additional field types that are unique from other fi
 
 A Subform is created in two steps, first you need to add the Subform field type to the Form where the Subform should appear. Second, click _Edit Subform_ from the list of fields to add the fields for the subform.
 
-To make a field required, a developer must manually edit the configuration bundle. To make the appropriate edit, the developer should search for the JSON object containing the field in question and then set the ```required``` attribute to ```true```. This works for fields on standard form sections as well as fields on nested subforms. [Note: Since this setting can only be set manually in the configuration bundle, this section is only for developers working on the configuration bundle.]
+[Note: Since the settings in the following two sections can only be set manually in the configuration bundle, these sections are only for developers working on the configuration bundle.]
+
+To make a field required, a developer must manually edit the configuration bundle. To make the appropriate edit, the developer should search for the JSON object containing the field in question and then set the ```required``` attribute to ```true```. This works for fields on standard form sections as well as fields on nested subforms.
+
+Oftentimes, you will want to avoid having the user fill out a required on a nested subform when a case is first created. For instance, you may want to make it required that a user fill out the name field for each Family Details subform added to a case, but you also may not want to force the user to add information about family members when the first created. One way to fix this problem is to set a subform to start out with zero entries. This change also must be made manually in the configuration bundle by a developer. To make the change, the developer should search for the JSON object defining the subform in question. In this object, you should see the attribute ```initial_subforms```. Set this attribute to the number of subform entries that should display in the forms when the case is first created. So, if we find the definition for the Family Details subform and, in this definition, set ```initial_subforms: 0```, this will make it so that no Family Details subform entries initially upon case creation, meaning that the user will not have to fill out any of the required Family Details fields.
 
 ## Editing an Existing Form
 
