@@ -495,6 +495,8 @@ Within a form there are two additional field types that are unique from other fi
 
 A Subform is created in two steps, first you need to add the Subform field type to the Form where the Subform should appear. Second, click _Edit Subform_ from the list of fields to add the fields for the subform.
 
+To make a field required, a developer must manually edit the configuration bundle. To make the appropriate edit, the developer should search for the JSON object containing the field in question and then set the ```required``` attribute to ```true```. This works for fields on standard form sections as well as fields on nested subforms. [Note: Since this setting can only be set manually in the configuration bundle, this section is only for developers working on the configuration bundle.]
+
 ## Editing an Existing Form
 
 Similarly to creating a new form, you can edit an existing form to show, hide, or change existing fields. You should only change fields which are outside the **core data set.** This means the fields that are inherent to the Primero deployment when you first receive it should not be edited, but can be selected to be invisible in the form and field level forms.
