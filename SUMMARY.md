@@ -35,11 +35,29 @@
 
 	*  [*Disabling and Deleting Users*](PrimeroAdministrationandConfigurationGuide.md#disabling-and-deleting-users)
 
+	*  [*Configuring Manager Dashboard*](PrimeroAdministrationandConfigurationGuide.md#configuring-manager-dashboard)
+
+	*  [*Referral Button*](PrimeroAdministrationandConfigurationGuide.md#referral-button)
+
 *  [*Configuring Programs and Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-programs-and-modules)
 
 	*  [*Configuring Programs*](PrimeroAdministrationandConfigurationGuide.md#configuring-programs)
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
+
+		*  [*Edits to the Configuration Bundle*](PrimeroAdministrationandConfigurationGuide.md#edits-to-the-configuration-bundle)
+
+			*  [*Agency Code*](PrimeroAdministrationandConfigurationGuide.md#agency-code)
+
+			*  [*Search for an existing ID before creating a Case record*](PrimeroAdministrationandConfigurationGuide.md#search-for-an-existing-id-before-creating-a-case-record)
+
+*  [*System Settings Configuration*](PrimeroAdministrationandConfigurationGuide.md#system-settings-configuration)
+
+	*  [*Age Range*](PrimeroAdministrationandConfigurationGuide.md#age-range)
+
+	*  [*Reporting Location*](PrimeroAdministrationandConfigurationGuide.md#reporting-location)
+
+	*  [*Name Field Auto-Population*](PrimeroAdministrationandConfigurationGuide.md#name-field-auto-population)
 
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
@@ -49,15 +67,27 @@
 
 	*  [*Editing an Existing Form*](PrimeroAdministrationandConfigurationGuide.md#editing-an-existing-form)
 
-		*  [*Change an Existing Field*](PrimeroAdministrationandConfigurationGuide.md#change-an-existing-field)
+			*  [*Change an Existing Field*](PrimeroAdministrationandConfigurationGuide.md#change-an-existing-field)
 
-		*  [*Change the Field Order within a Form*](PrimeroAdministrationandConfigurationGuide.md#change-the-field-order-within-a-form)
+			*  [*Change the Field Order within a Form*](PrimeroAdministrationandConfigurationGuide.md#change-the-field-order-within-a-form)
 
-		*  [*Change the Form Group*](PrimeroAdministrationandConfigurationGuide.md#change-the-form-group)
+			*  [*Change the Form Group*](PrimeroAdministrationandConfigurationGuide.md#change-the-form-group)
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
 
+		*  [*Jordan Case Identity*](PrimeroAdministrationandConfigurationGuide.md#jordan-case-identity)
+
+*  [*Alerts sand Notifications*](PrimeroAdministrationandConfigurationGuide.md#alerts_sand_notifications)
+
+*  [*Permissions*](PrimeroAdministrationandConfigurationGuide.md#permissions)
+
+	*  [*Create a CP Incident from a CP Case*](PrimeroAdministrationandConfigurationGuide.md#create-a-cp-incident-from-a-cp-case)
+
+	*  [*Create services details from a case*](PrimeroAdministrationandConfigurationGuide.md#create-services-details-from-a-case)
+
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
+
+	*  [*Protection Concerns*](PrimeroAdministrationandConfigurationGuide.md#protection-concerns)
 
 *  [*Exporting and Importing the Configuration Bundle*](PrimeroAdministrationandConfigurationGuide.md#exporting-and-importing-the-configuration-bundle)
 

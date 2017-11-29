@@ -294,6 +294,84 @@ Although not recommended, if for some reason a user needs to be deleted, follow 
 
 To delete the username, click on the OK button. To cancel and keep the username, click on the CANCEL button. This action cannot be undone so proceed with caution.
 
+## Configuring Manager Dashboard
+
+The statistics that show up on the manager dashboard are configurable from the roles settings. To change the dashboard for a role, click on the **Settings** tab and click on **Roles**. Scroll down to the **Dashboards** section and here you can add or remove the statistics.
+
+The added statistics are as follows:
+
+* **View Approvals**
+
+  This adds the **Approvals** section to the dashboard. For each approval type it shows how many cases are awaiting approval and how many have already been either accepted or rejected.
+
+  ![](img/image116.png)
+
+* **View Assessment**
+
+  This adds the **Cases by Assessment Level** section to the dashboard where you can see a breakdown of the number of cases per assessment level along with how many are new or recently updated.
+
+  ![](img/image115.png)
+
+* **View Reporting Locations**
+
+  This adds the cases by location section that shows the number of cases per location and how many are open, closed, or new for that location.
+
+  ![](img/image118.png)
+
+* **View Protection Concerns**
+
+  This adds the **Protection Concerns** section to the dashboard which shows the breakdown of cases by type of protection concern along with which cases are new, open, or closed.
+
+  ![](img/image119.png)
+
+* **Manage**
+
+  This adds both the **Protection Concerns** and the cases by location sections to the dashboard.
+
+* **View Cases To Assign**
+
+  This adds the **Cases To Assign** section of the dashboard which shows the cases that are assigned to you that should be reassigned based on your role. The cases are separated by cases that are due to be assigned in the future and cases that are overdue to be assigned with further separation based on priority.
+
+  ![](img/image117.png)
+
+* **View Cases By Workflow**
+
+  This adds the **CASES BY WORKFLOW** table that shows cases by social worker broken up by response type and if the services have been implemented.
+
+  ![](img/image122.png)
+
+* **View Cases By Social Worker**
+
+  This adds the **CASES BY SOCIAL WORKER** table that shows the number of cases assigned to each social worker.
+
+  ![](img/image120.png)
+
+* **View Referrals By Social Worker**
+
+  This adds the **REFERRALS BY SOCIAL WORKER** table that shows the cases referred to each social worker.
+
+  ![](img/image121.png)
+
+* **View Transfers By Social Worker**
+
+  This adds the **TRANSFERS BY SOCIAL WORKER** table that shows cases by social worker that are in the process of being transferred.
+
+  ![](img/image123.png)
+
+* **View Protection Concerns filter**
+
+  This adds the ability to filter cases by Protection Conserns to the filters section.
+
+  ![](img/image124.png)
+
+* **View None Values**
+
+  This adds the cases with "no proirity" level to the **Cases by Assessment Level** and **Cases To Assign** sections of the dashboard.
+
+## Referral Button
+
+A button that opens the referral form for a Response Overview located on the Response Overview form header. To have the button appear, the user has to have the permission **Refer Case from Service form** added to their role (this is disabled by default).
+
 # Configuring Programs and Modules
 
 Configuring Programs and Modules should not be done without the guidance of the appropriate Steering Committee. Site administrators should never configure or edit Programs and Modules without approval and assistance. Modules are higher level components in which country, regional, and international decisions need to be made for its purpose and use cases. While creating or editing Modules and Programs will not be a frequently-used feature, should it become necessary, the instructions are provided below.
@@ -329,7 +407,6 @@ Modules represent how the system will be used and contain the default set of for
 
 * Gender Based Violence \(GBV\): This module includes case management and incident tracking for gender-based violence service providers.
 
-
 Each module comes with module-specific components and a default set of forms and other configurations. While there appears to be some overlap between the modules - both CP and GBV have cases - each module has a unique set of forms. In some cases, fields, like name and date of birth, may be shared among the forms across modules.
 
 To add more Modules, with the understanding that this should be done with caution and guidance, follow these steps:
@@ -349,7 +426,58 @@ To add more Modules, with the understanding that this should be done with cautio
 
 ![](img/image33.png)
 
-To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
+### Edits to the Configuration Bundle
+
+#### Agency Code
+
+The **Agency_code** is added to the "Case" on the top left of the case view (for example "FPD Case"). This is defined in the Agency lookup as the ```agency_code``` property and the display of the agency code is toggled by the module property ```agency_code_indicator``` (set to true by defalt). [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+#### Search for an existing ID before creating a Case record
+
+A new feature allows for searching for an existing case by ID before creating a new one.
+This feature is active by default and is toggled by the ```allow_searchable_ids``` property in modules settings. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+# System Settings Configuration
+
+System settings is a part of the settings which affect the whole build. This group of settings can be edited directly in the configuration bundle using the (SystemSettings) object, or directly through the web application.
+
+## Age Range
+
+Age range is set in the ```SystemSettings``` part of the configuration bundle by the ```primary_age_range``` property. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+* There are two arrays of age ranges primero and unhcr with unhcr being the default set by the ```age_ranges``` property
+
+* The default age ranges are ```["0..4", "5..11", "12..17", "18..59", "60..#{AgeRange::MAX}"]```
+
+## Reporting Location
+
+In ```SystemSettings``` under ```reporting_location_config``` the ```hierarchy_filter``` replaces ```reg_ex_filter``` to filter locations. This should match the hierarchy array in ```Locations```. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+## Name Field Auto-Population
+
+A field can be set to auto-populate based on one or more other fields using the ```auto_populate_list``` attribute in the configuration bundle or system_settings seed file. This is configured to auto-populate the *name* field with the first middle and last names by default. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+* ```field_key``` sets the field to be populated.
+
+* ```format``` sets the fields the values are pulled from.
+
+* ```separator``` sets what goes between the pulled values.
+
+* ```auto_populated``` sets if the field_key field is auto-populated.
+
+* For example for populating the name field with ```name_first```, ```name_middle```, and ```name_last``` it would look like this:
+```
+{
+  "field_key": "name",
+  "format": [
+    "name_first",
+    "name_middle",
+    "name_last"
+  ],
+  "separator": " ",
+  "auto_populated": true
+},
+```
 
 # Form and Field Configuration
 
@@ -374,7 +502,6 @@ A **field** \(data field\) is information within a record. Fields are attributes
 * Tally Field
 
 * Date Field / Date Range
-
 
 Forms are created first and then the fields on those forms are added once the form is created. Forms can only be created or modified by a user with the appropriate permissions. The following sections describe how to configure the forms and fields within Primero.
 
@@ -546,6 +673,61 @@ Once a Lookup is created, you can add to a field type and select whether you can
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
+## Customize List View Fields
+
+To auto-populate fields in the case list, you can use the 'auto_populate_list' attribute in the SystemSettings portion of the configuration bundle. This attribute takes the form of an array of objects, with each object representing a different attribute in the list. In the example below, the attribute with a 'field_key' of 'name' will be populated with the attributes 'name_first,' 'name_middle,' and 'name_last' separated by a single space. So, for instance, a user with the first name 'John,' the middle name 'Wiley,' and the last name 'Hopkins' would have 'John Wiley Hopkins' shown in the 'name' column in the case list. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+```
+:auto_populate_list => [
+  {
+    :field_key => "name",
+    :format => [
+      "name_first",
+      "name_middle",
+      "name_last"
+    ],
+    :separator => " ",
+    :auto_populated => true
+  }
+],
+```
+
+# Alerts and Notifications
+
+Alerts are a way of letting the case owner know when someone else has changed something in a case such as updating a field in a form, adding an incident, adding service provision, or requesting approval for a form. Alerts appear in the form of a message at the top of the associated form with a red "!" next to the form name in the form selection side bar. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
+
+* In ```SystemSettings```
+
+  * toggle show_alerts to hide or show all the notifications. This includes the case sidebar form indicators and the messages in the form view for new subforms (incidents and service provision), approvals (BIA, case plan, case closure), and changed forms (currently only for service detail forms)
+
+  * ```approval_forms_to_alert``` is a map that is used to associate form ids with approval alert types. For example, the code below shows the bia, case_plan and closure forms being mapped to those approval alert types.
+
+  ```
+  :approval_forms_to_alert => {
+    "cp_bia_form" => "bia",
+    "services" => "case_plan",
+    "closure_form" => "closure"
+  }
+  ```
+
+  * ```changes_field_to_form``` is a map of field names to forms (either one field to one form or one field to an array of many forms is accepted structure). This is used to decide which fields will trigger an alert for a form when changed by someone who isn't the case owner. In the example below, the service provider medical details subform field is mapped to the service provider medical details (view only) form in order to add an alert to the subform's parent from when a change is made to the subform.
+
+  ```
+  :changes_field_to_form => {
+    "service_provider_details_medical_subform_section" => "service_provider_details_medical_view_only"
+  }
+  ```
+
+# Permissions
+
+## Create a CP Incident from a CP Case
+
+This permission allows creating an incident details from a case you don't own. To add or remove this ability for a user, go the **Settings** tab and click on **Roles**. Edit the corresponding role for that user by toggling the checkbox for **Add Incident Details to another user's case** in the **Permissions** section.
+
+## Create services details from a case
+
+This permission allows adding a service provision form to a case you don't own. To add or remove this ability for a user, go the **Settings** tab and click on **Roles**. Edit the corresponding role for that user by toggling the checkbox for **Add Service provision to another user's case** in the **Permissions** section.
+
 # Rules for Importing Data into Primero
 
 Importing information into Primero is a strict process. This helps make sure that data is not incorrectly input into the system. There are some rules as to how and what you can import:
@@ -569,6 +751,10 @@ Importing information into Primero is a strict process. This helps make sure tha
 
 
 For additional questions or concerns, you may discuss with your site administrator or the proper authority.
+
+## Protection Concerns
+
+* If you're looking to explicitly set the ids of protection concern options, this can be done by editing the lookup in the configuration under ```lookup-protection-concerns```. [Note: This setting can only be set manually in the configuration bundle, so this section is only for developers working on the configuration bundle.]
 
 # Exporting and Importing the Configuration Bundle
 
@@ -809,4 +995,3 @@ When you access Primero using an Internet Explorer browser, you may receive the 
 ![](img/image111.png)
 
 * Click “Continue to this website \(not recommended\).” You will be redirected to Primero log in page.
-
