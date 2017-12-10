@@ -41,6 +41,10 @@
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
 
+*  [*System Settings*](PrimeroAdministrationandConfigurationGuide.md#system-settings)
+
+	*  [*Setting users to receive notification emails*](PrimeroAdministrationandConfigurationGuide.md#setting-users-to-receive-notification-emails)
+
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)

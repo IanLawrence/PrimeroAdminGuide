@@ -294,6 +294,7 @@ Although not recommended, if for some reason a user needs to be deleted, follow 
 
 To delete the username, click on the OK button. To cancel and keep the username, click on the CANCEL button. This action cannot be undone so proceed with caution.
 
+
 # Configuring Programs and Modules
 
 Configuring Programs and Modules should not be done without the guidance of the appropriate Steering Committee. Site administrators should never configure or edit Programs and Modules without approval and assistance. Modules are higher level components in which country, regional, and international decisions need to be made for its purpose and use cases. While creating or editing Modules and Programs will not be a frequently-used feature, should it become necessary, the instructions are provided below.
@@ -350,6 +351,28 @@ To add more Modules, with the understanding that this should be done with cautio
 ![](img/image33.png)
 
 To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
+
+
+# System Settings
+
+Just like the Programs and Modules, the settings located in the **System Settings** tab should not be edited without the guidance of the appropriate Steering Committee. These settings are important and should be changed only with the appropriate approval and assistance.
+
+![](img/image115.png)
+
+On the System Settings page, you will see the current version of Primero which is running, as well as fields for the default system language, the sending of email notifications, the sending of welcome emails, and the default welcome email text. The first of these fields is self-explanatory: it controls the language used by the application. Checking the "Send Email Notifications?" box will allow the application to send emails to users when certain milestones are reached in the case management process: when they receive a case via assignment or transfer, when another user requests that they approve a case plan, etc. For more information on the various types of notification emails, please see the Primero CPIMS User Guide.
+
+Checking the "Send Welcome Email?" box will tell the application to automatically send emails to newly-created users which welcome them to Primero and send them a link to the home page. Similarly, the "Welcome Email Text" field determines the content of this welcome email. Below is an image of the default email text.
+
+![](img/image116.png)
+
+As per usual, clicking the "Save" button will preserve any changes you have made to the System Settings.
+
+## Setting users to receive notification emails
+
+[Note: Since the settings in the following section can only be set manually in the user bundle, this section is only for developers working on the user bundle.]
+
+As a quick note, although the above options can enable notification emails in the application, users accounts can be specifically modified to not receive notification emails. Users are set to receive notifications by default, and, in order to change this, administrators must export a user bundle file, manually modify the setting for the given user in this file, and then re-import the user bundle. Each user whose details are contained in the bundle will will have its own JSON object. The attribute on this object which dictates whether a user receives notifications is the ```send_mail``` attribute. Set this to ```true``` for a user to receive notification emails, or to ```false``` to exclude a user from receiving notifications.
+
 
 # Form and Field Configuration
 
