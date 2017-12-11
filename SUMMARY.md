@@ -61,6 +61,8 @@
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
 
+*  [*Managing Workflow Statuses*](PrimeroAdministrationandConfigurationGuide.md#managing-workflow-statuses)
+
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
 
 *  [*Exporting and Importing the Configuration Bundle*](PrimeroAdministrationandConfigurationGuide.md#exporting-and-importing-the-configuration-bundle)

@@ -359,7 +359,7 @@ Just like the Programs and Modules, the settings located in the **System Setting
 
 ![](img/image115.png)
 
-On the System Settings page, you will see the current version of Primero which is running, as well as fields for the default system language, the sending of email notifications, the sending of welcome emails, and the default welcome email text. The first of these fields is self-explanatory: it controls the language used by the application. Checking the "Send Email Notifications?" box will allow the application to send emails to users when certain milestones are reached in the case management process: when they receive a case via assignment or transfer, when another user requests that they approve a case plan, etc. For more information on the various types of notification emails, please see the Primero CPIMS User Guide.
+On the System Settings page, you will see the current version of Primero which is running, as well as fields for the default system language, the sending of email notifications, the sending of welcome emails, and the default welcome email text. The first of these fields is self-explanatory: it controls the language used by the application. Checking the "Send Email Notifications?" box will allow the application to send emails to users when certain milestones are reached in the case management process: when they receive a case via assignment or transfer, when another user requests that they approve a case plan, etc. For more information on the various types of notification emails, please see the **Primero CPIMS User Guide**.
 
 Checking the "Send Welcome Email?" box will tell the application to automatically send emails to newly-created users which welcome them to Primero and send them a link to the home page. Similarly, the "Welcome Email Text" field determines the content of this welcome email. Below is an image of the default email text.
 
@@ -375,7 +375,7 @@ As a quick note, although the above options can enable notification emails in th
 
 ## Using appointment dates for services
 
-Another attribute in the System Settings portion of the configuration bundle which cannot be edited through the administrator interface is that which controls how services become due. The 'due_date_from_appointment_date' attribute, set to be ```false``` by default, can be manually set to ```true``` in order to make each service become due based on the the "Appointment Date" field (or any field on the services subform with the id "service_appointment_date"). When this attribute is instead set to ```false```, a service instead comes due based on the "Implementation Timeframe" field (or any other field on the services subform with the id "service_response_timeframe"). For more information on how services become due, please see the Primero CPIMS User guide.
+Another attribute in the System Settings portion of the configuration bundle which cannot be edited through the administrator interface is that which controls how services become due. The 'due_date_from_appointment_date' attribute, set to be ```false``` by default, can be manually set to ```true``` in order to make each service become due based on the the "Appointment Date" field (or any field on the services subform with the id "service_appointment_date"). When this attribute is instead set to ```false```, a service instead comes due based on the "Implementation Timeframe" field (or any other field on the services subform with the id "service_response_timeframe"). For more information on how services become due, please see the **Primero CPIMS User Guide**.
 
 # Form and Field Configuration
 
@@ -577,6 +577,24 @@ To create a new Lookup:
 Once a Lookup is created, you can add to a field type and select whether you can pick one or more of the values.
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
+
+
+# Managing Workflow Statuses
+
+A combination of lookups and attributes in the System Settings can be used to control the various workflow statuses that a case can have. Please note that any changes to the workflow statuses should only be made after significant testing on VMs and discussion with the local steering committee.
+
+Three workflow statuses are always enabled, and will display in the workflow bar no matter what values exist in the lookups. These are "New," "Reopened," and "Closed." It is important to note that only one of the first two of these will display at a given time, with "New" appearing in the bar by default, and "Reopened" only appearing if the case has been reopened after being closed. In this scenario, the "New" status will not appear at all.
+
+Some statuses (associated with the service currently being implemented) come from the "Service Response Type" lookup. The default values for this lookup are "Care plan," "Action plan," and "Service provision." However, any entries made here will appear in the workflow status bar. If a user adds a non-implemented service to an open case and gives it a response type, the case's workflow status will be set to this new service's response type. For example, if I have an open case, and I have added a service that has not yet been implemented and has a response type of "Action plan," the workflow status for the case will then be "Action plan." If multiple non-implemented services have been added, the case's workflow status will be the response type of the most recently-added service.
+
+[Note: Since the settings in the following section can only be set manually in the user bundle, this section is only for developers working on the user bundle.]
+
+There are three more potential workflow values: "Assessment," "Case Plan," and "Service Implemented." Although none of these are set to appear in the workflow status bar by default, each can be enabled for a given module using the ```use_workflow_assessment```, ```use_workflow_case_plan```, and ```use_workflow_service_implemented``` attributes, respectively, for whichever module where you want to use the status. Set any one of these attributes to ```true``` to use the corresponding workflow status. For instance, to enable the "Assessment" workflow status in the default configuration bundle, search for "PrimeroModule." You should come to a list of all the modules in the system. By default, there should be only one, with an id of "primeromodule-cp." Within the object representing this module, set the ```use_workflow_assessment``` attribute to ```true```. You may end up with something looking like the lines pictured below. If you then re-import the bundle with this change, you should see the "Assessment" workflow status show up in the workflow status bar.
+
+![](img/image117.png)
+
+For more information on the fields which must be filled out on a case record in order for each workflow status to be applied, please see the **Primero CPIMS User Guide**.
+
 
 # Rules for Importing Data into Primero
 
