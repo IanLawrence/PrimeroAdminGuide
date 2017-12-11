@@ -367,12 +367,15 @@ Checking the "Send Welcome Email?" box will tell the application to automaticall
 
 As per usual, clicking the "Save" button will preserve any changes you have made to the System Settings.
 
-## Setting users to receive notification emails
+[Note: Since the settings in the following two sections can only be set manually in the user bundle, these sections are only for developers working on the user bundle.]
 
-[Note: Since the settings in the following section can only be set manually in the user bundle, this section is only for developers working on the user bundle.]
+## Setting users to receive notification emails
 
 As a quick note, although the above options can enable notification emails in the application, users accounts can be specifically modified to not receive notification emails. Users are set to receive notifications by default, and, in order to change this, administrators must export a user bundle file, manually modify the setting for the given user in this file, and then re-import the user bundle. Each user whose details are contained in the bundle will will have its own JSON object. The attribute on this object which dictates whether a user receives notifications is the ```send_mail``` attribute. Set this to ```true``` for a user to receive notification emails, or to ```false``` to exclude a user from receiving notifications.
 
+## Using appointment dates for services
+
+Another attribute in the System Settings portion of the configuration bundle which cannot be edited through the administrator interface is that which controls how services become due. The 'due_date_from_appointment_date' attribute, set to be ```false``` by default, can be manually set to ```true``` in order to make each service become due based on the the "Appointment Date" field (or any field on the services subform with the id "service_appointment_date"). When this attribute is instead set to ```false```, a service instead comes due based on the "Implementation Timeframe" field (or any other field on the services subform with the id "service_response_timeframe"). For more information on how services become due, please see the Primero CPIMS User guide.
 
 # Form and Field Configuration
 
