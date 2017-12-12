@@ -45,6 +45,8 @@
 
 	*  [*Setting users to receive notification emails*](PrimeroAdministrationandConfigurationGuide.md#setting-users-to-receive-notification-emails)
 
+	*  [*Using appointment dates for services*](PrimeroAdministrationandConfigurationGuide.md#using-appointment-dates-for-services)
+
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)
