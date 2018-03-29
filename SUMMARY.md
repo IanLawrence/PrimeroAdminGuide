@@ -41,6 +41,12 @@
 
 	*  [*Configuring Modules*](PrimeroAdministrationandConfigurationGuide.md#configuring-modules)
 
+*  [*System Settings*](PrimeroAdministrationandConfigurationGuide.md#system-settings)
+
+	*  [*Setting users to receive notification emails*](PrimeroAdministrationandConfigurationGuide.md#setting-users-to-receive-notification-emails)
+
+	*  [*Using appointment dates for services*](PrimeroAdministrationandConfigurationGuide.md#using-appointment-dates-for-services)
+
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)
@@ -56,6 +62,8 @@
 		*  [*Change the Form Group*](PrimeroAdministrationandConfigurationGuide.md#change-the-form-group)
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
+
+*  [*Managing Workflow Statuses*](PrimeroAdministrationandConfigurationGuide.md#managing-workflow-statuses)
 
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
 

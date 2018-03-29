@@ -114,7 +114,7 @@ A User Role sets the following:
 
 * Forms - The specific forms a user with this role sees. All fields on the form will be visible if the user can see the form.
 
-* Dashboards- The information the user will see on the dashboard when first logging in. The options are “View Approvals,” “View Assessment,” and “Manage.” If either of the first two are selected, the user will see these items on the dashboard. If “Manage” is selected, it overrides the other permissions checked and gives access to all options in the section.
+* Dashboards- The information the user will see on the dashboard when first logging in. Each of these potential options gives access to a new section of the dashboard. If “Manage” is selected, it overrides any combination of the permissions checked and gives access to all options in the section. The "Tasks View" option, rather than giving access to a specific part of the dashboard, allows a user with the role to see the **Tasks View**, which shows users which tasks are upcoming or overdue for their cases. For more information on this view, see the **Primero CPIMS User Guide**.
 
 
 It is important to note that once a role has been created, it cannot be deleted. The role can only be disabled. It is important to reiterate that, when you are modifying a role’s permissions, you must modify them for each type of record you want the role to be able to handle. So, for instance, if you wanted a role to be able to write to, read from, and export cases, you would need to specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the ‘case’ section of the role form. If you wanted your role to only be able to read from tracing requests, you would only check the ‘read’ box in the ‘tracing request’ section. If you wanted to make sure the role had no access whatsoever to the user record, then you would check nothing in the ‘user’ section. On the other hand, if you want to grant all available permissions on a particular type of resource, you can always just check the ‘manage’ box, which will signal that the role has all permissions for that resource and save you a bit of time in the process.
@@ -294,6 +294,7 @@ Although not recommended, if for some reason a user needs to be deleted, follow 
 
 To delete the username, click on the OK button. To cancel and keep the username, click on the CANCEL button. This action cannot be undone so proceed with caution.
 
+
 # Configuring Programs and Modules
 
 Configuring Programs and Modules should not be done without the guidance of the appropriate Steering Committee. Site administrators should never configure or edit Programs and Modules without approval and assistance. Modules are higher level components in which country, regional, and international decisions need to be made for its purpose and use cases. While creating or editing Modules and Programs will not be a frequently-used feature, should it become necessary, the instructions are provided below.
@@ -350,6 +351,31 @@ To add more Modules, with the understanding that this should be done with cautio
 ![](img/image33.png)
 
 To edit an existing Program, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
+
+
+# System Settings
+
+Just like the Programs and Modules, the settings located in the **System Settings** tab should not be edited without the guidance of the appropriate Steering Committee. These settings are important and should be changed only with the appropriate approval and assistance.
+
+![](img/image115.png)
+
+On the System Settings page, you will see the current version of Primero which is running, as well as fields for the default system language, the sending of email notifications, the sending of welcome emails, and the default welcome email text. The first of these fields is self-explanatory: it controls the language used by the application. Checking the "Send Email Notifications?" box will allow the application to send emails to users when certain milestones are reached in the case management process: when they receive a case via assignment or transfer, when another user requests that they approve a case plan, etc. For more information on the various types of notification emails, please see the **Primero CPIMS User Guide**.
+
+Checking the "Send Welcome Email?" box will tell the application to automatically send emails to newly-created users which welcome them to Primero and send them a link to the home page. Similarly, the "Welcome Email Text" field determines the content of this welcome email. Below is an image of the default email text.
+
+![](img/image116.png)
+
+As per usual, clicking the "Save" button will preserve any changes you have made to the System Settings.
+
+[Note: Since the settings in the following two sections can only be set manually in the user bundle, these sections are only for developers working on the user bundle.]
+
+## Setting users to receive notification emails
+
+As a quick note, although the above options can enable notification emails in the application, users accounts can be specifically modified to not receive notification emails. Users are set to receive notifications by default, and, in order to change this, administrators must export a user bundle file, manually modify the setting for the given user in this file, and then re-import the user bundle. Each user whose details are contained in the bundle will will have its own JSON object. The attribute on this object which dictates whether a user receives notifications is the ```send_mail``` attribute. Set this to ```true``` for a user to receive notification emails, or to ```false``` to exclude a user from receiving notifications.
+
+## Using appointment dates for services
+
+Another attribute in the System Settings portion of the configuration bundle which cannot be edited through the administrator interface is that which controls how services become due. The 'due_date_from_appointment_date' attribute, set to be ```false``` by default, can be manually set to ```true``` in order to make each service become due based on the the "Appointment Date" field (or any field on the services subform with the id "service_appointment_date"). When this attribute is instead set to ```false```, a service instead comes due based on the "Implementation Timeframe" field (or any other field on the services subform with the id "service_response_timeframe"). For more information on how services become due, please see the **Primero CPIMS User Guide**.
 
 # Form and Field Configuration
 
@@ -495,6 +521,12 @@ Within a form there are two additional field types that are unique from other fi
 
 A Subform is created in two steps, first you need to add the Subform field type to the Form where the Subform should appear. Second, click _Edit Subform_ from the list of fields to add the fields for the subform.
 
+[Note: Since the settings in the following two sections can only be set manually in the configuration bundle, these sections are only for developers working on the configuration bundle.]
+
+To make a field required, a developer must manually edit the configuration bundle. To make the appropriate edit, the developer should search for the JSON object containing the field in question and then set the ```required``` attribute to ```true```. This works for fields on standard form sections as well as fields on nested subforms.
+
+Oftentimes, you will want to avoid having the user fill out a required on a nested subform when a case is first created. For instance, you may want to make it required that a user fill out the name field for each Family Details subform added to a case, but you also may not want to force the user to add information about family members when the first created. One way to fix this problem is to set a subform to start out with zero entries. This change also must be made manually in the configuration bundle by a developer. To make the change, the developer should search for the JSON object defining the subform in question. In this object, you should see the attribute ```initial_subforms```. Set this attribute to the number of subform entries that should display in the forms when the case is first created. So, if we find the definition for the Family Details subform and, in this definition, set ```initial_subforms: 0```, this will make it so that no Family Details subform entries initially upon case creation, meaning that the user will not have to fill out any of the required Family Details fields.
+
 ## Editing an Existing Form
 
 Similarly to creating a new form, you can edit an existing form to show, hide, or change existing fields. You should only change fields which are outside the **core data set.** This means the fields that are inherent to the Primero deployment when you first receive it should not be edited, but can be selected to be invisible in the form and field level forms.
@@ -545,6 +577,24 @@ To create a new Lookup:
 Once a Lookup is created, you can add to a field type and select whether you can pick one or more of the values.
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
+
+
+# Managing Workflow Statuses
+
+A combination of lookups and attributes in the System Settings can be used to control the various workflow statuses that a case can have. Please note that any changes to the workflow statuses should only be made after significant testing on VMs and discussion with the local steering committee.
+
+Three workflow statuses are always enabled, and will display in the workflow bar no matter what values exist in the lookups. These are "New," "Reopened," and "Closed." It is important to note that only one of the first two of these will display at a given time, with "New" appearing in the bar by default, and "Reopened" only appearing if the case has been reopened after being closed. In this scenario, the "New" status will not appear at all.
+
+Some statuses (associated with the service currently being implemented) come from the "Service Response Type" lookup. The default values for this lookup are "Care plan," "Action plan," and "Service provision." However, any entries made here will appear in the workflow status bar. If a user adds a non-implemented service to an open case and gives it a response type, the case's workflow status will be set to this new service's response type. For example, if I have an open case, and I have added a service that has not yet been implemented and has a response type of "Action plan," the workflow status for the case will then be "Action plan." If multiple non-implemented services have been added, the case's workflow status will be the response type of the most recently-added service.
+
+[Note: Since the settings in the following section can only be set manually in the user bundle, this section is only for developers working on the user bundle.]
+
+There are three more potential workflow values: "Assessment," "Case Plan," and "Service Implemented." Although none of these are set to appear in the workflow status bar by default, each can be enabled for a given module using the ```use_workflow_assessment```, ```use_workflow_case_plan```, and ```use_workflow_service_implemented``` attributes, respectively, for whichever module where you want to use the status. Set any one of these attributes to ```true``` to use the corresponding workflow status. For instance, to enable the "Assessment" workflow status in the default configuration bundle, search for "PrimeroModule." You should come to a list of all the modules in the system. By default, there should be only one, with an id of "primeromodule-cp." Within the object representing this module, set the ```use_workflow_assessment``` attribute to ```true```. You may end up with something looking like the lines pictured below. If you then re-import the bundle with this change, you should see the "Assessment" workflow status show up in the workflow status bar.
+
+![](img/image117.png)
+
+For more information on the fields which must be filled out on a case record in order for each workflow status to be applied, please see the **Primero CPIMS User Guide**.
+
 
 # Rules for Importing Data into Primero
 
