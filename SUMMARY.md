@@ -27,6 +27,10 @@
 
 	*  [*Creating and Editing User Roles*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-user-roles)
 
+		*  [*Superusers and User Admins*](PrimeroAdministrationandConfigurationGuide.md#superusers-and-user-admins)
+
+		*  [*The Agency Read Attribute*](PrimeroAdministrationandConfigurationGuide.md#the-agency-read-attribute)
+
 	*  [*Creating and Editing User Groups*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-user-groups)
 
 	*  [*Creating and Editing Agencies*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-agencies)

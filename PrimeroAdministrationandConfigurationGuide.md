@@ -157,9 +157,9 @@ A **Superuser** role is a role has the all-encompassing "manage" permission for 
 
 The second special type of role is the **User Admin** role. A user admin role has less power than a superuser role, but is defined as having the all-encompassing "manage" permission for **Roles**, **Users**, **User Groups**, **Agencies**, **System Settings**, and **Forms and Lookups**. Once again, a user admin *user* is a user who has a user admin *role*. Only superusers and other admin users can view or edit the attributes of user admin users. Similarly, only superusers can edit a user admin role.
 
-### The "Admin Read" attribute
+### The Agency Read Attribute
 
-Another specialized permission level exists in the **Admin Read** permission given to a user role with respect to that role's access to users. This permission level only exists with respect to users, and denotes that the given role can perform actions on users *only within the current user's user group*. As an example, suppose an administrator named Ahmad at a local NGO named "ABC" needs to be able to manage the organization's users: resetting passwords, disabling users, and creating new user accounts. Ahmad's user account gets a role with the admin read permission for users, as well as the read and write permissions. What this means is that Ahmad will only be able to view and edit user accounts which, like Ahmad's user account, have their agency set to "ABC." This means Ahmad can only access, and is only responsible for, cases within his organization. An administrator attempting to create a role like Ahmad's would choose the options in the picture below when creating the role.
+Another specialized permission level exists in the **Agency Read** permission given to a user role with respect to that role's access to users. This permission level only exists with respect to users and denotes that the given role can perform actions on users *only within the current user's agency*. As an example, suppose an administrator named Ahmad at a local NGO named "ABC" needs to be able to manage the organization's users: resetting passwords, disabling users, and creating new user accounts. Ahmad's user account gets a role with the read, write, and agency read permission for users. Because of this, Ahmad will only be able to view and edit user accounts which, like Ahmad's user account, have their agency set to "ABC." This means Ahmad can only access, and is only responsible for, cases within his organization. An administrator attempting to create a role like Ahmad's would choose the options in the picture below when creating the role.
 
 ![](img/image118.png)
 
@@ -250,7 +250,7 @@ It is important to note that once an agency has been created, it cannot be delet
 
 * The agency is a required field as well.
 
-Please note that, while users may sometimes be able to edit their own user accounts, no user may edit their own roles, user groups, modules, or agency. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
+Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
 
 To create a new User, follow these steps:
