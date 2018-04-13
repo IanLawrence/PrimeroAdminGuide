@@ -820,43 +820,5 @@ Once a test instance exists, the administrator can apply the changes and manuall
 
 It is recommended that configuration design take place on a separate test instance. This will buffer live end users from experiencing potential errors from misconfigured forms and roles. Once the configuration has been successfully modified, it can then be applied to production as an import of the Configuration Bundle.
 
-# Security Certificate Issues
 
-Although we expect Primero instances to have SSL certificates associated with each deployment, that may not always be true. If so, there are some additional steps required to gain access to Primero. Depending on the browser, you will have to add Primero to your exceptions, “accept risks”, or “proceed.”
-
-## Security Certificate Issues on the Chrome Browser
-
-When you access Primero using the Chrome browser, you may receive the following message:
-
-![](img/image104.png)
-
-* Click Advanced on the Privacy Error Page. The following will appear
-
-![](img/image12.png)
-
-* Click the “Proceed to…” link at the bottom of the window. You will be redirected to the Primero login page
-
-## Security Certificate Issues on the Firefox Browser
-
-When you access Primero using the Chrome browser, you may receive the following message:
-
-![](img/image95.png)
-
-* Click “I Understand the Risks” and the window will expand to include the following:
-
-![](img/image31.png)
-
-* Click “Add Exception…” and the following window will appear:
-
-![](img/image13.png)
-
-* Click “Confirm Security Exception.” You will be redirected to the Primero log in page.
-
-## Security Certificate Issues on the Internet Explorer \(IE\) Browser
-
-When you access Primero using an Internet Explorer browser, you may receive the following message:
-
-![](img/image111.png)
-
-* Click “Continue to this website \(not recommended\).” You will be redirected to Primero log in page.
 

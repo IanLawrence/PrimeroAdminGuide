@@ -91,14 +91,6 @@
 
 	*  [*Designing Forms and Lookups*](PrimeroAdministrationandConfigurationGuide.md#designing-forms-and-lookups)
 
-*  [*Security Certificate Issues*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues)
-
-	*  [*Security Certificate Issues on the Chrome Browser*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues-on-the-chrome-browser)
-
-	*  [*Security Certificate Issues on the Firefox Browser*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues-on-the-firefox-browser)
-
-	*  [*Security Certificate Issues on the Internet Explorer (IE) Browser*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues-on-the-internet-explorer-ie-browser)
-
 
 
 
