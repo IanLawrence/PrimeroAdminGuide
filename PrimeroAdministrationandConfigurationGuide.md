@@ -595,6 +595,27 @@ Once a Lookup is created, you can add to a field type and select whether you can
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
+# Matching Configuration
+
+Using either the Primero admin interface or the configuration bundle, administrators can change which case and tracing request fields are used to perform matching.
+
+To edit the matching configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar.
+
+![](/img/image118.png)
+
+Select the _**Matching**_ link in the left panel navigation.
+
+![](/img/image119.png)
+
+You will now see two large multi-select fields: the one on the left contains fields used for matching on cases, while the right contains fields used for matching on tracing requests.
+
+![](/img/image120.png)
+
+To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save."
+
+[Note: Since the following text discusses working manually in the configuration bundle, it pertains only to developers.]
+
+To edit which fields are used for matching within the config bundle, you must first find the field which you want to make matchable or non-matchable. Each field has a ```matchable``` attribute. To use the field for matching, set this attribute to ```true```. To make sure the field is not used for matching, you can set the attribute to ```false``` or simply delete the attribute from the field's JSON object.
 
 # Managing Workflow Statuses
 
