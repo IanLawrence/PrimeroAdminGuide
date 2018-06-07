@@ -108,7 +108,7 @@ A User Role sets the following:
 
 * Permissions - What actions the user with this role can perform on which resources\(i.e. read and write on Cases, but only export on Tracing Requests.\) Most users will not need permissions on system-oriented resources such as Users and Groups; Roles; Forms; Lookups; and System.
 
-* Management - The breadth of data this role can see. The options are: “Access only my records,” “Access all records owned by users in my group,” and “Access all records.”
+* Management - The breadth of data this role can see. The options are: “Access only my records or user,” “Access all records or users in my group,” and “Access all records or users,” and "No records - Admin functionality only." As suggested, users whose roles have the first option can only see their own records and, if they have access to users and roles, can only see their own user and role. The second option suggests that a user can access users in their own user group, along with the records owned by users in their user group. The third option gives a user access to all records in the user in the system. Finally, the fourth option is for administrators who manage things like users and forms but should not have access to actual case, incident, and tracing request records.
 
 * Role Management - Which roles the role is able to manage. This setting is found as a permission under the “Role” resource.
 
@@ -128,11 +128,11 @@ To create a new role, use the following process:
 2. Select the _Roles_ link in the left panel navigation.
 
 
-## ![](img/image73.png) {#section-3}
+![](img/image73.png)
 
 1. Once selected, click the CREATE ROLE button to bring up the creation form.
 
-## ![](img/image94.png) {#section-5}
+![](img/image94.png)
 
 1. In the Role Creation Form, you can set what Actions, Resources, Management, and Forms a User with this role can access. Click on the SAVE button once all the desired information is entered.
 
@@ -149,16 +149,29 @@ A few hints for setting roles:
 
 * The list of forms for Cases contains forms for both the CP and GBV modules and, likewise. For the user to see the form, the role must have access to the form and the username must have access to the module.
 
+### Superusers and User Admins
+
+There are two important types of roles which we must discuss here, since the system treats them differently. The first is the **Superuser** role.
+
+A **Superuser** role is a role has the all-encompassing "manage" permission for **Cases**, **Incidents**, **Reports**, **Roles**, **Users**, **User Groups**, **Agencies**, **System Settings**, and **Forms and Lookups**. A superuser, meanwhile, is a user who has been assigned such a role. Since this user has a great deal of power within the system, only superusers can view or edit the attributes of other superusers. For similar reasons, superuser roles cannot be edited within Primero's administrative interface.
+
+The second special type of role is the **User Admin** role. A user admin role has less power than a superuser role, but is defined as having the all-encompassing "manage" permission for **Roles**, **Users**, **User Groups**, **Agencies**, **System Settings**, and **Forms and Lookups**. Once again, a user admin *user* is a user who has a user admin *role*. Only superusers and other admin users can view or edit the attributes of user admin users. Similarly, only superusers can edit a user admin role.
+
+### The Agency Read Attribute
+
+Another specialized permission level exists in the **Agency Read** permission given to a user role with respect to that role's access to users. This permission level only exists with respect to users and denotes that the given role can perform actions on users *only within the current user's agency*. As an example, suppose an administrator named Ahmad at a local NGO named "ABC" needs to be able to manage the organization's users: resetting passwords, disabling users, and creating new user accounts. Ahmad's user account gets a role with the read, write, and agency read permission for users. Because of this, Ahmad will only be able to view and edit user accounts which, like Ahmad's user account, have their agency set to "ABC." This means Ahmad can only access, and is only responsible for, cases within his organization. An administrator attempting to create a role like Ahmad's would choose the options in the picture below when creating the role.
+
+![](img/image118.png)
 
 ## Creating and Editing User Groups
 
 **User Groups** are used to create teams of users and allow different levels of access to records within the group. As with Roles, this should be set up before creating individual users. Access to the records within a User Group is determined within the role as follows:
 
-* Access only my records
+* Access only my records or user
 
-* Access all records owned by users in my group
+* Access all records or users in my group
 
-* Access all records
+* Access all records or users
 
 * No access - Admin functionality only
 
@@ -215,7 +228,7 @@ A name for the agency is required; no other information is necessary.
 
 For the logo to appear at the top right of the screen in the Primero application, check the box at the bottom of the form as shown below and click on the SAVE button once all the desired information is entered.
 
-## ![](img/image103.png) {#section-6}
+![](img/image103.png)
 
 To edit an existing agency, find the name in the list of agencies and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
@@ -236,6 +249,8 @@ It is important to note that once an agency has been created, it cannot be delet
 * User Groups - Must be an existing user group or groups as defined in the section above.
 
 * The agency is a required field as well.
+
+Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
 
 To create a new User, follow these steps:
@@ -665,8 +680,6 @@ To import a Configuration Bundle from a file:
 This is the _.json_ file that was contained inside the zip file that you received when you exported the Configuration Bundle in the previous step. You cannot upload the zip file itself, however, since it is encrypted. Therefore, you must extract the file out of the zip file to a known location on your computer, and then find it and select it in the import popup window. To do this, double click the zip file, enter in the password for the exported file and your computer will open a .json file. Select this file for import. After clicking _OK_, the system will process for a moment and then present you with a message whether the import succeeded or failed. \(Please note that it may take a few seconds for all your configuration changes to load once you have imported the configuration bundle. If you do not see your changes show up immediately, wait fifteen seconds or so, reload your page, and check again.\)
 
 ### Troubleshooting the Import of the Configuration Bundle
-
-###  {#section-11}
 
 Sometimes a bundle import will succeed and the ‘File was imported successfully’ message will appear, but the process does not apply the full set of bundle changes. For example, some Forms or Lookups may go missing. If that is the case, the bundle will need to be reapplied again using the Import process until the full set of configuration changes are observed. It helps to keep a list of expected Forms, Lookups, and Roles and then double check that this list appears in the configured Primero instance. It is important to note that existing core case and incident data will not be erased if the bundle is partially applied.
 
