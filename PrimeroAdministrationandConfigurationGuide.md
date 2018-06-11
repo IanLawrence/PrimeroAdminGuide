@@ -592,7 +592,7 @@ Using either the Primero admin interface or the configuration bundle, administra
 
 To edit the matching configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-![](/img/image118.png)
+![](/img/image121.png)
 
 Select the _**Matching**_ link in the left panel navigation.
 
