@@ -116,6 +116,7 @@ A User Role sets the following:
 
 * Dashboards- The information the user will see on the dashboard when first logging in. Each of these potential options gives access to a new section of the dashboard. If “Manage” is selected, it overrides any combination of the permissions checked and gives access to all options in the section. The "Tasks View" option, rather than giving access to a specific part of the dashboard, allows a user with the role to see the **Tasks View**, which shows users which tasks are upcoming or overdue for their cases. For more information on this view, see the **Primero CPIMS User Guide**.
 
+* Audit Logs - Whether the user can see an overview of actions occurring in the system. This action is more appropriate for managers and administrators than for case workers. For more information on Audit Logs, see the **Primero CPIMS User Guide**.
 
 It is important to note that once a role has been created, it cannot be deleted. The role can only be disabled. It is important to reiterate that, when you are modifying a role’s permissions, you must modify them for each type of record you want the role to be able to handle. So, for instance, if you wanted a role to be able to write to, read from, and export cases, you would need to specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the ‘case’ section of the role form. If you wanted your role to only be able to read from tracing requests, you would only check the ‘read’ box in the ‘tracing request’ section. If you wanted to make sure the role had no access whatsoever to the user record, then you would check nothing in the ‘user’ section. On the other hand, if you want to grant all available permissions on a particular type of resource, you can always just check the ‘manage’ box, which will signal that the role has all permissions for that resource and save you a bit of time in the process.
 
@@ -123,20 +124,20 @@ It is important to note that once a role has been created, it cannot be deleted.
 
 To create a new role, use the following process:
 
-1. Navigate to the Users page using the SETTINGS link in the navigation bar.
+* Navigate to the Users page using the SETTINGS link in the navigation bar.
 
-2. Select the _Roles_ link in the left panel navigation.
+* Select the _Roles_ link in the left panel navigation.
 
 
 ![](img/image73.png)
 
-1. Once selected, click the CREATE ROLE button to bring up the creation form.
+* Once selected, click the CREATE ROLE button to bring up the creation form.
 
 ![](img/image94.png)
 
-1. In the Role Creation Form, you can set what Actions, Resources, Management, and Forms a User with this role can access. Click on the SAVE button once all the desired information is entered.
+* In the Role Creation Form, you can set what Actions, Resources, Management, and Forms a User with this role can access. Click on the SAVE button once all the desired information is entered.
 
-2. It is required that a user have access to **“Record Owner”** form. A user cannot edit this form, but access will be needed for the system to allow the user to access the record type.
+* It is required that a user have access to **“Record Owner”** form. A user cannot edit this form, but access will be needed for the system to allow the user to access the record type.
 
 
 To edit the properties of an existing role, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen. We highly recommend that a role never be deleted unless it was created in error as this may have a negative impact on any users who have been assigned the role. Click on the SAVE button once all the desired information has been changed or entered.
@@ -184,14 +185,14 @@ The following diagram helps explain the relationship between Users, Roles, and U
 
 To create a new user group, use the following process:
 
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
+* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-2. Select the _**User Groups**_ link in the left panel navigation.
+* Select the _**User Groups**_ link in the left panel navigation.
 
 
 ![](img/image110.png)
 
-1. Use the CREATE USER GROUP button to bring up the creation form.
+* Use the CREATE USER GROUP button to bring up the creation form.
 
 ![](img/image69.png)
 
@@ -209,20 +210,18 @@ To edit the name or description of an existing user group, find the name and cli
 
 To create a new Agency, use the following process:
 
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
+* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-2. Select the _**Agency**_ link in the left panel navigation.
+* Select the _**Agency**_ link in the left panel navigation.
 
 
 ![](img/image92.png)
 
-1. Use the CREATE button to bring up the creation form.
+* Use the CREATE button to bring up the creation form.
 
 ![](img/image36.png)
 
-A name for the agency is required; no other information is necessary.
-
-1. To add a logo for the Agency, use the BROWSE button to navigate through the files available and select the appropriate image.
+A name for the agency is required; no other information is necessary. To add a logo for the Agency, use the BROWSE button to navigate through the files available and select the appropriate image.
 
 ![](img/image105.png)
 
@@ -255,18 +254,18 @@ Please note that, while users may sometimes be able to edit their own user accou
 
 To create a new User, follow these steps:
 
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
+* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-2. Select the _**Users**_ link in the left panel navigation.
+* Select the _**Users**_ link in the left panel navigation.
 
-3. Use the **CREATE USER** action button to bring up the creation form:
+* Use the **CREATE USER** action button to bring up the creation form:
 
 
 ![](img/image30.png)
 
-1. As described above, there are a few fields that are mandatory to create a user: Full Name, User Name \(must be unique\), Password and Reenter Password, and Organization, which is a dropdown selection list of the Agencies created above.
+* As described above, there are a few fields that are mandatory to create a user: Full Name, User Name \(must be unique\), Password and Reenter Password, and Organization, which is a dropdown selection list of the Agencies created above. Please make sure these mandatory fields are filled out.
 
-2. Then select none, one, or many roles, modules, and user groups for each user:
+* Select none, one, or many roles, modules, and user groups for each user:
 
   a.  Role - sets the permissions of the user \(i.e. Edit, Flag, etc.\)
 
@@ -274,8 +273,7 @@ To create a new User, follow these steps:
 
   c.  User Groups - sets the hierarchy and shared information access for a user. This helps set the manager versus team member role and vice versa.
 
-
-Click on the SAVE button once all the desired information is entered.
+* Click on the SAVE button once all the desired information is entered.
 
 To edit an existing user, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
@@ -320,18 +318,18 @@ Programs represent a mandate for the application as provided by the steering com
 
 To add Programs, with the understanding that this will have no impact and should be done with caution and guidance, follow these steps:
 
-1. Navigate to the **SETTINGS** option in the main navigation bar.
+* Navigate to the **SETTINGS** option in the main navigation bar.
 
-2. Select the _**Program**_ link in the left panel navigation.
+* Select the _**Program**_ link in the left panel navigation.
 
 
 ![](img/image32.png)
 
-1. Use the **CREATE PROGRAM** action button to bring up the creation form:
+* Use the **CREATE PROGRAM** action button to bring up the creation form:
 
 ![](img/image61.png)
 
-1. The only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
+* The only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
 
 ![](img/image49.png)
 
@@ -350,18 +348,18 @@ Each module comes with module-specific components and a default set of forms and
 
 To add more Modules, with the understanding that this should be done with caution and guidance, follow these steps:
 
-1. Navigate to the **SETTINGS** option in the main navigation bar.
+* Navigate to the **SETTINGS** option in the main navigation bar.
 
-2. Select the _**Module**_ link in the left panel navigation.
+* Select the _**Module**_ link in the left panel navigation.
 
 
 ![](img/image107.png)
 
-1. Use the **CREATE MODULE** action button to bring up the creation form:
+* Use the **CREATE MODULE** action button to bring up the creation form:
 
 ![](img/image40.png)
 
-1. Name and Program are mandatory fields. At least one Associated Record Type must be selected. Once the Associated Record Type\(s\) is selected, the forms only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
+* Name and Program are mandatory fields. At least one Associated Record Type must be selected. Once the Associated Record Type\(s\) is selected, the forms only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
 
 ![](img/image33.png)
 
@@ -425,37 +423,33 @@ It may be necessary to create a new form when the core set of forms does not sat
 
 To create a new form, follow these steps:
 
-1. Navigate to the **FORMS** link in the top navigation bar.
+* Navigate to the **FORMS** link in the top navigation bar.
 
-2. Within the Form Builder, select the proper form set using the drop downs for record type and module \(i.e. Case and CP; Incident and GBV; etc.\)
+* Within the Form Builder, select the proper form set using the drop downs for record type and module \(i.e. Case and CP; Incident and GBV; etc.\)
 
 
 ![](img/image37.png)
 
-1. Once in the proper form set, select the NEW FORM SECTION actionbutton in the anchored header.
+* Once in the proper form set, select the NEW FORM SECTION actionbutton in the anchored header.
 
 ![](img/image35.png)
 
-1. Fill in the following information about the form:
+* Fill in the following information about the form:
 
-2. Form Name - this is the name of the Form that will appear in the List of Forms in the Left Navigation panel.
+  * Form Name - this is the name of the Form that will appear in the List of Forms in the Left Navigation panel.
 
-3. Description - this a description of the Form and is not displayed
+  * Description - this a description of the Form and is not displayed
 
-4. Form Group Name - this is the name that displays in the Left Navigation Panel at the top level when forms are grouped. The Form Group has a dropdown carrot to the right of the name in the Left Navigation Panel. Clicking on this carrot expands or contracts the Form Group. To add the Form Group Name, you can select an existing Form Group from the dropdown list or add a new one. To add a new one, type the desired name in the box directly below the field and then click on the phrase ‘Click to add &lt;form group name&gt;‘ directly below that:
+  * Form Group Name - this is the name that displays in the Left Navigation Panel at the top level when forms are grouped. The Form Group has a dropdown carrot to the right of the name in the Left Navigation Panel. Clicking on this carrot expands or contracts the Form Group. To add the Form Group Name, you can select an existing Form Group from the dropdown list or add a new one. To add a new one, type the desired name in the box directly below the field and then click on the phrase ‘Click to add &lt;form group name&gt;‘ directly below that:
 
 
 ![](img/image38.png)
 
-If you want the form to appear by itself and not as part of a group at the top level in the Left Navigation Panel, you must enter same the Form Name in the Form Group Name field by using the instructions to add as described above.
-
-* The system will default to making this form visible. If you do not want it visible, simply uncheck that tick box.
+If you want the form to appear by itself and not as part of a group at the top level in the Left Navigation Panel, you must enter same the Form Name in the Form Group Name field by using the instructions to add as described above. The system will default to making this form visible. If you do not want it visible, simply uncheck that tick box.
 
 ![](img/image112.png)
 
-1. Press SAVE when all the desired information is entered.
-
-Once you have saved the form, you can add fields to the form using the instructions below.
+Press SAVE when all the desired information is entered. Once you have saved the form, you can add fields to the form using the instructions below.
 
 To edit an existing Form, either find the name in the list of forms and click _Edit_ in the options in the right column from the list view, or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
@@ -577,22 +571,42 @@ Use the mouse to click “Click to add” and it will create a new form group na
 
 To create a new Lookup:
 
-1. Navigate to the Form Builder using the **FORMS** link in the navigation bar
+* Navigate to the Form Builder using the **FORMS** link in the navigation bar
 
-2. Select the **NEW LOOKUP** action button in the anchored header. The following will appear:
-
+* Select the **NEW LOOKUP** action button in the anchored header. The following will appear:
 
 ![](img/image60.png)
 
-1. Add a name for the Lookup you are creating.
+* Add a name for the Lookup you are creating.
 
-2. Add a single option in each “Option” field adding new fields or removing as needed.
+* Add a single option in each “Option” field adding new fields or removing as needed.
 
 
 Once a Lookup is created, you can add to a field type and select whether you can pick one or more of the values.
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
+# Matching Configuration
+
+Using either the Primero admin interface or the configuration bundle, administrators can change which case and tracing request fields are used to perform matching.
+
+To edit the matching configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar.
+
+![](/img/image121.png)
+
+Select the _**Matching**_ link in the left panel navigation.
+
+![](/img/image119.png)
+
+You will now see two large multi-select fields: the one on the left contains fields used for matching on cases, while the right contains fields used for matching on tracing requests.
+
+![](/img/image120.png)
+
+To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save."
+
+[Note: Since the following text discusses working manually in the configuration bundle, it pertains only to developers.]
+
+To edit which fields are used for matching within the config bundle, you must first find the field which you want to make matchable or non-matchable. Each field has a ```matchable``` attribute. To use the field for matching, set this attribute to ```true```. To make sure the field is not used for matching, you can set the attribute to ```false``` or simply delete the attribute from the field's JSON object.
 
 # Managing Workflow Statuses
 
