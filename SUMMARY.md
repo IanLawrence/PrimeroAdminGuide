@@ -27,6 +27,10 @@
 
 	*  [*Creating and Editing User Roles*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-user-roles)
 
+		*  [*Superusers and User Admins*](PrimeroAdministrationandConfigurationGuide.md#superusers-and-user-admins)
+
+		*  [*The Agency Read Attribute*](PrimeroAdministrationandConfigurationGuide.md#the-agency-read-attribute)
+
 	*  [*Creating and Editing User Groups*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-user-groups)
 
 	*  [*Creating and Editing Agencies*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-agencies)
@@ -63,6 +67,8 @@
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
 
+*  [*Matching Configuration*](PrimeroAdministrationandConfigurationGuide.md#matching-configuration)
+
 *  [*Managing Workflow Statuses*](PrimeroAdministrationandConfigurationGuide.md#managing-workflow-statuses)
 
 *  [*Rules for Importing Data into Primero*](PrimeroAdministrationandConfigurationGuide.md#rules-for-importing-data-into-primero)
@@ -90,14 +96,6 @@
 	*  [*Testing*](PrimeroAdministrationandConfigurationGuide.md#testing)
 
 	*  [*Designing Forms and Lookups*](PrimeroAdministrationandConfigurationGuide.md#designing-forms-and-lookups)
-
-*  [*Security Certificate Issues*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues)
-
-	*  [*Security Certificate Issues on the Chrome Browser*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues-on-the-chrome-browser)
-
-	*  [*Security Certificate Issues on the Firefox Browser*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues-on-the-firefox-browser)
-
-	*  [*Security Certificate Issues on the Internet Explorer (IE) Browser*](PrimeroAdministrationandConfigurationGuide.md#security-certificate-issues-on-the-internet-explorer-ie-browser)
 
 
 

@@ -108,7 +108,7 @@ A User Role sets the following:
 
 * Permissions - What actions the user with this role can perform on which resources\(i.e. read and write on Cases, but only export on Tracing Requests.\) Most users will not need permissions on system-oriented resources such as Users and Groups; Roles; Forms; Lookups; and System.
 
-* Management - The breadth of data this role can see. The options are: “Access only my records,” “Access all records owned by users in my group,” and “Access all records.”
+* Management - The breadth of data this role can see. The options are: “Access only my records or user,” “Access all records or users in my group,” and “Access all records or users,” and "No records - Admin functionality only." As suggested, users whose roles have the first option can only see their own records and, if they have access to users and roles, can only see their own user and role. The second option suggests that a user can access users in their own user group, along with the records owned by users in their user group. The third option gives a user access to all records in the user in the system. Finally, the fourth option is for administrators who manage things like users and forms but should not have access to actual case, incident, and tracing request records.
 
 * Role Management - Which roles the role is able to manage. This setting is found as a permission under the “Role” resource.
 
@@ -116,6 +116,7 @@ A User Role sets the following:
 
 * Dashboards- The information the user will see on the dashboard when first logging in. Each of these potential options gives access to a new section of the dashboard. If “Manage” is selected, it overrides any combination of the permissions checked and gives access to all options in the section. The "Tasks View" option, rather than giving access to a specific part of the dashboard, allows a user with the role to see the **Tasks View**, which shows users which tasks are upcoming or overdue for their cases. For more information on this view, see the **Primero CPIMS User Guide**.
 
+* Audit Logs - Whether the user can see an overview of actions occurring in the system. This action is more appropriate for managers and administrators than for case workers. For more information on Audit Logs, see the **Primero CPIMS User Guide**.
 
 It is important to note that once a role has been created, it cannot be deleted. The role can only be disabled. It is important to reiterate that, when you are modifying a role’s permissions, you must modify them for each type of record you want the role to be able to handle. So, for instance, if you wanted a role to be able to write to, read from, and export cases, you would need to specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the ‘case’ section of the role form. If you wanted your role to only be able to read from tracing requests, you would only check the ‘read’ box in the ‘tracing request’ section. If you wanted to make sure the role had no access whatsoever to the user record, then you would check nothing in the ‘user’ section. On the other hand, if you want to grant all available permissions on a particular type of resource, you can always just check the ‘manage’ box, which will signal that the role has all permissions for that resource and save you a bit of time in the process.
 
@@ -123,20 +124,20 @@ It is important to note that once a role has been created, it cannot be deleted.
 
 To create a new role, use the following process:
 
-1. Navigate to the Users page using the SETTINGS link in the navigation bar.
+* Navigate to the Users page using the SETTINGS link in the navigation bar.
 
-2. Select the _Roles_ link in the left panel navigation.
+* Select the _Roles_ link in the left panel navigation.
 
 
-## ![](img/image73.png) {#section-3}
+![](img/image73.png)
 
-1. Once selected, click the CREATE ROLE button to bring up the creation form.
+* Once selected, click the CREATE ROLE button to bring up the creation form.
 
-## ![](img/image94.png) {#section-5}
+![](img/image94.png)
 
-1. In the Role Creation Form, you can set what Actions, Resources, Management, and Forms a User with this role can access. Click on the SAVE button once all the desired information is entered.
+* In the Role Creation Form, you can set what Actions, Resources, Management, and Forms a User with this role can access. Click on the SAVE button once all the desired information is entered.
 
-2. It is required that a user have access to **“Record Owner”** form. A user cannot edit this form, but access will be needed for the system to allow the user to access the record type.
+* It is required that a user have access to **“Record Owner”** form. A user cannot edit this form, but access will be needed for the system to allow the user to access the record type.
 
 
 To edit the properties of an existing role, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen. We highly recommend that a role never be deleted unless it was created in error as this may have a negative impact on any users who have been assigned the role. Click on the SAVE button once all the desired information has been changed or entered.
@@ -149,16 +150,29 @@ A few hints for setting roles:
 
 * The list of forms for Cases contains forms for both the CP and GBV modules and, likewise. For the user to see the form, the role must have access to the form and the username must have access to the module.
 
+### Superusers and User Admins
+
+There are two important types of roles which we must discuss here, since the system treats them differently. The first is the **Superuser** role.
+
+A **Superuser** role is a role has the all-encompassing "manage" permission for **Cases**, **Incidents**, **Reports**, **Roles**, **Users**, **User Groups**, **Agencies**, **System Settings**, and **Forms and Lookups**. A superuser, meanwhile, is a user who has been assigned such a role. Since this user has a great deal of power within the system, only superusers can view or edit the attributes of other superusers. For similar reasons, superuser roles cannot be edited within Primero's administrative interface.
+
+The second special type of role is the **User Admin** role. A user admin role has less power than a superuser role, but is defined as having the all-encompassing "manage" permission for **Roles**, **Users**, **User Groups**, **Agencies**, **System Settings**, and **Forms and Lookups**. Once again, a user admin *user* is a user who has a user admin *role*. Only superusers and other admin users can view or edit the attributes of user admin users. Similarly, only superusers can edit a user admin role.
+
+### The Agency Read Attribute
+
+Another specialized permission level exists in the **Agency Read** permission given to a user role with respect to that role's access to users. This permission level only exists with respect to users and denotes that the given role can perform actions on users *only within the current user's agency*. As an example, suppose an administrator named Ahmad at a local NGO named "ABC" needs to be able to manage the organization's users: resetting passwords, disabling users, and creating new user accounts. Ahmad's user account gets a role with the read, write, and agency read permission for users. Because of this, Ahmad will only be able to view and edit user accounts which, like Ahmad's user account, have their agency set to "ABC." This means Ahmad can only access, and is only responsible for, cases within his organization. An administrator attempting to create a role like Ahmad's would choose the options in the picture below when creating the role.
+
+![](img/image118.png)
 
 ## Creating and Editing User Groups
 
 **User Groups** are used to create teams of users and allow different levels of access to records within the group. As with Roles, this should be set up before creating individual users. Access to the records within a User Group is determined within the role as follows:
 
-* Access only my records
+* Access only my records or user
 
-* Access all records owned by users in my group
+* Access all records or users in my group
 
-* Access all records
+* Access all records or users
 
 * No access - Admin functionality only
 
@@ -171,14 +185,14 @@ The following diagram helps explain the relationship between Users, Roles, and U
 
 To create a new user group, use the following process:
 
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
+* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-2. Select the _**User Groups**_ link in the left panel navigation.
+* Select the _**User Groups**_ link in the left panel navigation.
 
 
 ![](img/image110.png)
 
-1. Use the CREATE USER GROUP button to bring up the creation form.
+* Use the CREATE USER GROUP button to bring up the creation form.
 
 ![](img/image69.png)
 
@@ -196,26 +210,24 @@ To edit the name or description of an existing user group, find the name and cli
 
 To create a new Agency, use the following process:
 
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
+* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-2. Select the _**Agency**_ link in the left panel navigation.
+* Select the _**Agency**_ link in the left panel navigation.
 
 
 ![](img/image92.png)
 
-1. Use the CREATE button to bring up the creation form.
+* Use the CREATE button to bring up the creation form.
 
 ![](img/image36.png)
 
-A name for the agency is required; no other information is necessary.
-
-1. To add a logo for the Agency, use the BROWSE button to navigate through the files available and select the appropriate image.
+A name for the agency is required; no other information is necessary. To add a logo for the Agency, use the BROWSE button to navigate through the files available and select the appropriate image.
 
 ![](img/image105.png)
 
 For the logo to appear at the top right of the screen in the Primero application, check the box at the bottom of the form as shown below and click on the SAVE button once all the desired information is entered.
 
-## ![](img/image103.png) {#section-6}
+![](img/image103.png)
 
 To edit an existing agency, find the name in the list of agencies and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
@@ -237,21 +249,23 @@ It is important to note that once an agency has been created, it cannot be delet
 
 * The agency is a required field as well.
 
+Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
+
 
 To create a new User, follow these steps:
 
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
+* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-2. Select the _**Users**_ link in the left panel navigation.
+* Select the _**Users**_ link in the left panel navigation.
 
-3. Use the **CREATE USER** action button to bring up the creation form:
+* Use the **CREATE USER** action button to bring up the creation form:
 
 
 ![](img/image30.png)
 
-1. As described above, there are a few fields that are mandatory to create a user: Full Name, User Name \(must be unique\), Password and Reenter Password, and Organization, which is a dropdown selection list of the Agencies created above.
+* As described above, there are a few fields that are mandatory to create a user: Full Name, User Name \(must be unique\), Password and Reenter Password, and Organization, which is a dropdown selection list of the Agencies created above. Please make sure these mandatory fields are filled out.
 
-2. Then select none, one, or many roles, modules, and user groups for each user:
+* Select none, one, or many roles, modules, and user groups for each user:
 
   a.  Role - sets the permissions of the user \(i.e. Edit, Flag, etc.\)
 
@@ -259,8 +273,7 @@ To create a new User, follow these steps:
 
   c.  User Groups - sets the hierarchy and shared information access for a user. This helps set the manager versus team member role and vice versa.
 
-
-Click on the SAVE button once all the desired information is entered.
+* Click on the SAVE button once all the desired information is entered.
 
 To edit an existing user, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
@@ -305,18 +318,18 @@ Programs represent a mandate for the application as provided by the steering com
 
 To add Programs, with the understanding that this will have no impact and should be done with caution and guidance, follow these steps:
 
-1. Navigate to the **SETTINGS** option in the main navigation bar.
+* Navigate to the **SETTINGS** option in the main navigation bar.
 
-2. Select the _**Program**_ link in the left panel navigation.
+* Select the _**Program**_ link in the left panel navigation.
 
 
 ![](img/image32.png)
 
-1. Use the **CREATE PROGRAM** action button to bring up the creation form:
+* Use the **CREATE PROGRAM** action button to bring up the creation form:
 
 ![](img/image61.png)
 
-1. The only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
+* The only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
 
 ![](img/image49.png)
 
@@ -335,18 +348,18 @@ Each module comes with module-specific components and a default set of forms and
 
 To add more Modules, with the understanding that this should be done with caution and guidance, follow these steps:
 
-1. Navigate to the **SETTINGS** option in the main navigation bar.
+* Navigate to the **SETTINGS** option in the main navigation bar.
 
-2. Select the _**Module**_ link in the left panel navigation.
+* Select the _**Module**_ link in the left panel navigation.
 
 
 ![](img/image107.png)
 
-1. Use the **CREATE MODULE** action button to bring up the creation form:
+* Use the **CREATE MODULE** action button to bring up the creation form:
 
 ![](img/image40.png)
 
-1. Name and Program are mandatory fields. At least one Associated Record Type must be selected. Once the Associated Record Type\(s\) is selected, the forms only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
+* Name and Program are mandatory fields. At least one Associated Record Type must be selected. Once the Associated Record Type\(s\) is selected, the forms only field that is mandatory to add a program is the Name of the program. The other fields such as Description, Program Start Date and Program End Date are optional. Click on the SAVE button once all the desired information is entered.
 
 ![](img/image33.png)
 
@@ -410,37 +423,33 @@ It may be necessary to create a new form when the core set of forms does not sat
 
 To create a new form, follow these steps:
 
-1. Navigate to the **FORMS** link in the top navigation bar.
+* Navigate to the **FORMS** link in the top navigation bar.
 
-2. Within the Form Builder, select the proper form set using the drop downs for record type and module \(i.e. Case and CP; Incident and GBV; etc.\)
+* Within the Form Builder, select the proper form set using the drop downs for record type and module \(i.e. Case and CP; Incident and GBV; etc.\)
 
 
 ![](img/image37.png)
 
-1. Once in the proper form set, select the NEW FORM SECTION actionbutton in the anchored header.
+* Once in the proper form set, select the NEW FORM SECTION actionbutton in the anchored header.
 
 ![](img/image35.png)
 
-1. Fill in the following information about the form:
+* Fill in the following information about the form:
 
-2. Form Name - this is the name of the Form that will appear in the List of Forms in the Left Navigation panel.
+  * Form Name - this is the name of the Form that will appear in the List of Forms in the Left Navigation panel.
 
-3. Description - this a description of the Form and is not displayed
+  * Description - this a description of the Form and is not displayed
 
-4. Form Group Name - this is the name that displays in the Left Navigation Panel at the top level when forms are grouped. The Form Group has a dropdown carrot to the right of the name in the Left Navigation Panel. Clicking on this carrot expands or contracts the Form Group. To add the Form Group Name, you can select an existing Form Group from the dropdown list or add a new one. To add a new one, type the desired name in the box directly below the field and then click on the phrase ‘Click to add &lt;form group name&gt;‘ directly below that:
+  * Form Group Name - this is the name that displays in the Left Navigation Panel at the top level when forms are grouped. The Form Group has a dropdown carrot to the right of the name in the Left Navigation Panel. Clicking on this carrot expands or contracts the Form Group. To add the Form Group Name, you can select an existing Form Group from the dropdown list or add a new one. To add a new one, type the desired name in the box directly below the field and then click on the phrase ‘Click to add &lt;form group name&gt;‘ directly below that:
 
 
 ![](img/image38.png)
 
-If you want the form to appear by itself and not as part of a group at the top level in the Left Navigation Panel, you must enter same the Form Name in the Form Group Name field by using the instructions to add as described above.
-
-* The system will default to making this form visible. If you do not want it visible, simply uncheck that tick box.
+If you want the form to appear by itself and not as part of a group at the top level in the Left Navigation Panel, you must enter same the Form Name in the Form Group Name field by using the instructions to add as described above. The system will default to making this form visible. If you do not want it visible, simply uncheck that tick box.
 
 ![](img/image112.png)
 
-1. Press SAVE when all the desired information is entered.
-
-Once you have saved the form, you can add fields to the form using the instructions below.
+Press SAVE when all the desired information is entered. Once you have saved the form, you can add fields to the form using the instructions below.
 
 To edit an existing Form, either find the name in the list of forms and click _Edit_ in the options in the right column from the list view, or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
@@ -562,22 +571,42 @@ Use the mouse to click “Click to add” and it will create a new form group na
 
 To create a new Lookup:
 
-1. Navigate to the Form Builder using the **FORMS** link in the navigation bar
+* Navigate to the Form Builder using the **FORMS** link in the navigation bar
 
-2. Select the **NEW LOOKUP** action button in the anchored header. The following will appear:
-
+* Select the **NEW LOOKUP** action button in the anchored header. The following will appear:
 
 ![](img/image60.png)
 
-1. Add a name for the Lookup you are creating.
+* Add a name for the Lookup you are creating.
 
-2. Add a single option in each “Option” field adding new fields or removing as needed.
+* Add a single option in each “Option” field adding new fields or removing as needed.
 
 
 Once a Lookup is created, you can add to a field type and select whether you can pick one or more of the values.
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
+# Matching Configuration
+
+Using either the Primero admin interface or the configuration bundle, administrators can change which case and tracing request fields are used to perform matching.
+
+To edit the matching configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar.
+
+![](/img/image121.png)
+
+Select the _**Matching**_ link in the left panel navigation.
+
+![](/img/image119.png)
+
+You will now see two large multi-select fields: the one on the left contains fields used for matching on cases, while the right contains fields used for matching on tracing requests.
+
+![](/img/image120.png)
+
+To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save."
+
+[Note: Since the following text discusses working manually in the configuration bundle, it pertains only to developers.]
+
+To edit which fields are used for matching within the config bundle, you must first find the field which you want to make matchable or non-matchable. Each field has a ```matchable``` attribute. To use the field for matching, set this attribute to ```true```. To make sure the field is not used for matching, you can set the attribute to ```false``` or simply delete the attribute from the field's JSON object.
 
 # Managing Workflow Statuses
 
@@ -665,8 +694,6 @@ To import a Configuration Bundle from a file:
 This is the _.json_ file that was contained inside the zip file that you received when you exported the Configuration Bundle in the previous step. You cannot upload the zip file itself, however, since it is encrypted. Therefore, you must extract the file out of the zip file to a known location on your computer, and then find it and select it in the import popup window. To do this, double click the zip file, enter in the password for the exported file and your computer will open a .json file. Select this file for import. After clicking _OK_, the system will process for a moment and then present you with a message whether the import succeeded or failed. \(Please note that it may take a few seconds for all your configuration changes to load once you have imported the configuration bundle. If you do not see your changes show up immediately, wait fifteen seconds or so, reload your page, and check again.\)
 
 ### Troubleshooting the Import of the Configuration Bundle
-
-###  {#section-11}
 
 Sometimes a bundle import will succeed and the ‘File was imported successfully’ message will appear, but the process does not apply the full set of bundle changes. For example, some Forms or Lookups may go missing. If that is the case, the bundle will need to be reapplied again using the Import process until the full set of configuration changes are observed. It helps to keep a list of expected Forms, Lookups, and Roles and then double check that this list appears in the configured Primero instance. It is important to note that existing core case and incident data will not be erased if the bundle is partially applied.
 
@@ -820,43 +847,5 @@ Once a test instance exists, the administrator can apply the changes and manuall
 
 It is recommended that configuration design take place on a separate test instance. This will buffer live end users from experiencing potential errors from misconfigured forms and roles. Once the configuration has been successfully modified, it can then be applied to production as an import of the Configuration Bundle.
 
-# Security Certificate Issues
 
-Although we expect Primero instances to have SSL certificates associated with each deployment, that may not always be true. If so, there are some additional steps required to gain access to Primero. Depending on the browser, you will have to add Primero to your exceptions, “accept risks”, or “proceed.”
-
-## Security Certificate Issues on the Chrome Browser
-
-When you access Primero using the Chrome browser, you may receive the following message:
-
-![](img/image104.png)
-
-* Click Advanced on the Privacy Error Page. The following will appear
-
-![](img/image12.png)
-
-* Click the “Proceed to…” link at the bottom of the window. You will be redirected to the Primero login page
-
-## Security Certificate Issues on the Firefox Browser
-
-When you access Primero using the Chrome browser, you may receive the following message:
-
-![](img/image95.png)
-
-* Click “I Understand the Risks” and the window will expand to include the following:
-
-![](img/image31.png)
-
-* Click “Add Exception…” and the following window will appear:
-
-![](img/image13.png)
-
-* Click “Confirm Security Exception.” You will be redirected to the Primero log in page.
-
-## Security Certificate Issues on the Internet Explorer \(IE\) Browser
-
-When you access Primero using an Internet Explorer browser, you may receive the following message:
-
-![](img/image111.png)
-
-* Click “Continue to this website \(not recommended\).” You will be redirected to Primero log in page.
 
