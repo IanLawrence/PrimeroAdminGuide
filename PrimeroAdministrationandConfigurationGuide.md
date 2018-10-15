@@ -118,9 +118,31 @@ A User Role sets the following:
 
 * Audit Logs - Whether the user can see an overview of actions occurring in the system. This action is more appropriate for managers and administrators than for case workers. For more information on Audit Logs, see the **Primero CPIMS User Guide**.
 
-It is important to note that once a role has been created, it cannot be deleted. The role can only be disabled. It is important to reiterate that, when you are modifying a role’s permissions, you must modify them for each type of record you want the role to be able to handle. So, for instance, if you wanted a role to be able to write to, read from, and export cases, you would need to specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the ‘case’ section of the role form. If you wanted your role to only be able to read from tracing requests, you would only check the ‘read’ box in the ‘tracing request’ section. If you wanted to make sure the role had no access whatsoever to the user record, then you would check nothing in the ‘user’ section. On the other hand, if you want to grant all available permissions on a particular type of resource, you can always just check the ‘manage’ box, which will signal that the role has all permissions for that resource and save you a bit of time in the process.
+It is important to note that once a role has been created, it cannot be deleted. The role can only be disabled.
+
+### Permissions Overview
+
+When you are modifying a role’s permissions, you must modify them for each type of record you want the role to be able to handle. So, for instance, if you wanted a role to be able to write to, read from, and export cases, you would need to specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the ‘case’ section of the role form. If you wanted your role to only be able to read from tracing requests, you would only check the ‘read’ box in the ‘tracing request’ section. If you wanted to make sure the role had no access whatsoever to the user record, then you would check nothing in the ‘user’ section. On the other hand, if you want to grant all available permissions on a particular type of resource, you can always just check the ‘manage’ box, which will signal that the role has all permissions for that resource and save you a bit of time in the process. Below is a list of all the available permissions on the *case* record.
 
 ![](img/image96.png)
+
+Users often have questions about the following permissions:
+
+* **Create an incident from a case** - Some deployments allow users to create an *Incident* based on the details recorded in a subform entry of the *Incident Details* form. Most deployments do not require that users have access to this permission.
+
+* **Add Incident Details to another user's case** and **Add Service provision to another user's case** - Each of these permissions allows a user to add information to another user's case from the search results page. In each situation, the user selects the case to which they want to add information and clicks a button in the action menu, at which point they record and submit their information. This then gets added to the case as a subform entry - in the *Incident Details* or *Services* form, respectively. You can find more details in the **Primero CPIMS User Guide** on how a user can add incident details or a service provision to another user's case. Please note that users can only make use of this permission if they also have the **Search for case records owned by other users** permission.
+
+* **Assign**, **Transfer**, and **Referral** - The Assign, Transfer, and Referral permissions are often a source of confusion, since many organizations use the word "refer" to mean sending a case to another organization. In Primero, this action would instead be called an "assignment" or a "transfer." Instead, "referral" means allowing another to see a limited section of the case record for a temporary period, while the original record owner maintains full control over the record. The below diagram helps explain the difference between these three actions.
+
+![](img/image122.png)
+
+* **Consent Override** - When a user assigns, transfers, or refers a case to another user, they are required to obtain the consent of the child to share case information. The **Consent Override** permission allows a user to carry out one of these actions, even if the child has not provided consent. Most deployments do not use this permission, in order to protect the data confidentiality of the child. 
+
+* **Display View Page** - This allows a user to see the "View" modal for cases to which they do not have full access. The fields in this modal are the same ones which are featured on the "short form" in the Primero RapidReg mobile application. This feature is useful for users performing tracing, or for service providers who need to see limited information about a child whose case record they do not have access to. This feature is only useful if the user also has the **Search for case records owned by other users** permission.
+
+* **View Photo** - Similar to the above **Display View Page** permission, and relevant to a similar set of users (FTR workers and service providers), this permission allows a user to see the photo of a case record to which they do not have full access. This feature is only useful if the user also has the **Search for case records owned by other users** permission.
+
+* **Add Notes** - Allows a user to add a note to a case, which will then be visible in the *Notes* or *Other Comments* form. This permission is often useful for managers who cannot edit cases, but want to be able to send reminders and notes to the case workers they manage.
 
 To create a new role, use the following process:
 
