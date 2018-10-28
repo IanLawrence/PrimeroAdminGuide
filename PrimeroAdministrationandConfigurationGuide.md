@@ -586,6 +586,44 @@ Once a Lookup is created, you can add to a field type and select whether you can
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
 
+## Locations
+
+When a user selects from a dropdown to indicate *where* something happened (e.g. child's current location, location where incident occurred), they are using Locations. Locations are similar to lookups in that they are stored in a single list, which can be used to provide options for multiple fields. They are different from lookups in that they are nested. This means that a location for "Manhattan" is considered a sub-location of the "New York City" location, which in itself is a sub-location of "New York State" and "United States." This way, if a user clicks a location dropdown field and types in "New York City," Manhattan is one of the locations that will appear as a result.
+
+To edit Locations, click the **FORMS** link in the navigation bar. Then click the **Locations** tab in the side navigation bar. 
+
+![](/img/1-7/navigate-to-locations.png)
+
+Once you have reached the Locations page, you will see a list of all locations in the system.
+
+![](/img/1-7/locations-page.png)
+
+The columns on this page show some important attributes of locations:
+
+* **Code**: Also called "Location Code," this is an abbreviation code (usually taken from an official UN dataset) which will be used by Primero to generate attributes like custom case IDs, and to determine the order in which locations are nested.
+
+* **Admin Level**: This number determines where in a hierarchy a given location sits. The "highest" level, usually a country, is 0, with 1, 2, etc. representing progressively subservient administrative subdivisions.
+
+* **Type**: This is a name used to classify the location, such as country, province, district, sub-district, city, or ward.
+
+* **Hierarchy**: This is a list of location codes representing, in order, the locations under which the given location is nested. For instance, with the first location in the list above, "Wua Wua," the hierarchy "IDN, 74, 7471" represents the locations with those codes: the country of Indonesia, the province of Sulawesi Tenggara, and the district of Kota Kendari.
+
+To edit a location, simply click the 'edit' link in the location's row in the list. **NOTE**: Please make any edits to locations on a VM for practice before transfering changes to a live production environment.
+
+![](/img/1-7/location-edit.png)
+
+On the Edit Location page, you can change details of the location. Notice the "Location Code" field shown above. As the warning message in the image above states, changing this code is hazardous and is not recommended for those not familiar with Primero. If you do change this code, you must update the *Parent Location* attribute for any locations nested under this location.
+
+Once you have made edits to the location, simply click save to submit your changes.
+
+Since some contexts have a massive set of locations, locations load asynchronously from the rest of Primero's configuration. This means that, when you make a change to locations through the admin interface, it may take up to five minutes for this change to be reflected for end-users making changes to a record.
+
+### Technical Note on Locations
+
+[Note: Since the following text discusses working manually in Primero's codebase, it pertains only to developers.]
+
+As noted above, locations can take a while to load, since some contexts have several thousand location entries. To ease the burden of loading these, Primero caches location data in a series of files on the application server, eliminating the need to pull them from the database every time a user tries to designate a child's current location or place of separation. These files are stored in the ```public/options/``` directory of the application. A job runs every five minutes which checks for changes to the locations in the database and then updates these cached location files. This is the reason for the five-minute delay in location updates mentioned in the section above.
+
 # Matching Configuration
 
 Using either the Primero admin interface or the configuration bundle, administrators can change which case and tracing request fields are used to perform matching.

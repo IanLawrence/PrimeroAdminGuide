@@ -67,6 +67,10 @@
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
 
+		*  [*Locations*](PrimeroAdministrationandConfigurationGuide.md#locations)
+
+			*  [*Technical Note on Locations*](PrimeroAdministrationandConfigurationGuide.md#technical-note-on-locations)
+
 *  [*Matching Configuration*](PrimeroAdministrationandConfigurationGuide.md#matching-configuration)
 
 *  [*Managing Workflow Statuses*](PrimeroAdministrationandConfigurationGuide.md#managing-workflow-statuses)
