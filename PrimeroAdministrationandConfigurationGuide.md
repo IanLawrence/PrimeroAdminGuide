@@ -432,7 +432,7 @@ To create a new form, follow these steps:
 
 * Once in the proper form set, select the NEW FORM SECTION actionbutton in the anchored header.
 
-![](img/image35.png)
+![](img/form-group-selection.png)
 
 * Fill in the following information about the form:
 
@@ -443,7 +443,9 @@ To create a new form, follow these steps:
   * Form Group Name - this is the name that displays in the Left Navigation Panel at the top level when forms are grouped. The Form Group has a dropdown carrot to the right of the name in the Left Navigation Panel. Clicking on this carrot expands or contracts the Form Group. To add the Form Group Name, you can select an existing Form Group from the dropdown list or add a new one. To add a new one, type the desired name in the box directly below the field and then click on the phrase ‘Click to add &lt;form group name&gt;‘ directly below that:
 
 
-![](img/image38.png)
+![](img/form-group-creation.png)
+
+If you create a new form group for your form, it will appear later in one of the Form Group lookups. You will be able to edit and provide a translation for your form group there. For more information on how to edit form groups, see the section **Managing Form Groups**
 
 If you want the form to appear by itself and not as part of a group at the top level in the Left Navigation Panel, you must enter same the Form Name in the Form Group Name field by using the instructions to add as described above. The system will default to making this form visible. If you do not want it visible, simply uncheck that tick box.
 
@@ -585,6 +587,16 @@ To create a new Lookup:
 Once a Lookup is created, you can add to a field type and select whether you can pick one or more of the values.
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
+
+### Managing Form Groups
+
+As you scroll through the list of lookups, you will notice that there is a lookup for the form groups for each type of record. Earlier, when we were creating a case (in the section **Creating and Editing a New Form**), we added our form to a new form group. When looking at the lookup labelled "Form Groups Cp Case," you will see that the form group you added appears here.
+
+![](img/form-group-lookup-list.png)
+
+To edit the list of form groups for Child Protection cases, click the "Edit" link for the "Form Groups Cp Case" lookup. Here, you can edit, remove, or provide translations for any of the items in the lookup. Note that if you remove one of these form groups, you will need to go back and edit any forms which used to belong to that form group.
+
+![](img/form-group-edit.png)
 
 ## Locations
 
