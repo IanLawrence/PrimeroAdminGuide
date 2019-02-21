@@ -122,7 +122,7 @@ It is important to note that once a role has been created, it cannot be deleted.
 
 ![](img/image96.png)
 
-To create a new role, use the following process:
+To create a new role please  use the following process:
 
 * Navigate to the Users page using the SETTINGS link in the navigation bar.
 
