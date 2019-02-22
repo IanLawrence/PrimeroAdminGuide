@@ -247,7 +247,9 @@ It is important to note that once an agency has been created, it cannot be delet
 
 * User Groups - Must be an existing user group or groups as defined in the section above.
 
-* The agency is a required field as well.
+* Agency- A user must be assigned an agency. This a required field as well, during the referral process a user will be searchable by their agency. 
+
+* Location- 
 
 Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
