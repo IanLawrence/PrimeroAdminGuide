@@ -632,17 +632,19 @@ Using either the Primero admin interface or the configuration bundle, administra
 
 To edit the matching configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar.
 
-![](/img/image121.png)
+![](/img/matchingsettingselection.png)
 
 Select the _**Matching**_ link in the left panel navigation.
 
-![](/img/image119.png)
+![](/img/matchingleftnav.png)
 
-You will now see two large multi-select fields: the one on the left contains fields used for matching on cases, while the right contains fields used for matching on tracing requests.
+You will now see see many large multi-select fields organized into two columns: the one on the left contains fields used for matching on cases, while the right contains fields used for matching on tracing requests.
 
-![](/img/image120.png)
+![](/img/adminmatching.png)
 
-To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save."
+To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save." If you remove a field as the superuser you will remove the ability for any user to use that field for searching. 
+
+If you wish to edit the fields used for a matching case or a tracing request for a singular you can do so under the Matches page. If a user wishes to add a field, they can do so in this location. 
 
 [Note: Since the following text discusses working manually in the configuration bundle, it pertains only to developers.]
 
