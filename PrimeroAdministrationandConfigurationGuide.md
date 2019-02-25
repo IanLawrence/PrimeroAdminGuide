@@ -77,6 +77,16 @@ Each of these field types is defined with an example in section 4.2 below.
 
 A **form** contains a set of fields for a record. By configuring the Primero application, you can specify new fields on a form, reorder the fields, or allow different forms to share the same field. For example, the standard form and field set for a child protection case has a form called “Preliminary Protection Concerns” which has a field listing the protection concerns related to the individual beneficiary\/survivor where multiple values can be selected. Further down, there is a different form called “Protection Concerns” which contains the same list \(for reference\) and an ability to elaborate on each protection concern with an additional set of fields. This narrows the information in each form and allows the form to be targeted to a particular purpose or a step in the case management workflow.
 
+To configure a form, go to the top navigation bar and click the Forms option. You will see a the list of forms in your module. On the right of each form you will see a small edit button. Select this button to edit:
+
+![](img/formeditor.png)
+
+In the forms editor, you have the option to change the name, description, form group, translations, visibility for web and mobile use, and make any fields uneditable that you wish.
+
+To change the name, description, form group, or translations simply type in the text box the option you wish. At the top of the screen you will notice two checkboxes, one for web app visibility and one for mobile app visibility. If you check the box, the form you are editing will be visible and users will be able to enter data and view this form. If you do not check the box, users will not see the form. In the below case, the approvals form is only visible on the web application:
+
+![](img/selectivesyncformeditor.png)
+
 ## Form Groups
 
 A **Form Group** is visible in the form navigation panel on the left side of the screen and can contain a single form or be expanded to show multiple forms. When multiple forms are added to a group, it becomes expandable\/ collapsible; if the group contains one form, there is no expand or collapse functionality. This allows for the form navigation panel to be organized in concise, navigable groupings to keep the panel shorter and easier to use. For example, the Identity\/Registration form group includes all forms specific to the identity \(Basic Identity, Preliminary Protection Concerns\) and registration \(Interview Details\) of a case. The form group to which each form belongs is configured on creation or edit.
@@ -527,8 +537,15 @@ Within a form there are two additional field types that are unique from other fi
 
 * A **Separator** identifies a new section within the form. For example, on the ‘Closure’ form, a separator marks the address portion of the form to set it apart from the rest of the fields on the page. This is not a sub-form because you only need to enter information into it once.
 
-
 A Subform is created in two steps, first you need to add the Subform field type to the Form where the Subform should appear. Second, click _Edit Subform_ from the list of fields to add the fields for the subform.
+
+Once you have created your subform, on the form editor page, you will see three options on the form editor page - edit, edit subform, and delete. Select edit subform and you will be taken to the subform editor. On the subform editor, you will see a few checkboxes for subform visibility and and selective syncing. 
+
+![](img/subformeditor.png)
+
+Selective syncing allows the mobile user to choose which subforms they wish to sync with the web application. This allows them to sync just one subform such as a singular medical follow-up form or an group of specialised subforms. If you wish to enable selective syncing, click the selectbox.
+
+![](img/selectivesynccheckedbox.png)
 
 [Note: Since the settings in the following two sections can only be set manually in the configuration bundle, these sections are only for developers working on the configuration bundle.]
 
