@@ -767,7 +767,6 @@ Below is an example of simple steps that can help in this verification:
 
   * Did they show up in your export correctly?
 
-
 When you are finally done adding information to your record, save it, and see if your information saved correctly. If they did, and you have encountered no errors, try creating and then exporting a report as well. If all of this proceeds without error, it is time to export a configuration bundle so you can save the changes you have made so far.
 
 # Exporting and Importing a Group of Users
