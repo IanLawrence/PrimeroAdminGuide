@@ -57,6 +57,10 @@
 
 	*  [*Creating and Editing Fields on a Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-fields-on-a-form)
 
+		*  [*Adding a Subform*](PrimeroAdministrationandConfigurationGuide.md#adding-a-subform)
+
+		*  [*Making a Field Required*](PrimeroAdministrationandConfigurationGuide.md#making-a-field-required)
+
 	*  [*Editing an Existing Form*](PrimeroAdministrationandConfigurationGuide.md#editing-an-existing-form)
 
 		*  [*Change an Existing Field*](PrimeroAdministrationandConfigurationGuide.md#change-an-existing-field)
