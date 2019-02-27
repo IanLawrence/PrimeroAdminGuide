@@ -247,9 +247,15 @@ It is important to note that once an agency has been created, it cannot be delet
 
 * User Groups - Must be an existing user group or groups as defined in the section above.
 
-* Agency- A user must be assigned an agency. This a required field as well, during the referral process a user will be searchable by their agency. 
+* Agency - The agency to which the user belongs.
 
-* Location- 
+* Location - The location where the user is based.
+
+* Services - The services which the user is capable of providing.
+
+The last three attributes - _Agency_, _Location_, and _Services_ - are used to filter users for referring and transferring cases. For instance, suppose a case worker wants to refer a child in their care to UNICEF for a medical service, and wants the service within the child's camp (we will call this "Camp 11"). In the referral modal, before selecting a recipient user for the referral, the case worker will be able to select an Agency of "UNICEF," a service of "Medical Service," and the Location "Camp 11." When the case worker clicks on the User dropdown, only users belonging to the UNICEF agency, located in Camp 11, and capable of providing a medical service, will appear as options.
+
+For this reason, agency administrators should regularly update their users' accounts with information on _Agency_, _Location_, and _Services_.
 
 Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
@@ -630,11 +636,7 @@ As noted above, locations can take a while to load, since some contexts have sev
 
 Using either the Primero admin interface or the configuration bundle, administrators can change which case and tracing request fields are used to perform matching.
 
-To edit the matching configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar.
-
-![](/img/matchingsettingselection.png)
-
-Select the _**Matching**_ link in the left panel navigation.
+To edit the Matching Configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar, then click the _**Matching**_ link in the left navigation panel.
 
 ![](/img/matchingleftnav.png)
 
@@ -642,9 +644,9 @@ You will now see see many large multi-select fields organized into two columns: 
 
 ![](/img/adminmatching.png)
 
-To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save." If you remove a field as the superuser you will remove the ability for any user to use that field for searching. 
+To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save."
 
-If you wish to edit the fields used for a matching case or a tracing request for a singular you can do so under the Matches page. If a user wishes to add a field, they can do so in this location. 
+The Matching Configuration dictates which fields are used for matching searches between cases and tracing requests, as well as the criteria which are available for the Duplicate Search. While users performing matching searches between cases and tracing request can remove matching criteria for individual searches, they cannot add criteria to their individual searches which are not first added to the system-wide Matching Configuration. For more details on how to change criteria for individual searches, as well as information on the Duplicate Search, please see the **Primero CPIMS User Guide**.
 
 [Note: Since the following text discusses working manually in the configuration bundle, it pertains only to developers.]
 
