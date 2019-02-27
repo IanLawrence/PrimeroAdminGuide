@@ -255,7 +255,7 @@ It is important to note that once an agency has been created, it cannot be delet
 
 The last three attributes - _Agency_, _Location_, and _Services_ - are used to filter users for referring and transferring cases. For instance, suppose a case worker wants to refer a child in their care to UNICEF for a medical service, and wants the service within the child's camp (we will call this "Camp 11"). In the referral modal, before selecting a recipient user for the referral, the case worker will be able to select an Agency of "UNICEF," a service of "Medical Service," and the Location "Camp 11." When the case worker clicks on the User dropdown, only users belonging to the UNICEF agency, located in Camp 11, and capable of providing a medical service, will appear as options.
 
-For this reason, agency administrators should regularly update their users' accounts with information on _Agency_, _Location_, and _Services_.
+For this reason, agency administrators should regularly update their users' accounts with information on _Agency_, _Location_, and _Services_. For more information on how to refer and transfer cases, as well as how to filter the list of potential recipients for these actions, see the **Primero CPIMS User Guide**.
 
 Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
