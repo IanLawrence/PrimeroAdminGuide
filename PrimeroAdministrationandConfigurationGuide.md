@@ -402,7 +402,7 @@ This is a template file which you should save as `locales.yml` in order for the 
 
 Each of the sections in this file (`development`, `test`, and `production`) represents a potential environment for the application. To change the locales available for your production environment, edit the settings under `production`. The `:default_locale` attribute represents the language which will be used as a fallback for all translations. So, if the value here is `'en'`, any label in the system lacking a translation in the current user's preferred language will appear in English instead. We recommend using English as the default locale, since all features are originally developed for English, meaning it is highly unlikely a translation will be missing for this language.
 
-The `:locales` attribute, meanwhile, is an array representing all of the languages which will be available for use in the system. The `:default_locale` language should be included in this array.
+The `:locales` attribute, meanwhile, is an array representing all of the languages which will be available for use in the system, including in the language toggle. The `:default_locale` language should be included in this array.
 
 As of v1.7.0, these are the locale codes and corresponding languages which may be used in Primero:
 
