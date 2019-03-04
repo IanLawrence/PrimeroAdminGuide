@@ -527,10 +527,34 @@ Within a form there are two additional field types that are unique from other fi
 
 * A **Separator** identifies a new section within the form. For example, on the ‘Closure’ form, a separator marks the address portion of the form to set it apart from the rest of the fields on the page. This is not a sub-form because you only need to enter information into it once.
 
+## Adding a Subform
 
-A Subform is created in two steps, first you need to add the Subform field type to the Form where the Subform should appear. Second, click _Edit Subform_ from the list of fields to add the fields for the subform.
+A Subform is created in two steps. First, add a field with a type of "Subform". Note that whatever you enter in the "Display Name" field will appear as the header for each subform entry.
 
-[Note: Since the settings in the following two sections can only be set manually in the configuration bundle, these sections are only for developers working on the configuration bundle.]
+![](img/subform-name-to-header.png)
+
+Once you have created the "subform" field, it will appear in the list of fields on the parent form. Click the _Edit Subform_ link which appears next to this new field.
+
+![](img/subformeditor.png)
+
+You will now arrive at the _Edit Form_ page for the subform you just added. You can now add fields to this subform just like you would with any other form.
+
+One option which only appears on subforms is "Selective Syncing."
+
+![](img/selectivesynccheckedbox.png)
+
+Selective Syncing means:
+
+ * Subform entries on the web will not sync down to mobile.
+ * When a user adds a subform entry to a case on mobile, then syncs, the new entry will sync up to the web app, but will disappear from the case record on the mobile device.
+
+This allows mobile users to add subform entries for things like services and follow ups while using minimum data for syncing. The below diagram explains how selective syncing would work in a situation where the "Family Details" form syncs selectively.
+
+![](img/selective-syncing-diagram.png)
+
+## Making a Field Required
+
+[Note: Since the settings in this section can only be set manually in the configuration bundle, these sections are only for developers working on the configuration bundle.]
 
 To make a field required, a developer must manually edit the configuration bundle. To make the appropriate edit, the developer should search for the JSON object containing the field in question and then set the ```required``` attribute to ```true```. This works for fields on standard form sections as well as fields on nested subforms.
 
