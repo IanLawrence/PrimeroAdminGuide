@@ -235,7 +235,15 @@ It is important to note that once an agency has been created, it cannot be delet
 
 ## Creating and Editing Users
 
-**Users** are the individuals using Primero who each have a unique username and password. Before setting up users, the roles, user group and agency for that user must be set up. For each individual user, the following information is specified:
+**Users** are the individuals using Primero who each have a unique username and password. Before setting up users, the roles, user group and agency for that user must be set up. To see the users in the system, click on the **SETTINGS** link in the navigation bar, then select the _**Users**_ link in the left panel navigation. You can filter users by agency using the dropdown in the right-hand filters panel.
+
+![](img/users-list-filter.png)
+
+Once you select an agency from the dropdown list and click "Apply", the list will only show users from the selected agency.
+
+![](img/users-list-filtered.png)
+
+For each individual user, the following information is specified:
 
 * Username - This should be unique across all the instances in the deployment.
 
@@ -259,17 +267,9 @@ For this reason, agency administrators should regularly update their users' acco
 
 Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
+To create a new User, go to the Users page, then click the **CREATE USER** action button to bring up the creation form:
 
-To create a new User, follow these steps:
-
-* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
-
-* Select the _**Users**_ link in the left panel navigation.
-
-* Use the **CREATE USER** action button to bring up the creation form:
-
-
-![](img/image30.png)
+![](img/users-list.png)
 
 * As described above, there are a few fields that are mandatory to create a user: Full Name, User Name \(must be unique\), Password and Reenter Password, and Organization, which is a dropdown selection list of the Agencies created above. Please make sure these mandatory fields are filled out.
 
