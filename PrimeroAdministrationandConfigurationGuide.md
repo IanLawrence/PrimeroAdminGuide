@@ -398,6 +398,32 @@ As a quick note, although the above options can enable notification emails in th
 
 Another attribute in the System Settings portion of the configuration bundle which cannot be edited through the administrator interface is that which controls how services become due. The 'due_date_from_appointment_date' attribute, set to be ```false``` by default, can be manually set to ```true``` in order to make each service become due based on the the "Appointment Date" field (or any field on the services subform with the id "service_appointment_date"). When this attribute is instead set to ```false```, a service instead comes due based on the "Implementation Timeframe" field (or any other field on the services subform with the id "service_response_timeframe"). For more information on how services become due, please see the **Primero CPIMS User Guide**.
 
+## Managing Available Languages
+
+[Note: Adjusting this element of the system settings requires some programming knowledge. Therefore, it is only intended for ICT officers deploying the Primero application to a server.]
+
+Primero takes its available languages or "locales" from a configuration file in the application directory. If you navigate to the `config` directory within the Primero repository, you will see a file labelled `locales.yml.example`. When you open the file, you should see the following.
+
+![](img/locales-yml-example.png)
+
+This is a template file which you should save as `locales.yml` in order for the application to recognize it. You can then adjust its contents as necessary. If no `locales.yml` file is present in the config directory, your users will not be able to use Primero in multiple languages.
+
+Each of the sections in this file (`development`, `test`, and `production`) represents a potential environment for the application. To change the locales available for your production environment, edit the settings under `production`. The `:default_locale` attribute represents the language which will be used as a fallback for all translations. So, if the value here is `'en'`, any label in the system lacking a translation in the current user's preferred language will appear in English instead. We recommend using English as the default locale, since all features are originally developed for English, meaning it is highly unlikely a translation will be missing for this language.
+
+The `:locales` attribute, meanwhile, is an array representing all of the languages which will be available for use in the system, including in the language toggle. The `:default_locale` language should be included in this array.
+
+As of v1.7.0, these are the locale codes and corresponding languages which may be used in Primero:
+
+* `'en'`: English
+* `'fr'`: Français
+* `'ar'`: Arabic
+* `'ar-LB'`: Lebanese Arabic
+* `'so'`: Somali
+* `'es'`: Spanish
+* `'bd'`: Bangla
+* `'id'`: Bahasa / Indonesian
+* `'ku'`: Kurdish
+
 # Form and Field Configuration
 
 A **form** contains a set of fields for a record. By configuring the Primero application, you can create a new form, modify the existing forms, specify new fields on a form, reorder the fields, or allow different forms to share the same field. Forms are organized by components - Cases, Tracing Requests, and Incidents - and Modules - CP and GBV.

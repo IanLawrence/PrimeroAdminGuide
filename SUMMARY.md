@@ -51,6 +51,8 @@
 
 	*  [*Using appointment dates for services*](PrimeroAdministrationandConfigurationGuide.md#using-appointment-dates-for-services)
 
+	*  [*Managing Available Languages*](PrimeroAdministrationandConfigurationGuide.md#managing-available-languages)
+
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)
