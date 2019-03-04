@@ -619,11 +619,15 @@ You may click and drag a single field to anywhere in the form to change the orde
 
 ### Change the Form Group
 
-While creating or editing a form, to add a new form group, type the name of the new form group in the field. The following will appear:
+While creating or editing a form, you can change the form group by clicking into the Form Group field. Begin typing the name of the form group you want and then select one of the results that appears.
 
-![](img/image44.png)
+![](img/form-edit-pick-form-group.png)
 
-Use the mouse to click “Click to add” and it will create a new form group name.
+To add a new form group, type the name of the new form group in the field. The following will appear:
+
+![](img/form-edit-create-form-group.png)
+
+Use the mouse to click “Click to add” and it will create the new form group. Click the **SAVE** button when you are done making changes to the form.
 
 ## Lookup Values Management
 
