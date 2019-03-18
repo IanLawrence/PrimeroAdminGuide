@@ -51,11 +51,17 @@
 
 	*  [*Using appointment dates for services*](PrimeroAdministrationandConfigurationGuide.md#using-appointment-dates-for-services)
 
+	*  [*Managing Available Languages*](PrimeroAdministrationandConfigurationGuide.md#managing-available-languages)
+
 *  [*Form and Field Configuration*](PrimeroAdministrationandConfigurationGuide.md#form-and-field-configuration)
 
 	*  [*Creating and Editing a New Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-a-new-form)
 
 	*  [*Creating and Editing Fields on a Form*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-fields-on-a-form)
+
+		*  [*Adding a Subform*](PrimeroAdministrationandConfigurationGuide.md#adding-a-subform)
+
+		*  [*Making a Field Required*](PrimeroAdministrationandConfigurationGuide.md#making-a-field-required)
 
 	*  [*Editing an Existing Form*](PrimeroAdministrationandConfigurationGuide.md#editing-an-existing-form)
 
@@ -66,6 +72,8 @@
 		*  [*Change the Form Group*](PrimeroAdministrationandConfigurationGuide.md#change-the-form-group)
 
 		*  [*Lookups Values Management*](PrimeroAdministrationandConfigurationGuide.md#lookup-values-management)
+
+			*  [*Managing Form Groups*](PrimeroAdministrationandConfigurationGuide#managing-form-groups)
 
 		*  [*Locations*](PrimeroAdministrationandConfigurationGuide.md#locations)
 

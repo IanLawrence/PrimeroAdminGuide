@@ -120,7 +120,7 @@ A User Role sets the following:
 
 It is important to note that once a role has been created, it cannot be deleted. The role can only be disabled. It is important to reiterate that, when you are modifying a role’s permissions, you must modify them for each type of record you want the role to be able to handle. So, for instance, if you wanted a role to be able to write to, read from, and export cases, you would need to specifically check the ‘write,’ ‘read,’ and ‘export’ boxes under the ‘case’ section of the role form. If you wanted your role to only be able to read from tracing requests, you would only check the ‘read’ box in the ‘tracing request’ section. If you wanted to make sure the role had no access whatsoever to the user record, then you would check nothing in the ‘user’ section. On the other hand, if you want to grant all available permissions on a particular type of resource, you can always just check the ‘manage’ box, which will signal that the role has all permissions for that resource and save you a bit of time in the process.
 
-![](img/image96.png)
+![](img/permissions-case-full.png)
 
 To create a new role please  use the following process:
 
@@ -235,7 +235,15 @@ It is important to note that once an agency has been created, it cannot be delet
 
 ## Creating and Editing Users
 
-**Users** are the individuals using Primero who each have a unique username and password. Before setting up users, the roles, user group and agency for that user must be set up. For each individual user, the following information is specified:
+**Users** are the individuals using Primero who each have a unique username and password. Before setting up users, the roles, user group and agency for that user must be set up. To see the users in the system, click on the **SETTINGS** link in the navigation bar, then select the _**Users**_ link in the left panel navigation. You can filter users by agency using the dropdown in the right-hand filters panel.
+
+![](img/users-list-filter.png)
+
+Once you select an agency from the dropdown list and click "Apply", the list will only show users from the selected agency.
+
+![](img/users-list-filtered.png)
+
+For each individual user, the following information is specified:
 
 * Username - This should be unique across all the instances in the deployment.
 
@@ -247,21 +255,21 @@ It is important to note that once an agency has been created, it cannot be delet
 
 * User Groups - Must be an existing user group or groups as defined in the section above.
 
-* The agency is a required field as well.
+* Agency - The agency to which the user belongs.
+
+* Location - The location where the user is based.
+
+* Services - The services which the user is capable of providing.
+
+The last three attributes - _Agency_, _Location_, and _Services_ - are used to filter users for referring and transferring cases. For instance, suppose a case worker wants to refer a child in their care to UNICEF for a medical service, and wants the service within the child's camp (we will call this "Camp 11"). In the referral modal, before selecting a recipient user for the referral, the case worker will be able to select an Agency of "UNICEF," a service of "Medical Service," and the Location "Camp 11." When the case worker clicks on the User dropdown, only users belonging to the UNICEF agency, located in Camp 11, and capable of providing a medical service, will appear as options.
+
+For this reason, agency administrators should regularly update their users' accounts with information on _Agency_, _Location_, and _Services_. For more information on how to refer and transfer cases, as well as how to filter the list of potential recipients for these actions, see the **Primero CPIMS User Guide**.
 
 Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
+To create a new User, go to the Users page, then click the **CREATE USER** action button to bring up the creation form:
 
-To create a new User, follow these steps:
-
-* Navigate to the Users page using the **SETTINGS** link in the navigation bar.
-
-* Select the _**Users**_ link in the left panel navigation.
-
-* Use the **CREATE USER** action button to bring up the creation form:
-
-
-![](img/image30.png)
+![](img/users-list.png)
 
 * As described above, there are a few fields that are mandatory to create a user: Full Name, User Name \(must be unique\), Password and Reenter Password, and Organization, which is a dropdown selection list of the Agencies created above. Please make sure these mandatory fields are filled out.
 
@@ -390,6 +398,32 @@ As a quick note, although the above options can enable notification emails in th
 
 Another attribute in the System Settings portion of the configuration bundle which cannot be edited through the administrator interface is that which controls how services become due. The 'due_date_from_appointment_date' attribute, set to be ```false``` by default, can be manually set to ```true``` in order to make each service become due based on the the "Appointment Date" field (or any field on the services subform with the id "service_appointment_date"). When this attribute is instead set to ```false```, a service instead comes due based on the "Implementation Timeframe" field (or any other field on the services subform with the id "service_response_timeframe"). For more information on how services become due, please see the **Primero CPIMS User Guide**.
 
+## Managing Available Languages
+
+[Note: Adjusting this element of the system settings requires some programming knowledge. Therefore, it is only intended for ICT officers deploying the Primero application to a server.]
+
+Primero takes its available languages or "locales" from a configuration file in the application directory. If you navigate to the `config` directory within the Primero repository, you will see a file labelled `locales.yml.example`. When you open the file, you should see the following.
+
+![](img/locales-yml-example.png)
+
+This is a template file which you should save as `locales.yml` in order for the application to recognize it. You can then adjust its contents as necessary. If no `locales.yml` file is present in the config directory, your users will not be able to use Primero in multiple languages.
+
+Each of the sections in this file (`development`, `test`, and `production`) represents a potential environment for the application. To change the locales available for your production environment, edit the settings under `production`. The `:default_locale` attribute represents the language which will be used as a fallback for all translations. So, if the value here is `'en'`, any label in the system lacking a translation in the current user's preferred language will appear in English instead. We recommend using English as the default locale, since all features are originally developed for English, meaning it is highly unlikely a translation will be missing for this language.
+
+The `:locales` attribute, meanwhile, is an array representing all of the languages which will be available for use in the system, including in the language toggle. The `:default_locale` language should be included in this array.
+
+As of v1.7.0, these are the locale codes and corresponding languages which may be used in Primero:
+
+* `'en'`: English
+* `'fr'`: Français
+* `'ar'`: Arabic
+* `'ar-LB'`: Lebanese Arabic
+* `'so'`: Somali
+* `'es'`: Spanish
+* `'bd'`: Bangla
+* `'id'`: Bahasa / Indonesian
+* `'ku'`: Kurdish
+
 # Form and Field Configuration
 
 A **form** contains a set of fields for a record. By configuring the Primero application, you can create a new form, modify the existing forms, specify new fields on a form, reorder the fields, or allow different forms to share the same field. Forms are organized by components - Cases, Tracing Requests, and Incidents - and Modules - CP and GBV.
@@ -432,7 +466,7 @@ To create a new form, follow these steps:
 
 * Once in the proper form set, select the NEW FORM SECTION actionbutton in the anchored header.
 
-![](img/image35.png)
+![](img/form-group-selection.png)
 
 * Fill in the following information about the form:
 
@@ -443,7 +477,9 @@ To create a new form, follow these steps:
   * Form Group Name - this is the name that displays in the Left Navigation Panel at the top level when forms are grouped. The Form Group has a dropdown carrot to the right of the name in the Left Navigation Panel. Clicking on this carrot expands or contracts the Form Group. To add the Form Group Name, you can select an existing Form Group from the dropdown list or add a new one. To add a new one, type the desired name in the box directly below the field and then click on the phrase ‘Click to add &lt;form group name&gt;‘ directly below that:
 
 
-![](img/image38.png)
+![](img/form-group-creation.png)
+
+If you create a new form group for your form, it will appear later in one of the Form Group lookups. You will be able to edit and provide a translation for your form group there. For more information on how to edit form groups, see the section **Managing Form Groups**
 
 If you want the form to appear by itself and not as part of a group at the top level in the Left Navigation Panel, you must enter same the Form Name in the Form Group Name field by using the instructions to add as described above. The system will default to making this form visible. If you do not want it visible, simply uncheck that tick box.
 
@@ -527,10 +563,34 @@ Within a form there are two additional field types that are unique from other fi
 
 * A **Separator** identifies a new section within the form. For example, on the ‘Closure’ form, a separator marks the address portion of the form to set it apart from the rest of the fields on the page. This is not a sub-form because you only need to enter information into it once.
 
+## Adding a Subform
 
-A Subform is created in two steps, first you need to add the Subform field type to the Form where the Subform should appear. Second, click _Edit Subform_ from the list of fields to add the fields for the subform.
+A Subform is created in two steps. First, add a field with a type of "Subform". Note that whatever you enter in the "Display Name" field will appear as the header for each subform entry.
 
-[Note: Since the settings in the following two sections can only be set manually in the configuration bundle, these sections are only for developers working on the configuration bundle.]
+![](img/subform-name-to-header.png)
+
+Once you have created the "subform" field, it will appear in the list of fields on the parent form. Click the _Edit Subform_ link which appears next to this new field.
+
+![](img/subformeditor.png)
+
+You will now arrive at the _Edit Form_ page for the subform you just added. You can now add fields to this subform just like you would with any other form.
+
+One option which only appears on subforms is "Selective Syncing."
+
+![](img/selectivesynccheckedbox.png)
+
+Selective Syncing means:
+
+ * Subform entries on the web will not sync down to mobile.
+ * When a user adds a subform entry to a case on mobile, then syncs, the new entry will sync up to the web app, but will disappear from the case record on the mobile device.
+
+This allows mobile users to add subform entries for things like services and follow ups while using minimum data for syncing. The below diagram explains how selective syncing would work in a situation where the "Family Details" form syncs selectively.
+
+![](img/selective-syncing-diagram.png)
+
+## Making a Field Required
+
+[Note: Since the settings in this section can only be set manually in the configuration bundle, these sections are only for developers working on the configuration bundle.]
 
 To make a field required, a developer must manually edit the configuration bundle. To make the appropriate edit, the developer should search for the JSON object containing the field in question and then set the ```required``` attribute to ```true```. This works for fields on standard form sections as well as fields on nested subforms.
 
@@ -559,11 +619,15 @@ You may click and drag a single field to anywhere in the form to change the orde
 
 ### Change the Form Group
 
-While creating or editing a form, to add a new form group, type the name of the new form group in the field. The following will appear:
+While creating or editing a form, you can change the form group by clicking into the Form Group field. Begin typing the name of the form group you want and then select one of the results that appears.
 
-![](img/image44.png)
+![](img/form-edit-pick-form-group.png)
 
-Use the mouse to click “Click to add” and it will create a new form group name.
+To add a new form group, type the name of the new form group in the field. The following will appear:
+
+![](img/form-edit-create-form-group.png)
+
+Use the mouse to click “Click to add” and it will create the new form group. Click the **SAVE** button when you are done making changes to the form.
 
 ## Lookup Values Management
 
@@ -585,6 +649,16 @@ To create a new Lookup:
 Once a Lookup is created, you can add to a field type and select whether you can pick one or more of the values.
 
 To edit the properties of an existing Lookup, find the name and click _Edit_ in the options in the right column. From the _Show_ page, click the EDIT button at the top of the screen.
+
+### Managing Form Groups
+
+As you scroll through the list of lookups, you will notice that there is a lookup for the form groups for each type of record. Earlier, when we were creating a case (in the section **Creating and Editing a New Form**), we added our form to a new form group. When looking at the lookup labelled "Form Groups Cp Case," you will see that the form group you added appears here.
+
+![](img/form-group-lookup-list.png)
+
+To edit the list of form groups for Child Protection cases, click the "Edit" link for the "Form Groups Cp Case" lookup. Here, you can edit, remove, or provide translations for any of the items in the lookup. Note that if you remove one of these form groups, you will need to go back and edit any forms which used to belong to that form group.
+
+![](img/form-group-edit.png)
 
 ## Locations
 
@@ -628,19 +702,17 @@ As noted above, locations can take a while to load, since some contexts have sev
 
 Using either the Primero admin interface or the configuration bundle, administrators can change which case and tracing request fields are used to perform matching.
 
-To edit the matching configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar.
+To edit the Matching Configuration in the admin interface, first navigate to the Users page using the **SETTINGS** link in the navigation bar, then click the _**Matching**_ link in the left navigation panel.
 
-![](/img/image121.png)
+![](/img/matchingleftnav.png)
 
-Select the _**Matching**_ link in the left panel navigation.
+You will now see see many large multi-select fields organized into two columns: the one on the left contains fields used for matching on cases, while the right contains fields used for matching on tracing requests.
 
-![](/img/image119.png)
-
-You will now see two large multi-select fields: the one on the left contains fields used for matching on cases, while the right contains fields used for matching on tracing requests.
-
-![](/img/image120.png)
+![](/img/adminmatching.png)
 
 To remove a field from the list, click the 'x' at the right of the field's box. To add another field, click into the multi-select input and begin typing the name of your field. Select one of the suggestions that appears. You can then save these changes by clicking "Save."
+
+The Matching Configuration dictates which fields are used for matching searches between cases and tracing requests, as well as the criteria which are available for the Duplicate Search. While users performing matching searches between cases and tracing request can remove matching criteria for individual searches, they cannot add criteria to their individual searches which are not first added to the system-wide Matching Configuration. For more details on how to change criteria for individual searches, as well as information on the Duplicate Search, please see the **Primero CPIMS User Guide**.
 
 [Note: Since the following text discusses working manually in the configuration bundle, it pertains only to developers.]
 
@@ -762,7 +834,6 @@ Below is an example of simple steps that can help in this verification:
 * Export the form\/fields you created into Excel
 
   * Did they show up in your export correctly?
-
 
 When you are finally done adding information to your record, save it, and see if your information saved correctly. If they did, and you have encountered no errors, try creating and then exporting a report as well. If all of this proceeds without error, it is time to export a configuration bundle so you can save the changes you have made so far.
 
