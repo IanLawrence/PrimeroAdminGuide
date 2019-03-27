@@ -294,20 +294,6 @@ To disable a User, follow these steps:
 
 ![](img/image97.png)
 
-Although not recommended, if for some reason a user needs to be deleted, follow these steps:
-
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
-
-2. Select the _Users_ link in the left panel navigation.
-
-3. From the list of users, find the username to be deleted and click _Delete_ in the options in the right column. The following confirmation box will appear:
-
-
-![](img/image28.png)
-
-To delete the username, click on the OK button. To cancel and keep the username, click on the CANCEL button. This action cannot be undone so proceed with caution.
-
-
 # Configuring Programs and Modules
 
 Configuring Programs and Modules should not be done without the guidance of the appropriate Steering Committee. Site administrators should never configure or edit Programs and Modules without approval and assistance. Modules are higher level components in which country, regional, and international decisions need to be made for its purpose and use cases. While creating or editing Modules and Programs will not be a frequently-used feature, should it become necessary, the instructions are provided below.
