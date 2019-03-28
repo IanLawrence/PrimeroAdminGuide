@@ -285,7 +285,7 @@ To create a new User, go to the Users page, then click the **CREATE USER** actio
 
 To edit an existing user, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
-## Disabling and Deleting Users
+## Disabling Users
 
 We highly recommend that a user never be deleted unless it was created in error to avoid issues with record ownership or other negative impacts. Instead, it is recommended that a user access be disabled. Disabling a username will prohibit that username from being used to log in to Primero.
 
@@ -301,20 +301,6 @@ To disable a User, follow these steps:
 
 
 ![](img/image97.png)
-
-Although not recommended, if for some reason a user needs to be deleted, follow these steps:
-
-1. Navigate to the Users page using the **SETTINGS** link in the navigation bar.
-
-2. Select the _Users_ link in the left panel navigation.
-
-3. From the list of users, find the username to be deleted and click _Delete_ in the options in the right column. The following confirmation box will appear:
-
-
-![](img/image28.png)
-
-To delete the username, click on the OK button. To cancel and keep the username, click on the CANCEL button. This action cannot be undone so proceed with caution.
-
 
 # Configuring Programs and Modules
 
