@@ -38,7 +38,7 @@ Primero **Users** are the individuals working for service-providing organization
 
 ## Roles
 
-Users will have **Roles**, which define what particular users are allowed to do: read records, modify records, run reports, configure the system. Examples of roles are Social Worker, \CP Manager, and CP Administrator.
+Users will have a **Role**, which defines what particular users are allowed to do: read records, modify records, run reports, configure the system. Examples of roles are Social Worker, \CP Manager, and CP Administrator.
 
 Along with defining what actions the user is allowed to perform, roles also limit what kind of information is visible about individual records for a specific user. For example, a CP Social Worker may be allowed to view and edit personally identifiable information \(such as name, age, and sex\) about a particular client, while a CP Manager may only see a reduced set of information about that same person \(age and sex, but not the name\), and may not be allowed to edit any of it.
 
@@ -83,7 +83,7 @@ A **Form Group** is visible in the form navigation panel on the left side of the
 
 # User and Role Management
 
-As described above, each Primero user has a combination of at least one role and one user group that allows them to access the functions and records required to support their business role within the service-providing organizations and agencies that use the Primero implementation. User management consists of the following three elements:
+As described above, each Primero user has a combination of one role and at least one user group, allowing them to access the functions and records necessary to perform their day-to-day work. User management consists of the following three elements:
 
 * **Users** are the individuals using Primero who each have a unique username and password. Each user is given access to one or more modules in Primero \(e.g., CP for case management\).
 
@@ -235,7 +235,7 @@ It is important to note that once an agency has been created, it cannot be delet
 
 ## Creating and Editing Users
 
-**Users** are the individuals using Primero who each have a unique username and password. Before setting up users, the roles, user group and agency for that user must be set up. To see the users in the system, click on the **SETTINGS** link in the navigation bar, then select the _**Users**_ link in the left panel navigation. You can filter users by agency using the dropdown in the right-hand filters panel.
+**Users** are the individuals using Primero who each have a unique username and password. Before setting up users, the role, user group and agency for that user must be set up. To see the users in the system, click on the **SETTINGS** link in the navigation bar, then select the _**Users**_ link in the left panel navigation. You can filter users by agency using the dropdown in the right-hand filters panel.
 
 ![](img/users-list-filter.png)
 
@@ -265,23 +265,28 @@ The last three attributes - _Agency_, _Location_, and _Services_ - are used to f
 
 For this reason, agency administrators should regularly update their users' accounts with information on _Agency_, _Location_, and _Services_. For more information on how to refer and transfer cases, as well as how to filter the list of potential recipients for these actions, see the **Primero CPIMS User Guide**.
 
-Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which roles, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
+Please note that, while users may sometimes be able to edit their own user accounts, no user may edit which role, user groups, modules, or agency are assigned to their user account. Primero uses this precaution to ensure users do not grant themselves additional power and endanger the data confidentiality of clients.
 
 To create a new User, go to the Users page, then click the **CREATE USER** action button to bring up the creation form:
 
 ![](img/users-list.png)
 
-* As described above, there are a few fields that are mandatory to create a user: Full Name, User Name \(must be unique\), Password and Reenter Password, and Organization, which is a dropdown selection list of the Agencies created above. Please make sure these mandatory fields are filled out.
+As described above, there are a few fields that are mandatory to create a user:
 
-* Select none, one, or many roles, modules, and user groups for each user:
+* Full Name
+* User Name \(must be unique\)
+* Password and Password Confirmation
+* Role \(sets the permissions of the user\)
+* Agency \(You will choose from a dropdown selection list of the Agencies created in the system\).
 
-  a.  Role - sets the permissions of the user \(i.e. Edit, Flag, etc.\)
+In addition, you can select one or more options for the following user attributes:
 
-  b.  Module - sets access to which module for the user \(CP,GBV, etc.\)
+* Module - The field of work within which the user will operate \(e.g. CP, GBV, etc.\)
+* User Groups - Positions the user within a structure of teams, with managers having oversight access to the cases of any users in the group.
 
-  c.  User Groups - sets the hierarchy and shared information access for a user. This helps set the manager versus team member role and vice versa.
+If this user will be managing a team of social workers or performs any administrative work, be sure to select the "Manager" tickbox. This attribute gives the user the ability to see dashboards and filters which help with managing a team.
 
-* Click on the SAVE button once all the desired information is entered.
+Click on the SAVE button once all the desired information is entered.
 
 To edit an existing user, either find the name and click _Edit_ in the options in the right column from the list view or from the _Show_ page, click the EDIT button at the top of the screen. Click on the SAVE button once all the desired information has been changed or entered.
 
