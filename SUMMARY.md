@@ -23,7 +23,7 @@
 
 	*  [*Form Groups*](PrimeroAdministrationandConfigurationGuide.md#form-groups)
 
-*  [*User and Role Managements*](PrimeroAdministrationandConfigurationGuide.md#user-and-role-management)
+*  [*User and Role Management*](PrimeroAdministrationandConfigurationGuide.md#user-and-role-management)
 
 	*  [*Creating and Editing User Roles*](PrimeroAdministrationandConfigurationGuide.md#creating-and-editing-user-roles)
 
